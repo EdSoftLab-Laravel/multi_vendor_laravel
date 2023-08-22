@@ -20,12 +20,12 @@
 
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/customize-animate.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/odometer.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/owl.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/admin/css/toastr.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/customize-animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/odometer.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/owl.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/main.css') }}"/>
 
     @php($icon = \App\Models\BusinessSetting::where(['key' => 'icon'])->first()->value ?? '')
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/app/public/business/' . $icon ?? asset('public/assets/landing/img/favicon.svg')) }}">
@@ -61,7 +61,7 @@
                     @php($logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value ?? '')
                     <a href="{{route('home')}}" class="logo">
                         <img
-                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                     src="{{ asset('storage/app/public/business/' . $fav) }}" alt="">
                     </a>
                     <ul class="menu">
@@ -94,7 +94,7 @@
                     </div>
                     @php( $local = session()->has('landing_local')?session('landing_local'):'en')
                     @php($lang = \App\Models\BusinessSetting::where('key', 'system_language')->first())
-                    @if ($lang)  
+                    @if ($lang)
                         <div class="dropdown--btn-hover position-relative">
                             <a class="dropdown--btn border-0 px-3 header--btn text-capitalize d-flex" href="javascript:void(0)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20">
@@ -209,7 +209,7 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a class="logo">
-                                <img onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                <img onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                             src="{{ asset('storage/app/public/business/' . $logo) }}" alt="">
                             </a>
                         </div>
@@ -222,7 +222,7 @@
                                 @foreach ($social_media as $social)
                                 <li>
                                     <a href="{{ $social->link }}" target="_blank">
-                                        <img src="{{ asset('public/assets/landing/img/footer/'. $social->name.'.svg') }}" alt="">
+                                        <img src="{{ asset('assets/landing/img/footer/'. $social->name.'.svg') }}" alt="">
                                     </a>
                                 </li>
                                 @endforeach
@@ -234,12 +234,12 @@
                         <div class="app-btn-grp">
                             @if (isset($landing_page_links['playstore_url_status']))
                             <a href="{{ isset($landing_page_links['playstore_url']) ? $landing_page_links['playstore_url'] : '' }}">
-                                <img src="{{ asset('public/assets/landing/img/google.svg') }}" alt="">
+                                <img src="{{ asset('assets/landing/img/google.svg') }}" alt="">
                             </a>
                             @endif
                             @if (isset($landing_page_links['apple_store_url_status']))
                             <a href="{{ isset($landing_page_links['apple_store_url']) ? $landing_page_links['apple_store_url'] : '' }}">
-                                <img src="{{ asset('public/assets/landing/img/apple.svg') }}" alt="">
+                                <img src="{{ asset('assets/landing/img/apple.svg') }}" alt="">
                             </a>
                             @endif
                         </div>
@@ -324,14 +324,14 @@
         </div>
     </footer>
     <!-- ======= Footer Section ======= -->
-    <script src="{{ asset('public/assets/landing/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('public/assets/landing/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('public/assets/landing/js/viewport.jquery.js') }}"></script>
-    <script src="{{ asset('public/assets/landing/js/wow.min.js') }}"></script>
-    <script src="{{ asset('public/assets/landing/js/odometer.min.js') }}"></script>
-    <script src="{{ asset('public/assets/landing/js/owl.min.js') }}"></script>
-    <script src="{{ asset('public/assets/landing/js/main.js') }}"></script>
-    <script src="{{ asset('public/assets/admin') }}/js/toastr.js"></script>
+    <script src="{{ asset('assets/landing/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/viewport.jquery.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/odometer.min.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/owl.min.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/main.js') }}"></script>
+    <script src="{{ asset('assets/admin') }}/js/toastr.js"></script>
     {!! Toastr::message() !!}
     @if ($errors->any())
         <script>
