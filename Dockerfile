@@ -1,7 +1,7 @@
 FROM composer:2.4 as build
 COPY . /app/
 # RUN composer update
-RUN composer install --ignore-platform-reqs
+# RUN composer install --ignore-platform-reqs
 # RUN composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction
 
 FROM php:8.1-apache-buster as dev
@@ -12,6 +12,10 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN apt-get update && apt-get install -y zip
 RUN docker-php-ext-install pdo pdo_mysql
+
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
+RUN install-php-extensions zip
+
 RUN apt-get update && apt-get -y install libjpeg-dev libpng-dev zlib1g-dev libfreetype6-dev git zip
 RUN apt-get update && \
     apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
@@ -23,17 +27,18 @@ RUN apt-get update && \
 
 COPY . /var/www/html/
 COPY --from=build /usr/bin/composer /usr/bin/composer
-RUN composer install --ignore-platform-reqs
+RUN composer update
+# RUN composer install --ignore-platform-reqs
 # RUN composer install --prefer-dist --no-interaction
 
 COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY .env.dev /var/www/html/.env
 
-# RUN php artisan config:cache && \
-#     php artisan route:cache && \
-#     chmod 777 -R /var/www/html/storage/ && \
-#     chown -R www-data:www-data /var/www/ && \
-#     a2enmod rewrite
+RUN php artisan config:cache && \
+    # php artisan route:cache && \
+    chmod 777 -R /var/www/html/storage/ && \
+    chown -R www-data:www-data /var/www/ && \
+    a2enmod rewrite
 
 FROM php:8.1-apache-buster as production
 
@@ -49,7 +54,7 @@ COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.con
 COPY .env.prod /var/www/html/.env
 
 RUN php artisan config:cache && \
-    php artisan route:cache && \
+    # php artisan route:cache && \
     chmod 777 -R /var/www/html/storage/ && \
     chown -R www-data:www-data /var/www/ && \
     a2enmod rewrite
