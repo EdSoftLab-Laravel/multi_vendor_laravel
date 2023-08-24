@@ -54,7 +54,7 @@
                     @php($total_store = isset($total_store) ? $total_store : 0)
                     <h4 class="title">{{$total_store}}</h4>
                     <span class="subtitle">{{translate('messages.total_stores')}}</span>
-                    <img class="resturant-icon" src="{{asset('/public/assets/admin/img/total-store.png')}}" alt="store">
+                    <img class="resturant-icon" src="{{asset('/assets/admin/img/total-store.png')}}" alt="store">
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
@@ -63,7 +63,7 @@
                     @php($active_stores = isset($active_stores) ? $active_stores : 0)
                     <h4 class="title">{{$active_stores}}</h4>
                     <span class="subtitle">{{translate('messages.active_stores')}}</span>
-                    <img class="resturant-icon" src="{{asset('/public/assets/admin/img/active-store.png')}}" alt="store">
+                    <img class="resturant-icon" src="{{asset('/assets/admin/img/active-store.png')}}" alt="store">
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
@@ -74,7 +74,7 @@
                     @php($inactive_stores = isset($inactive_stores) ? $inactive_stores : 0)
                     <h4 class="title">{{$inactive_stores}}</h4>
                     <span class="subtitle">{{translate('messages.inactive_stores')}}</span>
-                    <img class="resturant-icon" src="{{asset('/public/assets/admin/img/close-store.png')}}" alt="store">
+                    <img class="resturant-icon" src="{{asset('/assets/admin/img/close-store.png')}}" alt="store">
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
@@ -82,7 +82,7 @@
                     @php($data = \App\Models\Store::where('created_at', '>=', now()->subDays(30)->toDateTimeString())->where('module_id', Config::get('module.current_module_id'))->count())
                     <h4 class="title">{{$data}}</h4>
                     <span class="subtitle">{{translate('messages.newly_joined_stores')}}</span>
-                    <img class="resturant-icon" src="{{asset('/public/assets/admin/img/add-store.png')}}" alt="store">
+                    <img class="resturant-icon" src="{{asset('/assets/admin/img/add-store.png')}}" alt="store">
                 </div>
             </div>
         </div>
@@ -303,7 +303,7 @@
                 </div>
                 @if(count($stores) === 0)
                 <div class="empty--data">
-                    <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                    <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                     <h5>
                         {{translate('no_data_found')}}
                     </h5>

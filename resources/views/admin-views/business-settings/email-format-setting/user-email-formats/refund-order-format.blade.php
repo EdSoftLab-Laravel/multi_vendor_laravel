@@ -369,7 +369,7 @@
                                 <div class="max-349 mx-auto mb-20">
                                     <div>
                                         <div class="text-center">
-                                            <img src="{{asset('/public/assets/admin/img/modal/place-order-off.png')}}" alt="" class="mb-20">
+                                            <img src="{{asset('/assets/admin/img/modal/place-order-off.png')}}" alt="" class="mb-20">
                                             <h5 class="modal-title">{{translate('Want to disable Refund Order')}}</h5>
                                         </div>
                                         <div class="text-center">
@@ -380,7 +380,7 @@
                                     </div>
                                     <!-- <div>
                                         <div class="text-center">
-                                            <img src="{{asset('/public/assets/admin/img/modal/place-order-on.png')}}" alt="" class="mb-20">
+                                            <img src="{{asset('/assets/admin/img/modal/place-order-on.png')}}" alt="" class="mb-20">
                                             <h5 class="modal-title">{{translate('Want to enable Refund Order')}}</h5>
                                         </div>
                                         <div class="text-center">

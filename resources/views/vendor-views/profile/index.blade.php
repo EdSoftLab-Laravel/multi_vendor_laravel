@@ -186,7 +186,7 @@
                         <!-- Form Group -->
                             <div class="row form-group">
                                 <label for="newPassword" class="col-sm-3 col-form-label input-label">{{translate('messages.new_password')}}<span class="form-label-secondary" data-toggle="tooltip" data-placement="right"
-        data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/public/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span></label>
+        data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span></label>
 
                                 <div class="col-sm-9">
                                     <input type="password" class="js-pwstrength form-control" name="password"

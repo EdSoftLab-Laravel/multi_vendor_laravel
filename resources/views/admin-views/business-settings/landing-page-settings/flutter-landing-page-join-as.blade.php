@@ -351,7 +351,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Join as Seller')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -365,7 +365,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Join as Deliveryman')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>

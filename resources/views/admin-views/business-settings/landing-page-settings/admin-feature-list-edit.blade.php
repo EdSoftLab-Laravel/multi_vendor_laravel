@@ -147,7 +147,7 @@
                                 <label class="upload-img-3 m-0">
                                         <div class="position-relative">
                                         <div class="img">
-                                            <img src="{{asset('storage/app/public/admin_feature')}}/{{$feature->image}}" onerror='this.src="{{asset('/public/assets/admin/img/upload-3.png')}}"' alt="">
+                                            <img src="{{asset('storage/app/public/admin_feature')}}/{{$feature->image}}" onerror='this.src="{{asset('/assets/admin/img/upload-3.png')}}"' alt="">
                                         </div>
                                             <input type="file" name="image"  hidden>
                                             @if (isset($feature->image))
@@ -187,7 +187,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/feature-list-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/feature-list-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('Feature List Section')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -198,7 +198,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/feature-list-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/feature-list-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON')}} <strong>{{translate('Feature List Section')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -227,7 +227,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Feature List')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
                     <div class="single-item-slider owl-carousel">
                         <div class="item">
                             <div class="max-349 mx-auto mb-20 text-center">
-                                <img src="{{asset('/public/assets/admin/img/landing-how.png')}}" alt="" class="mb-20">
+                                <img src="{{asset('/assets/admin/img/landing-how.png')}}" alt="" class="mb-20">
                                 <h5 class="modal-title">{{translate('Notice!')}}</h5>
                                 <p>
                                     {{translate("If you want to disable or turn off any section please leave that section empty, don’t make any changes there!")}}
@@ -258,7 +258,7 @@
                         </div>
                         <div class="item">
                             <div class="max-349 mx-auto mb-20 text-center">
-                                <img src="{{asset('/public/assets/admin/img/notice-2.png')}}" alt="" class="mb-20">
+                                <img src="{{asset('/assets/admin/img/notice-2.png')}}" alt="" class="mb-20">
                                 <h5 class="modal-title">{{translate('If You Want to Change Language')}}</h5>
                                 <p>
                                     {{translate("Change the language on tab bar and input your data again!")}}
@@ -267,7 +267,7 @@
                         </div>
                         <div class="item">
                             <div class="max-349 mx-auto mb-20 text-center">
-                                <img src="{{asset('/public/assets/admin/img/notice-3.png')}}" alt="" class="mb-20">
+                                <img src="{{asset('/assets/admin/img/notice-3.png')}}" alt="" class="mb-20">
                                 <h5 class="modal-title">{{translate('Let’s See The Changes!')}}</h5>
                                 <p>
                                     {{translate('Visit landing page to see the changes you made in the settings option!')}}

@@ -134,7 +134,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate(' Special review')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/this-review-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/this-review-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('This review')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -164,7 +164,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/this-review-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/this-review-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('This review')}}</strong></h5>
                                     </div>
                                     <div class="text-center">

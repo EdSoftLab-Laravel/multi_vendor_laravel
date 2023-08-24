@@ -31,7 +31,7 @@
             <div class="card-body">
                 <div class="row align-items-md-center">
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
-                            <img class="rounded img--ratio-3" src="{{asset('storage/app/public/campaign')}}/{{$campaign['image']}}" onerror="this.src='{{asset('/public/assets/admin/img/900x400/img1.jpg')}}'" alt="Image Description">
+                            <img class="rounded img--ratio-3" src="{{asset('storage/app/public/campaign')}}/{{$campaign['image']}}" onerror="this.src='{{asset('/assets/admin/img/900x400/img1.jpg')}}'" alt="Image Description">
                     </div>
                     <div class="col-md-6">
                         <span class="d-block mb-1">

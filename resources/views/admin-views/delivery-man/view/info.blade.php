@@ -354,7 +354,7 @@
                                 <button class="btn w-100" data-toggle="modal"
                                     data-target="#image-{{ $key }}">
                                     <div class="gallary-card">
-                                        <img onerror="this.src='{{ asset('/public/assets/admin/img/900x400/img1.jpg') }}'"
+                                        <img onerror="this.src='{{ asset('/assets/admin/img/900x400/img1.jpg') }}'"
                                         src="{{ asset('storage/app/public/delivery-man') }}/{{ $img }}" class="w-100">
                                     </div>
                                 </button>
@@ -370,7 +370,7 @@
                                                     class="sr-only">{{ translate('messages.Close') }}</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <img onerror="this.src='{{ asset('/public/assets/admin/img/900x400/img1.jpg') }}'"
+                                            <img onerror="this.src='{{ asset('/assets/admin/img/900x400/img1.jpg') }}'"
                                                 src="{{ asset('storage/app/public/delivery-man/' . $img) }}"
                                                 class="w-100">
                                         </div>
@@ -474,7 +474,7 @@
                 </div>
                 @if(count($reviews) === 0)
                 <div class="empty--data">
-                    <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                    <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                     <h5>
                         {{translate('no_data_found')}}
                     </h5>

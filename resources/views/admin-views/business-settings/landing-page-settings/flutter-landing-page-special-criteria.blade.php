@@ -100,7 +100,7 @@
                                     </div>
                                     <label class="upload-img-3 m-0">
                                         <div class="img">
-                                            <img src="{{asset('/public/assets/admin/img/aspect-1.png')}}" alt="" class="img__aspect-1 min-w-187px max-w-187px">
+                                            <img src="{{asset('/assets/admin/img/aspect-1.png')}}" alt="" class="img__aspect-1 min-w-187px max-w-187px">
                                         </div>
                                           <input type="file"  name="image" hidden>
                                     </label>
@@ -144,7 +144,7 @@
                                         </td>
                                         <td>
                                             <img src="{{asset('storage/app/public/special_criteria')}}/{{$criteria->image}}"
-                                            onerror="this.src='{{asset('/public/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
+                                            onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                         </td>
                                         <td>
                                             <label class="toggle-switch toggle-switch-sm">
@@ -180,7 +180,7 @@
                     </div>
                     @if(count($criterias) === 0)
                     <div class="empty--data">
-                        <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                        <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                         <h5>
                             {{translate('no_data_found')}}
                         </h5>
@@ -197,7 +197,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate(' Special Criteria')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/this-criteria-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/this-criteria-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('This Criteria')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -227,7 +227,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/this-criteria-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/this-criteria-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('This Criteria')}}</strong></h5>
                                     </div>
                                     <div class="text-center">

@@ -13,7 +13,7 @@
     <div class="content container-fluid">
         <div class="page-header">
             <h2 class="page-header-title text-capitalize">
-                <img class="w--26" src="{{asset('/public/assets/admin/img/store.png')}}" alt="public">
+                <img class="w--26" src="{{asset('/assets/admin/img/store.png')}}" alt="public">
                 <span>
                     {{translate('messages.edit')}} {{translate('messages.store')}} {{translate('messages.info')}}
                 </span>

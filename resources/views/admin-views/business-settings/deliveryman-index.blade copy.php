@@ -65,7 +65,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('If this option is enabled, the Delivery men Tip option will show on the user app & web app during order placement.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.dm_tips_model_hint') }}"> * </span>
                                             </span>
                                             <input type="checkbox" class="toggle-switch-input" value="1"
@@ -92,7 +92,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('If this field is enabled, the delivery man is able to see the earnings when accepting the order on the order request page.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.customer_varification_toggle') }}"> *
                                                 </span>
                                             </span>
@@ -114,7 +114,7 @@
                                             <span class="form-label-secondary"
                                             data-toggle="tooltip" data-placement="right"
                                             data-original-title="{{ translate('Order cancellation is possible by the delivery person if "Yes" is chosen .') }}"><img
-                                                src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                 alt="{{ translate('messages.dm_cancel_order_hint') }}"></span></label>
                                         <div class="resturant-type-group border">
                                             <label class="form-check form--check mr-2 mr-md-4">
@@ -146,7 +146,7 @@
                                                 class="text-danger d-flex align-items-center mt-1"> *<span class="form-label-secondary"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('messages.dm_maximum_order_hint') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.dm_maximum_order_hint') }}"></span>
                                                 </small>
                                             </div>

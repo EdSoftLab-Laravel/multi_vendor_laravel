@@ -63,7 +63,7 @@
                         <div class="resturant-card card--bg-2" >
                             <h4 class="title">{{\App\CentralLogics\Helpers::format_currency($wallet->pending_withdraw)}}</h4>
                             <div class="subtitle">{{translate('messages.pending')}} {{translate('messages.withdraw')}}</div>
-                            <img class="resturant-icon w--30" src="{{asset('/public/assets/admin/img/transactions/pending.png')}}" alt="transaction">
+                            <img class="resturant-icon w--30" src="{{asset('/assets/admin/img/transactions/pending.png')}}" alt="transaction">
                         </div>
                     </div>
 
@@ -72,7 +72,7 @@
                         <div class="resturant-card card--bg-3">
                             <h4 class="title">{{\App\CentralLogics\Helpers::format_currency($wallet->total_withdrawn)}}</h4>
                             <div class="subtitle">{{translate('messages.withdrawn')}}</div>
-                            <img class="resturant-icon w--30" src="{{asset('/public/assets/admin/img/transactions/withdraw-amount.png')}}" alt="transaction">
+                            <img class="resturant-icon w--30" src="{{asset('/assets/admin/img/transactions/withdraw-amount.png')}}" alt="transaction">
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
                         <div class="resturant-card card--bg-4">
                             <h4 class="title">{{\App\CentralLogics\Helpers::format_currency($wallet->collected_cash)}}</h4>
                             <div class="subtitle">{{translate('messages.collected_cash')}}</div>
-                            <img class="resturant-icon w--30" src="{{asset('/public/assets/admin/img/transactions/withdraw-amount.png')}}" alt="transaction">
+                            <img class="resturant-icon w--30" src="{{asset('/assets/admin/img/transactions/withdraw-amount.png')}}" alt="transaction">
                         </div>
                     </div>
 
@@ -90,7 +90,7 @@
                         <div class="resturant-card card--bg-1">
                             <h4 class="title">{{\App\CentralLogics\Helpers::format_currency($wallet->total_earning)}}</h4>
                             <div class="subtitle">{{translate('messages.total_earning')}}</div>
-                            <img class="resturant-icon w--30" src="{{asset('/public/assets/admin/img/transactions/earning.png')}}" alt="transaction">
+                            <img class="resturant-icon w--30" src="{{asset('/assets/admin/img/transactions/earning.png')}}" alt="transaction">
                         </div>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
         @endif
         @if(count($withdraw_req) === 0)
         <div class="empty--data">
-            <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+            <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
             <h5>
                 {{translate('no_data_found')}}
             </h5>

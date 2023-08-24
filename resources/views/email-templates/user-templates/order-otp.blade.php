@@ -74,7 +74,7 @@ font-weight: 700
     <table style="width:100%;max-width:500px;margin:0 auto;text-align:center;background:#fff">
         <tr>
             <td style="padding:30px 30px 0">
-                <img src="{{asset('/public/assets/admin/img/order-otp.png')}}" alt="">
+                <img src="{{asset('/assets/admin/img/order-otp.png')}}" alt="">
                 <h3 style="font-size:17px;font-weight:500">Order Verification!</h3>
                 
             </td>
@@ -95,25 +95,25 @@ font-weight: 700
                 <span class="d-block" style="margin-bottom:20px">6amMart</span>
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
 
-                <img style="width:120px;display:block;margin:10px auto" onerror="this.src='{{asset('/public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px auto" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
                 <span class="privacy">
                     <a href="">Privacy Policy</a><a href="">Contact Us</a>
                 </span>
                 <span class="social" style="text-align:center">
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/pinterest.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/pinterest.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/instagram.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/instagram.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/facebook.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/facebook.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/linkedin.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/linkedin.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/twitter.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/twitter.png')}}" alt="">
                     </a>
                 </span>
                 <span class="copyright">

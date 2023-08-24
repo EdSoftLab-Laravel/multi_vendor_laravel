@@ -9,7 +9,7 @@
     <div class="page-header">
         <div class="d-flex flex-wrap justify-content-between">
             <h2 class="page-header-title text-capitalize my-2">
-                <img class="w--26" src="{{asset('/public/assets/admin/img/store.png')}}" alt="public">
+                <img class="w--26" src="{{asset('/assets/admin/img/store.png')}}" alt="public">
                 <span>
                     {{translate('messages.my_store_info')}}
                 </span>

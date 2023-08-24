@@ -30,7 +30,7 @@
                         <div class="card">
                             <div class="card-header card-header-shadow">
                                 <h5 class="card-title align-items-center">
-                                    <img src="{{asset('/public/assets/admin/img')}}/{{$socialLoginService['login_medium']}}.png" class="mr-1 w-20" alt="">
+                                    <img src="{{asset('/assets/admin/img')}}/{{$socialLoginService['login_medium']}}.png" class="mr-1 w-20" alt="">
                                     {{translate('messages.'.$socialLoginService['login_medium'])}}
                                 </h5>
                                 <label class="toggle-switch toggle-switch-sm p-0">
@@ -89,7 +89,7 @@
                             @csrf
                                 <div class="card-header card-header-shadow">
                                     <h5 class="card-title align-items-center">
-                                        <img src="{{asset('/public/assets/admin/img/apple.png')}}" class="mr-1 w--20" alt="">
+                                        <img src="{{asset('/assets/admin/img/apple.png')}}" class="mr-1 w--20" alt="">
                                         {{translate('messages.'.$appleLoginService['login_medium'])}}
                                     </h5>
                                     <label class="toggle-switch toggle-switch-sm p-0">
@@ -162,7 +162,7 @@
                             <div>
                                 <div class="text-center">
                                     <!-- facebook, pinterest, linkedin, instagram, apple image is in same folder -->
-                                    <img src="{{asset('/public/assets/admin/img/modal/facebook-off.png')}}" alt="" class="mb-20">
+                                    <img src="{{asset('/assets/admin/img/modal/facebook-off.png')}}" alt="" class="mb-20">
                                     <h5 class="modal-title">{{translate('Facebook is Disabled!')}}</h5>
                                 </div>
                                 <div class="text-center">
@@ -173,7 +173,7 @@
                             </div>
                             <!-- <div>
                                 <div class="text-center">
-                                    <img src="{{asset('/public/assets/admin/img/modal/facebook-on.png')}}" alt="" class="mb-20">
+                                    <img src="{{asset('/assets/admin/img/modal/facebook-on.png')}}" alt="" class="mb-20">
                                     <h5 class="modal-title">{{translate('Facebook is Enabled')}}</h5>
                                 </div>
                                 <div class="text-center">
@@ -207,7 +207,7 @@
                     </div>
                     <div class="modal-body pb-0">
                         <div class="text-center mb-20">
-                            <img src="{{asset('/public/assets/admin/img/modal/google.png')}}" alt="" class="mb-20">
+                            <img src="{{asset('/assets/admin/img/modal/google.png')}}" alt="" class="mb-20">
                             <h5 class="modal-title">{{translate('messages.google_api_setup_instructions')}}</h5>
                         </div>
                         <ol>
@@ -236,7 +236,7 @@
                     </div>
                     <div class="modal-body pb-0"><b></b>
                         <div class="text-center mb-20">
-                            <img src="{{asset('/public/assets/admin/img/modal/facebook.png')}}" alt="" class="mb-20">
+                            <img src="{{asset('/assets/admin/img/modal/facebook.png')}}" alt="" class="mb-20">
                             <h5 class="modal-title">{{translate('messages.facebook_api_set_instruction')}}</h5>
                         </div>
                         <ol>
@@ -278,7 +278,7 @@
                     </div>
                     <div class="modal-body pb-0"><b></b>
                         <div class="text-center mb-20">
-                            <img src="{{asset('/public/assets/admin/img/modal/apple.png')}}" alt="" class="mb-20">
+                            <img src="{{asset('/assets/admin/img/modal/apple.png')}}" alt="" class="mb-20">
                             <h5 class="modal-title">{{translate('messages.apple_api_set_instruction')}}</h5>
                         </div>
                         <ol>

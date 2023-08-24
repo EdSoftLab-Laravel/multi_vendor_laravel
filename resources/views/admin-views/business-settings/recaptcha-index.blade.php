@@ -123,7 +123,7 @@
                             {{translate("Otherwise this zone won't function properly & will work show anything against this zone")}}
                         </p>
                     </div>
-                    <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                    <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                 </div>
             </div>
         </div>

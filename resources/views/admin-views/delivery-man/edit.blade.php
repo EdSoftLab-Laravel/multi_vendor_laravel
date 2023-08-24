@@ -3,7 +3,7 @@
 @section('title','Update delivery-man')
 
 @push('css_or_js')
-    <link rel="stylesheet" href="{{asset('/public/assets/admin/css/intlTelInput.css')}}"/>
+    <link rel="stylesheet" href="{{asset('/assets/admin/css/intlTelInput.css')}}"/>
 @endpush
 
 @section('content')
@@ -102,7 +102,7 @@
                                 <center class="py-3 my-auto">
                                     <img class="img--100 rounded" id="viewer"
                                             src="{{asset('storage/app/public/delivery-man').'/'.$delivery_man['image']}}"
-                                            onerror='this.src="{{asset('/public/assets/admin/img/admin.png')}}"'
+                                            onerror='this.src="{{asset('/assets/admin/img/admin.png')}}"'
                                             alt="delivery-man image"/>
                                 </center>
                                 <div class="custom-file">
@@ -198,7 +198,7 @@
                             <div class="js-form-message form-group mb-0">
                                 <label class="input-label" for="signupSrPassword">{{translate('messages.password')}}
                                     <span class="form-label-secondary" data-toggle="tooltip" data-placement="right"
-        data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/public/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span>
+        data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span>
                                 </label>
 
                                 <div class="input-group input-group-merge">

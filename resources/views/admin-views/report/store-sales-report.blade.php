@@ -116,7 +116,7 @@
         <div class="store-report-content mt-11px">
             <div class="left-content">
                 <div class="left-content-card">
-                    <img src="{{ asset('/public/assets/admin/img/report/gross.svg') }}" alt="">
+                    <img src="{{ asset('/assets/admin/img/report/gross.svg') }}" alt="">
                     <div class="info">
                         <h4 class="subtitle">
                             {{ \App\CentralLogics\Helpers::number_format_short($orders->sum('order_amount')) }}</h4>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <div class="left-content-card">
-                    <img src="{{ asset('/public/assets/admin/img/report/tax.svg') }}" alt="">
+                    <img src="{{ asset('/assets/admin/img/report/tax.svg') }}" alt="">
                     <div class="info">
                         <h4 class="subtitle">
                             {{ \App\CentralLogics\Helpers::number_format_short($orders->sum('total_tax_amount')) }}</h4>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 <div class="left-content-card">
-                    <img src="{{ asset('/public/assets/admin/img/report/commission.svg') }}" alt="">
+                    <img src="{{ asset('/assets/admin/img/report/commission.svg') }}" alt="">
                     <div class="info">
                         <h4 class="subtitle">
                             {{ \App\CentralLogics\Helpers::number_format_short($orders->sum('transaction_sum_admin_commission')+$orders->sum('transaction_sum_delivery_fee_comission')-$orders->sum('transaction_sum_admin_expense')) }}
@@ -371,7 +371,7 @@
                     @endif
                     @if (count($items) === 0)
                         <div class="empty--data">
-                            <img src="{{ asset('/public/assets/admin/svg/illustrations/sorry.svg') }}" alt="public">
+                            <img src="{{ asset('/assets/admin/svg/illustrations/sorry.svg') }}" alt="public">
                             <h5>
                                 {{ translate('no_data_found') }}
                             </h5>

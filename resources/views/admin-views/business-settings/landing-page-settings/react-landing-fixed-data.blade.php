@@ -75,7 +75,7 @@
                                 <label class="upload-img-3 m-2 d-block">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/promotional_banner')}}/{{ $fixed_promotional_banner['value']??'' }}" onerror='this.src="{{asset('/public/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                        <img src="{{asset('storage/app/public/promotional_banner')}}/{{ $fixed_promotional_banner['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                     </div>
                                         <input type="file" name="fixed_promotional_banner"  hidden>
                                            @if (isset($fixed_promotional_banner['value']))
@@ -276,7 +276,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/feature-list-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/feature-list-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('Feature List Section')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -287,7 +287,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/feature-list-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/feature-list-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('Feature List Section')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -316,7 +316,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Admin Earn Money')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -329,7 +329,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Download Seller App Section')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -342,7 +342,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Download Delivery Man App Section ')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
             <div class="resturant-card-navbar px-xl-4 justify-content-evenly">
                 <div class="order-info-item">
                     <div class="order-info-icon icon-sm">
-                        <img src="{{asset('/public/assets/admin/img/all.png')}}" alt="public">
+                        <img src="{{asset('/assets/admin/img/all.png')}}" alt="public">
                     </div>
                     @php($item = \App\Models\Item::withoutGlobalScope(\App\Scopes\StoreScope::class)->where(['store_id'=>$store->id])->count())
                     @php($item = ($item == null) ? 0 : $item)
@@ -31,7 +31,7 @@
                 <span class="order-info-seperator"></span>
                 <div class="order-info-item">
                     <div class="order-info-icon icon-sm">
-                <img src="{{asset('/public/assets/admin/img/active.png')}}" alt="public">
+                <img src="{{asset('/assets/admin/img/active.png')}}" alt="public">
                     </div>
                     @php($item = \App\Models\Item::withoutGlobalScope(\App\Scopes\StoreScope::class)->where(['store_id'=>$store->id, 'status'=>1])->count())
                     @php($item = ($item == null) ? 0 : $item)
@@ -43,7 +43,7 @@
                 <span class="order-info-seperator"></span>
                 <div class="order-info-item">
                     <div class="order-info-icon icon-sm">
-                <img src="{{asset('/public/assets/admin/img/inactive.png')}}" alt="public">
+                <img src="{{asset('/assets/admin/img/inactive.png')}}" alt="public">
                     </div>
                     @php($item = \App\Models\Item::withoutGlobalScope(\App\Scopes\StoreScope::class)->where(['store_id'=>$store->id, 'status'=>0])->count())
                     @php($item = ($item == null) ? 0 : $item)
@@ -196,7 +196,7 @@
                     </div>
                     @if(count($foods) === 0)
                     <div class="empty--data">
-                        <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                        <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                         <h5>
                             {{translate('no_data_found')}}
                         </h5>

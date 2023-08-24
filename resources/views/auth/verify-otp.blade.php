@@ -41,7 +41,7 @@
         <div class="auth-wrapper-left">
             <div class="auth-left-cont">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img onerror="this.src='{{asset('/public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
                 <h2 class="title">{{translate('Your')}} <span class="d-block">{{translate('All Service')}}</span> <strong class="text--039D55">{{translate('in one field')}}....</strong></h2>
             </div>
         </div>
@@ -52,7 +52,7 @@
             <!-- OTP Card -->
             <div class="otp-card">
                 <div class="text-center">
-                    <img class="mb-4" src="{{asset('/public/assets/admin/img/lock.svg')}}" alt="">
+                    <img class="mb-4" src="{{asset('/assets/admin/img/lock.svg')}}" alt="">
                     <div class="mb-2">
                         {{ translate('a_5_digit_verification_code_has_been') }} <br> {{ translate('sent_to') }} <strong>{{ substr($admin->phone, 0, 3) . str_repeat('X', strlen($admin->phone) - 5) . substr($admin->phone, -2) }}</strong>
                     </div>

@@ -142,7 +142,7 @@
                                     <img class="img--100" id="viewer"
                                             src="{{asset('storage/app/public/product')}}/{{$product['image']}}"
                                             onerror='this.
-                                            src="{{asset('/public/assets/admin/img/400x400/img2.jpg')}}"'
+                                            src="{{asset('/assets/admin/img/400x400/img2.jpg')}}"'
                                             alt="product image"/>
                                 </center>
                                 <div class="custom-file mt-3">
@@ -298,7 +298,7 @@
                                 @if (!isset($product->food_variations) || count(json_decode($product->food_variations,true))<1)
                                 <div id="empty-variation">
                                     <div class="text-center">
-                                        <img src="{{ asset('/public/assets/admin/img/variation.png') }}" alt="">
+                                        <img src="{{ asset('/assets/admin/img/variation.png') }}" alt="">
                                         <div>{{ translate('No variation added') }}</div>
                                     </div>
                                 </div>

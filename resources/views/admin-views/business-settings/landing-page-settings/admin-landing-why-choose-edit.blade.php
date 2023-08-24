@@ -117,7 +117,7 @@
                                     <label class="upload-img-3 m-0">
                                         <div class="position-relative">
                                         <div class="img">
-                                            <img src="{{asset('storage/app/public/special_criteria')}}/{{ $criteria['image']??'' }}" onerror='this.src="{{asset('/public/assets/admin/img/aspect-1.png')}}"' alt="" class="img__aspect-1 min-w-187px max-w-187px">
+                                            <img src="{{asset('storage/app/public/special_criteria')}}/{{ $criteria['image']??'' }}" onerror='this.src="{{asset('/assets/admin/img/aspect-1.png')}}"' alt="" class="img__aspect-1 min-w-187px max-w-187px">
                                         </div>
                                           <input type="file"  name="image" hidden>
                                             @if (isset($criteria['image']))
@@ -146,7 +146,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate(' Special Criteria')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>

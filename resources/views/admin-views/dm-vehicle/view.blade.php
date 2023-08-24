@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <h1 class="page-header-title text-capitalize">
                         <div class="card-header-icon d-inline-flex mr-2 img">
-                            <img src="{{ asset('/public/assets/admin/img/delivery-man.png') }}" alt="public">
+                            <img src="{{ asset('/assets/admin/img/delivery-man.png') }}" alt="public">
                         </div>
                         <span>
                             {{ translate('vehicle_type') }}: {{$vehicle->type}}
@@ -155,7 +155,7 @@
 
                         @if (count($delivery_men) === 0)
                             <div class="empty--data">
-                                <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                                <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                                 <h5>
                                     {{ translate('no_data_found') }}
                                 </h5>

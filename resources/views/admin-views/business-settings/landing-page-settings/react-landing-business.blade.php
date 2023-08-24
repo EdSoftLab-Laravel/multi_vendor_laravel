@@ -153,7 +153,7 @@
                                 <label class="upload-img-3 m-0">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/business_image')}}/{{ $business_image['value']??'' }}" onerror='this.src="{{asset('/public/assets/admin/img/aspect-1.png')}}"' alt="" class="img__aspect-1 min-w-187px max-w-187px">
+                                        <img src="{{asset('storage/app/public/business_image')}}/{{ $business_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/aspect-1.png')}}"' alt="" class="img__aspect-1 min-w-187px max-w-187px">
                                     </div>
                                       <input type="file"  name="image" hidden>
                                          @if (isset($business_image['value']))
@@ -308,7 +308,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Download Apps Section')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -327,7 +327,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/user-app-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/user-app-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF User App Button')}}</h5>
                                     </div>
                                     <div class="text-center">
@@ -338,7 +338,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/user-app-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/user-app-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON User App Button')}}</h5>
                                     </div>
                                     <div class="text-center">
@@ -372,7 +372,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/dm-app-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/dm-app-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF Delivery Man App Button')}}</h5>
                                     </div>
                                     <div class="text-center">
@@ -383,7 +383,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/dm-app-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/dm-app-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON Delivery Man App Button')}}</h5>
                                     </div>
                                     <div class="text-center">
@@ -417,7 +417,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/seller-app-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/seller-app-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF Seller App Button')}}</h5>
                                     </div>
                                     <div class="text-center">
@@ -428,7 +428,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/seller-app-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/seller-app-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON Seller App Button')}}</h5>
                                     </div>
                                     <div class="text-center">

@@ -24,7 +24,7 @@
                 <div class="col-sm mb-2 mb-sm-0">
                     <h1 class="page-header-title">
                         <span class="page-header-icon">
-                            <img src="{{ asset('/public/assets/admin/img/shopping-basket.png') }}" class="w--20"
+                            <img src="{{ asset('/assets/admin/img/shopping-basket.png') }}" class="w--20"
                                 alt="">
                         </span>
                         <span>

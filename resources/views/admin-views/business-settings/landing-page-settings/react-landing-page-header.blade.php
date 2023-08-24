@@ -180,7 +180,7 @@
                                 <label class="upload-img-3 m-0">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/header_icon')}}/{{ $header_icon['value']??'' }}" onerror='this.src="{{asset('/public/assets/admin/img/aspect-1.png')}}"' class="img__aspect-1 mw-100 min-w-135px" alt="">
+                                        <img src="{{asset('storage/app/public/header_icon')}}/{{ $header_icon['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/aspect-1.png')}}"' class="img__aspect-1 mw-100 min-w-135px" alt="">
                                     </div>
                                     <input type="file"  name="image" hidden>
                                        @if (isset($header_icon['value']))
@@ -198,7 +198,7 @@
                                 <label class="upload-img-3 m-0">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/header_banner')}}/{{ $header_banner['value']??'' }}" onerror='this.src="{{asset('/public/assets/admin/img/aspect-1.png')}}"' class="img__aspect-1 mw-100 min-w-135px" alt="">
+                                        <img src="{{asset('storage/app/public/header_banner')}}/{{ $header_banner['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/aspect-1.png')}}"' class="img__aspect-1 mw-100 min-w-135px" alt="">
                                     </div>
                                         <input type="file" name="banner_image"  hidden>
                                            @if (isset($header_banner['value']))
@@ -242,7 +242,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Header Section')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>

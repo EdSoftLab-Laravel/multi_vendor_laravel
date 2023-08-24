@@ -52,7 +52,7 @@
                                 <label class="input-label d-flex" for="module_type">{{translate('messages.description')}} ({{ translate('messages.default') }})<span class="form-label-secondary text-danger d-flex"
                                     data-toggle="tooltip" data-placement="right"
                                     data-original-title="{{ translate('messages.Write_a_short_description_of_your_new_business_module_within_100_words_(550_characters)')}}"><img
-                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                         alt="{{ translate('messages.veg_non_veg') }}"></span></label>
                                 <textarea class="ckeditor form-control" name="description[]">{!! $module?->getRawOriginal('description') !!}</textarea>
                             </div>
@@ -84,7 +84,7 @@
                                     <label class="input-label d-flex" for="module_type">{{translate('messages.description')}} ({{strtoupper($lang)}})<span class="form-label-secondary text-danger d-flex"
                                         data-toggle="tooltip" data-placement="right"
                                         data-original-title="{{ translate('messages.Write_a_short_description_of_your_new_business_module_within_100_words_(550_characters)')}}"><img
-                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                             alt="{{ translate('messages.veg_non_veg') }}"></span></label>
                                     <textarea class="ckeditor form-control" name="description[]">{!! $translate[$lang]['description']??'' !!}</textarea>
                                 </div>
@@ -121,7 +121,7 @@
                             <div class="form-group" id="zone_check">
                                 <label class="input-label">{{ translate('Store can serve in') }} <small class="text-danger"><span class="input-label-secondary"
                                         title="{{ translate('messages.business_module_all_zone_hint') }}">
-                                        <img src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                             alt="{{ translate('messages.business_module_all_zone_hint') }}" class="initial--14">
                                 </span> *</small></label>
 

@@ -92,7 +92,7 @@
     <div class="store-report-content mt-11px">
         <div class="left-content">
             <div class="left-content-card">
-                <img src="{{asset('/public/assets/admin/img/report/trx-1.svg')}}" alt="">
+                <img src="{{asset('/assets/admin/img/report/trx-1.svg')}}" alt="">
                 <div class="info">
                     <h4 class="subtitle __txt-22">594</h4>
                     <h6 class="subtext font-regular">Total Transactions</h6>
@@ -103,14 +103,14 @@
                 </div>
             </div>
             <div class="left-content-card">
-                <img src="{{asset('/public/assets/admin/img/report/trx-2.svg')}}" alt="">
+                <img src="{{asset('/assets/admin/img/report/trx-2.svg')}}" alt="">
                 <div class="info">
                     <h4 class="subtitle __txt-22">$3,330</h4>
                     <h6 class="subtext font-regular">Total Transaction Amount</h6>
                 </div>
             </div>
             <div class="left-content-card">
-                <img src="{{asset('/public/assets/admin/img/report/trx-3.svg')}}" alt="">
+                <img src="{{asset('/assets/admin/img/report/trx-3.svg')}}" alt="">
                 <div class="info">
                     <h4 class="subtitle __txt-22">$3,330</h4>
                     <h6 class="subtext font-regular">Commission Earned</h6>
@@ -428,7 +428,7 @@
 
 
     <!-- Apex Charts -->
-    <script src="{{asset('/public/assets/admin/js/apex-charts/apexcharts.js')}}"></script>
+    <script src="{{asset('/assets/admin/js/apex-charts/apexcharts.js')}}"></script>
     <!-- Apex Charts -->
 @endpush
 

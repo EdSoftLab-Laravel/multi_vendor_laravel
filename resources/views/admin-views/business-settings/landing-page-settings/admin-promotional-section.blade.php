@@ -106,7 +106,7 @@
                                 </label>
                                 <label class="upload-img-3 m-0 d-block">
                                     <div class="img">
-                                        <img src="" onerror='this.src="{{asset('/public/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                        <img src="" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                     </div>
                                         <input type="file" name="image"  hidden>
                                 </label>
@@ -204,7 +204,7 @@
                                     </td>
                                     <td>
                                         <img src="{{asset('storage/app/public/promotional_banner')}}/{{$banner->image}}"
-                                        onerror="this.src='{{asset('/public/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
+                                        onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                     </td>
                                     <td>
                                         <label class="toggle-switch toggle-switch-sm">
@@ -240,7 +240,7 @@
                 </div>
                 @if(count($banners) === 0)
                 <div class="empty--data">
-                    <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                    <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                     <h5>
                         {{translate('no_data_found')}}
                     </h5>

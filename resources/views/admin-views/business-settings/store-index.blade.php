@@ -73,7 +73,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('messages.A_store_can_send_a_registration_request_through_their_store_or_customer.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.store_self_registration') }}"> *
                                                 </span>
                                             </span>
@@ -112,7 +112,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div class="confirm-toogle d-none">
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/store-self-reg-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/store-self-reg-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('Store Self Registration')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="cancel-toogle d-none">
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/store-self-reg-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/store-self-reg-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('Store Self Registration')}}</strong></h5>
                                     </div>
                                     <div class="text-center">

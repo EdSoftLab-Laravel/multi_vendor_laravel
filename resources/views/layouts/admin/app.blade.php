@@ -890,12 +890,12 @@
         if ($('#'+toggle_id).is(':checked')) {
             $('#toggle-title').empty().append(on_title);
             $('#toggle-message').empty().append(on_message);
-            $('#toggle-image').attr('src', "{{asset('/public/assets/admin/img/modal')}}/"+on_image);
+            $('#toggle-image').attr('src', "{{asset('/assets/admin/img/modal')}}/"+on_image);
             $('#toggle-ok-button').attr('toggle-ok-button', toggle_id);
         } else {
             $('#toggle-title').empty().append(off_title);
             $('#toggle-message').empty().append(off_message);
-            $('#toggle-image').attr('src', "{{asset('/public/assets/admin/img/modal')}}/"+off_image);
+            $('#toggle-image').attr('src', "{{asset('/assets/admin/img/modal')}}/"+off_image);
             $('#toggle-ok-button').attr('toggle-ok-button', toggle_id);
         }
         $('#toggle-modal').modal('show');
@@ -926,12 +926,12 @@
         if ($('#'+toggle_id).is(':checked')) {
             $('#toggle-status-title').empty().append(on_title);
             $('#toggle-status-message').empty().append(on_message);
-            $('#toggle-status-image').attr('src', "{{asset('/public/assets/admin/img/modal')}}/"+on_image);
+            $('#toggle-status-image').attr('src', "{{asset('/assets/admin/img/modal')}}/"+on_image);
             $('#toggle-status-ok-button').attr('toggle-ok-button', toggle_id);
         } else {
             $('#toggle-status-title').empty().append(off_title);
             $('#toggle-status-message').empty().append(off_message);
-            $('#toggle-status-image').attr('src', "{{asset('/public/assets/admin/img/modal')}}/"+off_image);
+            $('#toggle-status-image').attr('src', "{{asset('/assets/admin/img/modal')}}/"+off_image);
             $('#toggle-status-ok-button').attr('toggle-ok-button', toggle_id);
         }
         $('#toggle-status-modal').modal('show');
