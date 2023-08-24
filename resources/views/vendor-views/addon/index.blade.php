@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/addon.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/addon.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{translate('messages.add_new_addon')}}</span>
             </h1>
@@ -80,7 +80,7 @@
                     <div class="card-header py-2 border-0">
                         <div class="search--button-wrapper">
                             <h5 class="card-title">
-                                {{translate('messages.addon')}} {{translate('messages.list')}}  
+                                {{translate('messages.addon')}} {{translate('messages.list')}}
                                 <span class="badge badge-soft-dark ml-2" id="itemCount">{{$addons->total()}}</span>
                             </h5>
                             <form id="search-form" class="search-form">

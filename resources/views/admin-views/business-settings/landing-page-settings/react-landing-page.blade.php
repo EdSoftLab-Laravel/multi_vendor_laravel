@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.react_landing_page') }}
@@ -27,7 +27,7 @@
             @include('admin-views.business-settings.landing-page-settings.top-menu-links.react-landing-page-links')
         </div>
     </div>
-    
+
     <ul class="nav nav-tabs mb-4 border-0">
         <li class="nav-item">
             <a class="nav-link lang_link active" data-toggle="tab" href="#en-link">English(EN)</a>

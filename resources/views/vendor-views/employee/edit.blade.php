@@ -10,7 +10,7 @@
     <div class="page-header">
         <h1 class="page-header-title">
             <span class="page-header-icon">
-                <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
             </span>
             <span>
                 {{translate('messages.Employee')}} {{translate('messages.update')}}
@@ -67,7 +67,7 @@
 
                                 <center class="mb-auto">
                                     <img class="store-banner" id="viewer"
-                                    onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                    onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                     src="{{asset('storage/app/public/vendor')}}/{{$e['image']}}" alt="Employee thumbnail"/>
                                 </center>
 

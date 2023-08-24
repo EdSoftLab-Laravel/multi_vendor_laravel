@@ -88,7 +88,7 @@
                             </div>
                             @if(count($products)===0)
                             <div class="search--no-found">
-                                <img src="{{asset('public/assets/admin/img/search-icon.png')}}" alt="img">
+                                <img src="{{asset('assets/admin/img/search-icon.png')}}" alt="img">
                                 <p>
                                     {{translate('messages.no_products_on_pos_search')}}
                                 </p>
@@ -178,7 +178,7 @@
                         <hr class="non-printable">
                     </div>
                     <div class="row m-auto" id="print-modal-content">
-                        
+
                     </div>
 
                 </div>

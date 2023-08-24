@@ -13,7 +13,7 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center">
                 <h1 class="page-header-title">
                     <span class="page-header-icon">
-                        <img src="{{asset('public/assets/admin/img/product.png')}}" class="w--26" alt="">
+                        <img src="{{asset('assets/admin/img/product.png')}}" class="w--26" alt="">
                     </span>
                     <span>
                         {{$campaign['title']}}
@@ -67,7 +67,7 @@
                                 <a href="{{route('admin.store.view', $campaign->store_id)}}" title="{{$campaign->store['name']}}">
                                     <img
                                         class="img--70 circle"
-                                        onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                        onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                         src="{{asset('storage/app/public/store/'.$campaign->store->logo)}}"
                                         alt="Image Description">
                                     <h5 class="input-label mt-2">{{$campaign->store['name']}}</h5>
@@ -130,7 +130,7 @@
                                                             </strong>
                                                         </span>
                                                     @break
-    
+
                                                 @else
                                                     <span class="d-block text-capitalize">
                                                         <strong>
@@ -145,12 +145,12 @@
                                                             - ({{ translate('messages.required') }})
                                                         @endif
                                                     </span>
-    
+
                                                     @if ($variation['min'] != 0 && $variation['max'] != 0)
                                                         ({{ translate('messages.Min_select') }}: {{ $variation['min'] }} -
                                                         {{ translate('messages.Max_select') }}: {{ $variation['max'] }})
                                                     @endif
-    
+
                                                     @if (isset($variation['values']))
                                                         @foreach ($variation['values'] as $value)
                                                             <span class="d-block text-capitalize">

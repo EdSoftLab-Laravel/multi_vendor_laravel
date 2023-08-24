@@ -13,7 +13,7 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center">
                 <h1 class="page-header-title">
                     <span class="page-header-icon">
-                        <img src="{{asset('public/assets/admin/img/campaign.png')}}" class="w--26" alt="">
+                        <img src="{{asset('assets/admin/img/campaign.png')}}" class="w--26" alt="">
                     </span>
                     <span>
                         {{translate('messages.campaign')}}
@@ -65,7 +65,7 @@
                     </tr>
                     </thead>
 
-                    <tbody id="set-rows"> 
+                    <tbody id="set-rows">
                     @foreach($campaigns as $key=>$campaign)
                         <tr>
                             <td>{{$key+$campaigns->firstItem()}}</td>

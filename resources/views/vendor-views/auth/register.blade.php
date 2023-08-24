@@ -1,8 +1,8 @@
 @extends('layouts.landing.app')
 @section('title', translate('messages.store_registration'))
 @push('css_or_js')
-    <link rel="stylesheet" href="{{ asset('public/assets/admin') }}/css/toastr.css">
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/select2.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('assets/admin') }}/css/toastr.css">
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/select2.min.css') }}"/>
     <style>
         #map {
             height: 350px;
@@ -37,7 +37,7 @@
         }
 
     </style>
-    
+
 @endpush
 @section('content')
     <section class="m-0 py-5">
@@ -133,7 +133,7 @@
                                         value="{{ old('name') }}" required>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <div class="form-group">
                                     <label class="input-label" for="address">{{ translate('messages.store') }}
@@ -173,7 +173,7 @@
                                 <div class="form-group">
 
                                     <img class="__register-img" id="coverImageViewer"
-                                        src="{{ asset('public/assets/admin/img/900x400/img1.jpg') }}"
+                                        src="{{ asset('assets/admin/img/900x400/img1.jpg') }}"
                                         alt="Product thumbnail" />
 
                                     <label for="name" class="input-label pt-2">{{ translate('messages.upload') }} {{ translate('messages.cover') }}
@@ -190,7 +190,7 @@
                                 <div class="form-group">
 
                                     <img class="__register-img" id="logoImageViewer"
-                                        src="{{ asset('public/assets/admin/img/160x160/img1.jpg') }}"
+                                        src="{{ asset('assets/admin/img/160x160/img1.jpg') }}"
                                         alt="Product thumbnail" />
 
 
@@ -393,7 +393,7 @@
                                                 <img src="<?php echo $custome_recaptcha->inline(); ?>" style="width: 100%; border-radius: 4px;"/>
                                             </div>
                                         </div>
-                                    @endif                                
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -441,7 +441,7 @@
             });
         </script>
 
-        <script src="{{ asset('public/assets/admin/js/spartan-multi-image-picker.js') }}"></script>
+        <script src="{{ asset('assets/admin/js/spartan-multi-image-picker.js') }}"></script>
         <script type="text/javascript">
             $(function() {
                 $("#coba").spartanMultiImagePicker({
@@ -451,7 +451,7 @@
                     groupClassName: 'col-lg-2 col-md-4 col-sm-4 col-6',
                     maxFileSize: '',
                     placeholderImage: {
-                        image: '{{ asset('public/assets/admin/img/400x400/img2.jpg') }}',
+                        image: '{{ asset('assets/admin/img/400x400/img2.jpg') }}',
                         width: '100%'
                     },
                     dropFileLabel: "Drop Here",
@@ -693,10 +693,10 @@
                         },
                         __port: function (params, success, failure) {
                             var $request = $.ajax(params);
-    
+
                             $request.then(success);
                             $request.fail(failure);
-    
+
                             return $request;
                         }
                     }
@@ -706,7 +706,7 @@
             $(document).ready(function() {
                 $('.js-example-basic-single').select2();
             });
-    
+
         </script>
         <script>
             $(".lang_link").click(function(e){
@@ -714,7 +714,7 @@
                 $(".lang_link").removeClass('active');
                 $(".lang_form").addClass('d-none');
                 $(this).addClass('active');
-        
+
                 let form_id = this.id;
                 let lang = form_id.substring(0, form_id.length - 5);
                 console.log(lang);
@@ -729,6 +729,6 @@
                 }
             });
         </script>
-        
-    <script src="{{ asset('public/assets/landing/js/select2.min.js') }}"></script>
+
+    <script src="{{ asset('assets/landing/js/select2.min.js') }}"></script>
     @endpush

@@ -11,7 +11,7 @@
         <div class="d-flex flex-wrap align-items-center justify-content-between">
             <h1 class="page-header-title mb-3 mr-1">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/role.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/role.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.Employee')}} {{translate('messages.list')}}

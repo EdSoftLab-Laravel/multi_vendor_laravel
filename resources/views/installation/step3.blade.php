@@ -24,7 +24,7 @@
                         <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                               data-bs-title="Follow our documentation">
 
-                            <img src="{{asset('public/assets/installation')}}/assets/img/svg-icons/info.svg" alt=""
+                            <img src="{{asset('assets/installation')}}/assets/img/svg-icons/info.svg" alt=""
                                  class="svg">
                         </span>
             </a>
@@ -95,14 +95,14 @@
                                     <div class="input-inner-end-ele position-relative">
                                         <input type="password" id="database-password" min="8"
                                                autocomplete="new-password" class="form-control" name="DB_PASSWORD"
-                                               
+
                                                placeholder="Ex: password">
                                         <div class="togglePassword">
                                             <img
-                                                src="{{asset('public/assets/installation')}}/assets/img/svg-icons/eye.svg"
+                                                src="{{asset('assets/installation')}}/assets/img/svg-icons/eye.svg"
                                                 alt="" class="svg eye">
                                             <img
-                                                src="{{asset('public/assets/installation')}}/assets/img/svg-icons/eye-off.svg"
+                                                src="{{asset('assets/installation')}}/assets/img/svg-icons/eye-off.svg"
                                                 alt=""
                                                 class="svg eye-off">
                                         </div>

@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/email.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/email.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{translate('messages.firebase')}} {{translate('messages.push')}} {{translate('messages.notification')}} {{translate('messages.setup')}}
                 </span>
@@ -436,22 +436,22 @@
                             <div class="row">
                                 @php($opm=\App\Models\BusinessSetting::with('translations')->where('key','order_pending_message')->first())
                                 @php($data=$opm?json_decode($opm->value,true):null)
-                                
+
                                 <?php
                                         if(count($opm->translations)){
                                             $translate = [];
                                             foreach($opm->translations as $t)
-                                            {   
+                                            {
                                                 if($t->locale == $lang && $t->key=='order_pending_message'){
                                                     $translate[$lang]['message'] = $t->value;
                                                 }
                                             }
-                                           
+
                                         }
-     
+
                                 ?>
 
-                                
+
 
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
@@ -470,7 +470,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                               
+
                                            @endif
                                         </div>
                                         <textarea name="pending_message[]" class="form-control" {{$lang == $default_lang? 'required':''}} oninvalid="document.getElementById('en-link').click()">{!! $translate[$lang]['message']??$data['message'] !!}</textarea>
@@ -483,12 +483,12 @@
                                 if(count($ocm->translations)){
                                         $translate_2 = [];
                                         foreach($ocm->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='order_confirmation_msg'){
                                                 $translate_2[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -509,7 +509,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                
+
                                             @endif
                                         </div>
                                         <textarea name="confirm_message[]" class="form-control" {{$lang == $default_lang? 'required':''}} oninvalid="document.getElementById('en-link').click()">{!! $translate_2[$lang]['message']??$data['message'] !!}</textarea>
@@ -519,17 +519,17 @@
                                 @php($oprm=\App\Models\BusinessSetting::with('translations')->where('key','order_processing_message')->first())
 
                                 @php($data=$oprm?json_decode($oprm->value,true):null)
-                                
+
                                 <?php
                                 if(count($oprm->translations)){
                                         $translate_3 = [];
                                         foreach($oprm->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='order_processing_message'){
                                                 $translate_3[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -548,7 +548,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                    
+
                                             @endif
                                         </div>
                                         <textarea name="processing_message[]" class="form-control" {{$lang == $default_lang? 'required':''}} oninvalid="document.getElementById('en-link').click()">{!! $translate_3[$lang]['message']??$data['message'] !!}</textarea>
@@ -561,12 +561,12 @@
                                 if(count($dbs->translations)){
                                         $translate_4 = [];
                                         foreach($dbs->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='order_handover_message'){
                                                 $translate_4[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -589,7 +589,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                
+
                                             @endif
                                         </div>
                                         <textarea name="order_handover_message[]" class="form-control" {{$lang == $default_lang? 'required':''}} oninvalid="document.getElementById('en-link').click()">{!! $translate_4[$lang]['message']??$data['message'] !!}</textarea>
@@ -602,16 +602,16 @@
                                 if(count($ofdm->translations)){
                                         $translate_5 = [];
                                         foreach($ofdm->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='out_for_delivery_message'){
                                                 $translate_5[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
-                                
+
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <div class="d-flex flex-wrap justify-content-between mb-2">
@@ -642,12 +642,12 @@
                                 if(count($odm->translations)){
                                         $translate_6 = [];
                                         foreach($odm->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='order_delivered_message'){
                                                 $translate_6[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -669,7 +669,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                
+
                                             @endif
                                         </div>
                                         <textarea name="delivered_message[]" class="form-control" {{$lang == $default_lang? 'required':''}} oninvalid="document.getElementById('en-link').click()">{!! $translate_6[$lang]['message']??$data['message'] !!}</textarea>
@@ -682,12 +682,12 @@
                                 if(count($dba->translations)){
                                         $translate_7 = [];
                                         foreach($dba->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='delivery_boy_assign_message'){
                                                 $translate_7[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -710,7 +710,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                
+
                                             @endif
                                         </div>
                                         <textarea name="delivery_boy_assign_message[]" class="form-control" {{$lang == $default_lang? 'required':''}} oninvalid="document.getElementById('en-link').click()">{!! $translate_7[$lang]['message']??$data['message'] !!}</textarea>
@@ -744,18 +744,18 @@
                                 </div>--}}
 
                                 @php($dbc=\App\Models\BusinessSetting::where('key','delivery_boy_delivered_message')->first())
-                                
+
                                 @php($data=$dbc?json_decode($dbc->value,true):'')
                                 <?php
                                 if(count($dbc->translations)){
                                         $translate_8 = [];
                                         foreach($dbc->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='delivery_boy_delivered_message'){
                                                 $translate_8[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -778,7 +778,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                
+
                                             @endif
                                         </div>
 
@@ -792,12 +792,12 @@
                                 if(count($opm->translations)){
                                         $translate_9 = [];
                                         foreach($opm->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='order_cancled_message'){
                                                 $translate[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>
@@ -820,7 +820,7 @@
                                                     <span class="pl-2 switch--custom-label-text text-primary on text-uppercase">{{ translate('messages.on') }}</span>
                                                     <span class="pl-2 switch--custom-label-text off text-uppercase">{{ translate('messages.off') }}</span>
                                                 </label>
-                                                
+
                                             @endif
                                         </div>
 
@@ -834,12 +834,12 @@
                                 if(count($opm->translations)){
                                         $translate_10 = [];
                                         foreach($opm->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='order_refunded_message'){
                                                 $translate_10[$lang]['message'] = $t->value;
                                             }
                                         }
-                                   
+
                                      }
 
                                 ?>

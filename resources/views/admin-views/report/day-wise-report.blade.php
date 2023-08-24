@@ -11,10 +11,10 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/report.png') }}" class="w--22" alt="">
+                    <img src="{{ asset('assets/admin/img/report.png') }}" class="w--22" alt="">
                 </span>
                 <span>
-                    {{ translate('messages.transection_report') }} 
+                    {{ translate('messages.transection_report') }}
                     @if (isset($filter) && $filter != 'all_time')
                     <span class="mb-0 h6 badge badge-soft-success ml-2"
                         id="itemCount">( {{ session('from_date') }} - {{ session('to_date') }} )</span>
@@ -421,14 +421,14 @@
                             <a id="export-excel" class="dropdown-item"
                                 href="{{ route('admin.transactions.report.day-wise-report-export', ['type' => 'excel', request()->getQueryString()]) }}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin/svg/components/excel.svg') }}"
+                                    src="{{ asset('assets/admin/svg/components/excel.svg') }}"
                                     alt="Image Description">
                                 {{ translate('messages.excel') }}
                             </a>
                             <a id="export-csv" class="dropdown-item"
                                 href="{{ route('admin.transactions.report.day-wise-report-export', ['type' => 'csv', request()->getQueryString()]) }}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin/svg/components/placeholder-csv-format.svg') }}"
+                                    src="{{ asset('assets/admin/svg/components/placeholder-csv-format.svg') }}"
                                     alt="Image Description">
                                 .{{ translate('messages.csv') }}
                             </a>
@@ -468,7 +468,7 @@
                                 <th class="border-0">{{ translate('messages.payment_status') }}</th>
                                 <th class="border-0">{{ translate('messages.action') }}</th>
                             </tr>
-                        </thead> 
+                        </thead>
                         <tbody id="set-rows">
                             @foreach ($order_transactions as $k => $ot)
                                 <tr scope="row">
@@ -552,7 +552,7 @@
                                           </span>
                                         @endif
                                     </td>
-                    
+
                                     <td>
                                         <div class="btn--container justify-content-center">
                                             <a class="btn btn-outline-success square-btn btn-sm mr-1 action-btn"  href="{{route('admin.report.generate-statement',[$ot['id']])}}">
@@ -590,10 +590,10 @@
 @endpush
 
 @push('script_2')
-    <script src="{{ asset('public/assets/admin') }}/vendor/chart.js/dist/Chart.min.js"></script>
-    <script src="{{ asset('public/assets/admin') }}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js">
+    <script src="{{ asset('assets/admin') }}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{ asset('assets/admin') }}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js">
     </script>
-    <script src="{{ asset('public/assets/admin') }}/js/hs.chartjs-matrix.js"></script>
+    <script src="{{ asset('assets/admin') }}/js/hs.chartjs-matrix.js"></script>
 
     <script>
         $(document).on('ready', function() {

@@ -3,7 +3,7 @@
 @section('title',translate('messages.settings'))
 
 @push('css_or_js')
-<link href="{{asset('public/assets/admin/css/croppie.css')}}" rel="stylesheet">
+<link href="{{asset('assets/admin/css/croppie.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/config.png')}}" class="w--30" alt="">
+                    <img src="{{asset('assets/admin/img/config.png')}}" class="w--30" alt="">
                 </span>
                 <span>
                     {{translate('messages.store')}} {{translate('messages.setup')}}
@@ -24,7 +24,7 @@
             <div class="card-body py-3">
                 <div class="d-flex flex-row justify-content-between align-items-center">
                     <h4 class="card-title align-items-center d-flex">
-                        <img src="{{asset('public/assets/admin/img/store.png')}}" class="w--20 mr-1" alt="">
+                        <img src="{{asset('assets/admin/img/store.png')}}" class="w--20 mr-1" alt="">
                         <span>{{translate('messages.store_temporarily_closed_title')}}</span>
                     </h4>
                     <label class="switch toggle-switch-lg m-0">
@@ -83,7 +83,7 @@
                             </label>
                         </div>
                     </div>
-                    
+
                     @if ($store->module->module_type == 'pharmacy')
                     @php($prescription_order_status = \App\Models\BusinessSetting::where('key', 'prescription_order_status')->first())
                     @php($prescription_order_status = $prescription_order_status ? $prescription_order_status->value : 0)
@@ -107,7 +107,7 @@
                             <label class="toggle-switch toggle-switch-sm d-flex justify-content-between border rounded px-3 form-control" for="free_delivery">
                                 <span class="pr-2">
                                     {{translate('messages.free_delivery')}}
-                                    <span data-toggle="tooltip" data-placement="right" data-original-title="{{translate('If this option is on, customers will get free delivery')}}" class="input-label-secondary"><img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="i"></span>
+                                    <span data-toggle="tooltip" data-placement="right" data-original-title="{{translate('If this option is on, customers will get free delivery')}}" class="input-label-secondary"><img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="i"></span>
                                 </span>
                                 <input type="checkbox" name="free_delivery" class="toggle-switch-input" onclick="location.href='{{route('vendor.business-settings.toggle-settings',[$store->id,$store->free_delivery?0:1, 'free_delivery'])}}'" id="free_delivery" {{$store->free_delivery?'checked':''}}>
                                 <span class="toggle-switch-label">

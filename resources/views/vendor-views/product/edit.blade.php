@@ -4,7 +4,7 @@
 
 @push('css_or_js')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{asset('public/assets/admin/css/tags-input.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/css/tags-input.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -14,7 +14,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--22" alt="">
+                    <img src="{{asset('assets/admin/img/edit.png')}}" class="w--22" alt="">
                 </span>
                 <span>
                     {{translate('messages.item_update')}}
@@ -293,7 +293,7 @@
                                     @endforeach
                                 @endif
                             </div>
-                            
+
                                 <!-- Empty Variation -->
                                 @if (!isset($product->food_variations) || count(json_decode($product->food_variations,true))<1)
                                 <div id="empty-variation">
@@ -664,7 +664,7 @@
     </script>
 
 
-    <script src="{{asset('public/assets/admin')}}/js/tags-input.min.js"></script>
+    <script src="{{asset('assets/admin')}}/js/tags-input.min.js"></script>
 
     <script>
         $('#choice_attributes').on('change', function () {
@@ -677,7 +677,7 @@
 
         function add_more_customer_choice_option(i, name) {
             let n = name;
-            
+
             $('#customer_choice_options').append(
                 `<div class="__choos-item"><div><input type="hidden" name="choice_no[]" value="${i}"><input type="text" class="form-control d-none" name="choice[]" value="${n}" placeholder="{{ translate('messages.choice_title') }}" readonly> <label class="form-label">${n}</label> </div><div><input type="text" class="form-control" name="choice_options_${i}[]" placeholder="{{ translate('messages.enter_choice_values') }}" data-role="tagsinput" onchange="combination_update()"></div></div>`
             );
@@ -789,7 +789,7 @@
         })
     </script>
 
-    <script src="{{asset('public/assets/admin/js/spartan-multi-image-picker.js')}}"></script>
+    <script src="{{asset('assets/admin/js/spartan-multi-image-picker.js')}}"></script>
     <script type="text/javascript">
         $(function () {
             $("#coba").spartanMultiImagePicker({
@@ -799,7 +799,7 @@
                 groupClassName: 'col-lg-2 col-md-4 col-sm-4 col-6',
                 maxFileSize: '',
                 placeholderImage: {
-                    image: "{{asset('public/assets/admin/img/400x400/img2.jpg')}}",
+                    image: "{{asset('assets/admin/img/400x400/img2.jpg')}}",
                     width: '100%'
                 },
                 dropFileLabel: "Drop Here",

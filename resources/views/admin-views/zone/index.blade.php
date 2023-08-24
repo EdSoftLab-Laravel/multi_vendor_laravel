@@ -13,7 +13,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/zone.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/zone.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.Add_New_Business_Zone')}}
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class="instructions-image mt-4">
-                                    <img src="{{asset('public/assets/admin/img/instructions.gif')}}" alt="instructions">
+                                    <img src="{{asset('assets/admin/img/instructions.gif')}}" alt="instructions">
                                 </div>
                             </div>
                         </div>
@@ -196,13 +196,13 @@
                                     {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                                     <a id="export-copy" class="dropdown-item" href="javascript:;">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                            src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                             alt="Image Description">
                                         {{ translate('messages.copy') }}
                                     </a>
                                     <a id="export-print" class="dropdown-item" href="javascript:;">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                            src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                             alt="Image Description">
                                         {{ translate('messages.print') }}
                                     </a>
@@ -211,19 +211,19 @@
                                         {{ translate('messages.options') }}</span>
                                     <a id="export-excel" class="dropdown-item" href="{{route('admin.zone.export', ['type'=>'excel'])}}">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                            src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                             alt="Image Description">
                                         {{ translate('messages.excel') }}
                                     </a>
                                     <a id="export-csv" class="dropdown-item" href="{{route('admin.zone.export', ['type'=>'csv'])}}">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                            src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                             alt="Image Description">
                                         .{{ translate('messages.csv') }}
                                     </a>
                                     {{-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/components/pdf.svg"
+                                            src="{{ asset('assets/admin') }}/svg/components/pdf.svg"
                                             alt="Image Description">
                                         {{ translate('messages.pdf') }}
                                     </a> --}}
@@ -249,10 +249,10 @@
                                 <th class="border-0" >{{translate('messages.stores')}}</th>
                                 <th class="border-0" >{{translate('messages.deliverymen')}}</th>
                                 <th class="border-0" >{{translate('messages.status')}}</th>
-                                @if ($digital_payment && $digital_payment['status']==1)   
+                                @if ($digital_payment && $digital_payment['status']==1)
                                 <th class="border-0" >{{translate('messages.digital_payment')}}</th>
                                 @endif
-                                @if ($config && $config['status']==1)   
+                                @if ($config && $config['status']==1)
                                 <th class="border-0" >{{translate('messages.cash_on_delivery')}}</th>
                                 @endif
                                 <th class="border-0 text-center" >{{translate('messages.action')}}</th>
@@ -291,7 +291,7 @@
                                         <form action="{{route('admin.zone.status',[$zone['id'],$zone->status?0:1])}}" method="get" id="status-{{$zone['id']}}_form">
                                         </form>
                                     </td>
-                                    @if ($digital_payment && $digital_payment['status']==1)  
+                                    @if ($digital_payment && $digital_payment['status']==1)
                                     <td>
                                         <label class="toggle-switch toggle-switch-sm" for="digital_paymentCheckbox{{$zone->id}}">
                                             <input type="checkbox" onclick="status_form_alert('digital_payment-{{$zone['id']}}',`{{ $zone->digital_payment?translate('Want_to_disable_‘Digital_Payment’?'):translate('Want_to_enable_‘Digital_Payment’?') }}`,`{{ $zone->digital_payment? translate('If_yes,_the_digital_payment_option_will_be_hidden_during_checkout.'):translate('If_yes,_Customers_can_choose_the_‘Digital_Payment’_option_during_checkout.')}}`, event)" class="toggle-switch-input" id="digital_paymentCheckbox{{$zone->id}}" {{$zone->digital_payment?'checked':''}}>
@@ -303,7 +303,7 @@
                                         </form>
                                     </td>
                                     @endif
-                                    @if ($config && $config['status']==1) 
+                                    @if ($config && $config['status']==1)
                                     <td>
                                         <label class="toggle-switch toggle-switch-sm" for="cashOnDeliveryCheckbox{{$zone->id}}">
                                             <input type="checkbox" onclick="status_form_alert('cash_on_delivery-{{$zone['id']}}',`{{ $zone->cash_on_delivery?translate('Want_to_disable_‘Cash_On_Delivery’?'):translate('Want_to_enable_‘Cash_On_Delivery’?') }}`,`{{ $zone->cash_on_delivery? translate('If_yes,_the_Cash_on_Delivery_option_will_be_hidden_during_checkout.'):translate('If_yes,_Customers_can_choose_the_‘Cash_On_Delivery’_option_during_checkout.')}}`, event)" class="toggle-switch-input" id="cashOnDeliveryCheckbox{{$zone->id}}" {{$zone->cash_on_delivery?'checked':''}}>
@@ -369,7 +369,7 @@
         </div>
     </div>
 @if ($zone_instruction == '0')
-    
+
 <div class="modal fade" id="warning-modal">
     <div class="modal-dialog modal-lg warning-modal">
         <div class="modal-content">
@@ -738,7 +738,7 @@ $(".popover-wrapper").click(function(){
                     }
                     else{
                         $('.tab-content').find('input:text').val('');
-                        $('input[name="name"]').val(null);          
+                        $('input[name="name"]').val(null);
                         lastpolygon.setMap(null);
                         $('#coordinates').val(null);
                         toastr.success("{{ translate('messages.zone_added_successfully') }}", {
@@ -763,7 +763,7 @@ $(".popover-wrapper").click(function(){
                 $(".lang_link").removeClass('active');
                 $(".lang_form").addClass('d-none');
                 $(this).addClass('active');
-    
+
                 let form_id = this.id;
                 let lang = form_id.substring(0, form_id.length - 5);
                 console.log(lang);

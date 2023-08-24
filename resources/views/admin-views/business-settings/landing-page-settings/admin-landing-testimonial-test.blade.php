@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.admin_landing_pages') }}
@@ -52,7 +52,7 @@
                                             class="form-label-secondary" data-toggle="tooltip"
                                             data-placement="right"
                                             data-original-title="{{ translate('Write_the_title_within_250_characters') }}">
-                                            <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                            <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                 alt="">
                                         </span></label>
                                         <textarea name="review" maxlength="250" placeholder="{{translate('Very Good Company')}}" class="form-control h92px">{{ $review->review }}</textarea>
@@ -104,7 +104,7 @@
                             <button type="reset" class="btn btn--reset">{{translate('Reset')}}</button>
                             <button type="submit" onclick="" class="btn btn--primary mb-2">{{translate('messages.Update')}}</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </form>
@@ -115,7 +115,7 @@
                 <input type="hidden" name="model_name" value="AdminTestimonial" >
                 <input type="hidden" name="image_path" value="reviewer_image" >
                 <input type="hidden" name="field_name" value="reviewer_image" >
-            </form> 
+            </form>
             <form  id="company_image_form" action="{{ route('admin.remove_image') }}" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{  $review?->id}}" >
@@ -123,9 +123,9 @@
                 <input type="hidden" name="model_name" value="AdminTestimonial" >
                 <input type="hidden" name="image_path" value="reviewer_company_image" >
                 <input type="hidden" name="field_name" value="company_image" >
-            </form> 
-        
-        
+            </form>
+
+
             <!--  Special review Section View -->
             <div class="modal fade" id="testimonials-section">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -139,7 +139,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Testimonial Modal -->
             <div class="modal fade" id="testimonials-status-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -175,7 +175,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>

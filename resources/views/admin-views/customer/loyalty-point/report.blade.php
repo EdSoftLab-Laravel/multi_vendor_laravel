@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/customer-loyalty.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/customer-loyalty.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                      {{translate('messages.customer_loyalty_point')}} {{translate('messages.report')}}
@@ -92,7 +92,7 @@
                             <span class="subtitle">
                                 {{translate('messages.debit')}}
                             </span>
-                            <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/1.png')}}" alt="dashboard">
+                            <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/1.png')}}" alt="dashboard">
                         </div>
                     </div>
                     <!--Debit earned End-->
@@ -103,7 +103,7 @@
                             <span class="subtitle">
                                 {{translate('messages.credit')}}
                             </span>
-                            <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/2.png')}}" alt="dashboard">
+                            <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/2.png')}}" alt="dashboard">
                         </div>
                     </div>
                     <!--credit earned end-->
@@ -114,7 +114,7 @@
                             <span class="subtitle">
                                 {{translate('messages.balance')}}
                             </span>
-                            <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/3.png')}}" alt="dashboard">
+                            <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/3.png')}}" alt="dashboard">
                         </div>
                     </div>
                     <!--balance earned end-->
@@ -203,10 +203,10 @@
 
 @push('script_2')
 
-    <script src="{{asset('public/assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
     <script
-        src="{{asset('public/assets/admin')}}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js"></script>
-    <script src="{{asset('public/assets/admin')}}/js/hs.chartjs-matrix.js"></script>
+        src="{{asset('assets/admin')}}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js"></script>
+    <script src="{{asset('assets/admin')}}/js/hs.chartjs-matrix.js"></script>
 
     <script>
         $(document).on('ready', function () {

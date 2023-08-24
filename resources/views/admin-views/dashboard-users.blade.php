@@ -49,8 +49,8 @@
                         </div>
                         @foreach ($customers as $key => $customer)
                             <img src="{{ asset('storage/app/public/profile') }}/{{ $customer['image'] }}"
-                            onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
-                        @endforeach 
+                            onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
+                        @endforeach
                     </div>
                     <h3 class="title">{{$total_customers}}</h3>
                     <h5 class="subtitle text-capitalize">{{translate('messages.total_customer')}}</h5>
@@ -65,8 +65,8 @@
                         </div>
                         @foreach ($delivery_man as $key => $dm)
                             <img src="{{ asset('storage/app/public/delivery-man') }}/{{ $dm['image'] }}"
-                            onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
-                        @endforeach 
+                            onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
+                        @endforeach
                     </div>
                     <h3 class="title">{{$total_deliveryman}}</h3>
                     <h5 class="subtitle text-capitalize">{{translate('messages.total_delivery_man')}}</h5>
@@ -84,7 +84,7 @@
                             @break
                         @endif
                         <img src="{{ asset('storage/app/public/delivery-man') }}/{{ $item['image'] }}"
-                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
+                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
                         @endforeach
                     </div>
                     <h3 class="title">{{$total_employees}}</h3>
@@ -455,7 +455,7 @@
                         position: point,
                         map: map,
                         title: deliveryMan[i].image,
-                        icon: "{{ asset('public/assets/admin/img/delivery_boy_map.png') }}"
+                        icon: "{{ asset('assets/admin/img/delivery_boy_map.png') }}"
                     });
                     dmMarkers[deliveryMan[i].id] = marker;
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -537,9 +537,9 @@
           name: '{{ translate('New_Customer_Growth') }}',
           data: [{{$last_year_users > 0 ? number_format($user_data[1]/$last_year_users,2) : 0}},
            {{$user_data[1] > 0 ? number_format($user_data[2]/$user_data[1],2) : 0}},
-           {{$user_data[2] > 0 ? number_format($user_data[3]/$user_data[2],2) : 0}}, 
-           {{$user_data[3] > 0 ? number_format($user_data[4]/$user_data[3],2) : 0}}, 
-           {{$user_data[4] > 0 ? number_format($user_data[5]/$user_data[4],2) : 0}}, 
+           {{$user_data[2] > 0 ? number_format($user_data[3]/$user_data[2],2) : 0}},
+           {{$user_data[3] > 0 ? number_format($user_data[4]/$user_data[3],2) : 0}},
+           {{$user_data[4] > 0 ? number_format($user_data[5]/$user_data[4],2) : 0}},
            {{$user_data[5] > 0 ? number_format($user_data[6]/$user_data[5],2) : 0}},
            {{$user_data[6] > 0 ? number_format($user_data[7]/$user_data[6],2) : 0}},
            {{$user_data[7] > 0 ? number_format($user_data[8]/$user_data[7],2) : 0}},

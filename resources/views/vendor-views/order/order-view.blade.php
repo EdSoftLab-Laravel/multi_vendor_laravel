@@ -219,7 +219,7 @@
                                                         data-target="#imagemodal{{ $key }}"
                                                         title="{{ translate('messages.order') }} {{ translate('messages.attachment') }}">
                                                         <div class="gallary-card ml-auto">
-                                                            <img src="{{ asset('storage/app/' . 'public/order/' . $item) }}"
+                                                            <img src="{{ asset('storage/app/' . 'order/' . $item) }}"
                                                                 alt="{{ translate('messages.prescription') }}"
                                                                 class="initial--22 object-cover">
                                                         </div>
@@ -238,12 +238,12 @@
                                                                         class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <img src="{{ asset('storage/app/' . 'public/order/' . $item) }}"
+                                                                <img src="{{ asset('storage/app/' . 'order/' . $item) }}"
                                                                     class="initial--22 w-100">
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <a class="btn btn-primary"
-                                                                    href="{{ route('admin.file-manager.download', base64_encode('public/order/' . $item)) }}"><i
+                                                                    href="{{ route('admin.file-manager.download', base64_encode('order/' . $item)) }}"><i
                                                                         class="tio-download"></i>
                                                                     {{ translate('messages.download') }}
                                                                 </a>
@@ -260,7 +260,7 @@
                                     <button class="btn w-100 px-0" data-toggle="modal" data-target="#imagemodal"
                                         title="{{ translate('messages.order') }} {{ translate('messages.attachment') }}">
                                         <div class="gallary-card ml-auto">
-                                            <img src="{{ asset('storage/app/' . 'public/order/' . $order->order_attachment) }}"
+                                            <img src="{{ asset('storage/app/' . 'order/' . $order->order_attachment) }}"
                                                 alt="{{ translate('messages.prescription') }}"
                                                 class="initial--22 object-cover">
                                         </div>
@@ -277,12 +277,12 @@
                                                             class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img src="{{ asset('storage/app/' . 'public/order/' . $order->order_attachment) }}"
+                                                    <img src="{{ asset('storage/app/' . 'order/' . $order->order_attachment) }}"
                                                         class="initial--22 w-100">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a class="btn btn-primary"
-                                                        href="{{ route('admin.file-manager.download', base64_encode('public/order/' . $order->order_attachment)) }}"><i
+                                                        href="{{ route('admin.file-manager.download', base64_encode('order/' . $order->order_attachment)) }}"><i
                                                             class="tio-download"></i> {{ translate('messages.download') }}
                                                     </a>
                                                 </div>
@@ -303,14 +303,14 @@
                         $total_addon_price = 0;
                         $product_price = 0;
                         $store_discount_amount = 0;
-                        
+
                         if ($order->prescription_order == 1) {
                             $product_price = $order['order_amount'] - $order['delivery_charge'] - $order['total_tax_amount'] - $order['dm_tips'] + $order['store_discount_amount'];
                             if($order->tax_status == 'included'){
                                 $product_price += $order['total_tax_amount'];
                             }
                         }
-                        
+
                         $total_addon_price = 0;
                         ?>
                         <div class="table-responsive">
@@ -343,7 +343,7 @@
                                                             href="{{ route('vendor.item.view', $detail->item['id']) }}">
                                                             <img class="img-fluid rounded"
                                                                 src="{{ asset('storage/app/public/product') }}/{{ $detail->item['image'] }}"
-                                                                onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                                                onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                 alt="Image Description">
                                                         </a>
                                                         <div class="media-body">
@@ -453,7 +453,7 @@
                                                         <div class="avatar avatar-xl mr-3">
                                                             <img class="img-fluid"
                                                                 src="{{ asset('storage/app/public/campaign') }}/{{ $detail->campaign['image'] }}"
-                                                                onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                                                onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                 alt="Image Description">
                                                         </div>
                                                         <div class="media-body">
@@ -521,19 +521,19 @@
                             <hr>
                         </div>
                         <?php
-                        
+
                         $coupon_discount_amount = $order['coupon_discount_amount'];
-                        
+
                         $total_price = $product_price + $total_addon_price - $store_discount_amount - $coupon_discount_amount;
-                        
+
                         $total_tax_amount = $order['total_tax_amount'];
                         if($order->tax_status == 'included'){
                                 $total_tax_amount=0;
                             }
                         $tax_included = \App\Models\BusinessSetting::where(['key'=>'tax_included'])->first() ?  \App\Models\BusinessSetting::where(['key'=>'tax_included'])->first()->value : 0;
-                        
+
                         $store_discount_amount = $order['store_discount_amount'];
-                        
+
                         ?>
                         <div class="row justify-content-md-end mb-3 mx-0 mt-4">
                             <div class="col-md-9 col-lg-8">
@@ -685,7 +685,7 @@
                                 <div class="media align-items-center customer--information-single" href="javascript:">
                                     <div class="avatar avatar-circle">
                                         <img class="avatar-img"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/160x160/img1.jpg') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
                                             src="{{ asset('storage/app/public/delivery-man/' . $order->delivery_man->image) }}"
                                             alt="Image Description">
                                     </div>
@@ -758,7 +758,7 @@
                             <div class="media align-items-center customer--information-single" href="javascript:">
                                 <div class="avatar avatar-circle">
                                     <img class="avatar-img"
-                                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img1.jpg') }}'"
+                                        onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
                                         src="{{ asset('storage/app/public/profile/' . $order->customer->image) }}"
                                         alt="Image Description">
                                 </div>
@@ -1139,7 +1139,7 @@
                 })
             }
         }
-        
+
         function last_location_view() {
             toastr.warning('Only available when order is out for delivery!', {
                 CloseButton: true,

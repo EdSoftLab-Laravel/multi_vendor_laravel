@@ -11,7 +11,7 @@
     <div class="page-header">
         <h1 class="page-header-title">
             <span class="page-header-icon">
-                <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
             </span>
             <span>
                 {{translate('messages.edit_role')}}
@@ -156,7 +156,7 @@
                             <label class="form-check-label qcont" for="custom_role">{{translate('messages.custom_role')}}</label>
                         </div>
                     </div> --}}
-                    
+
                     <div class="check-item">
                         <div class="form-group form-check form--check">
                             <input type="checkbox" name="modules[]" value="campaign" class="form-check-input"

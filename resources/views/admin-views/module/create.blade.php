@@ -3,7 +3,7 @@
 @section('title',translate('messages.business_modules'))
 
 @push('css_or_js')
-<link rel="stylesheet" href="{{asset('public/assets/admin/css/radio-image.css')}}">
+<link rel="stylesheet" href="{{asset('assets/admin/css/radio-image.css')}}">
 
 @endpush
 
@@ -27,7 +27,7 @@
                     <div class="business-notes">
                         <h6><img src="{{asset('/public/assets/admin/img/notes.png')}}" alt=""> {{translate('Note')}}</h6>
                         <div>
-                        {{translate('messages.Don’t_forget_to_click_the_‘Add_Module’_button_below_to_save_the_new_business_module.')}}  
+                        {{translate('messages.Don’t_forget_to_click_the_‘Add_Module’_button_below_to_save_the_new_business_module.')}}
                         </div>
                     </div>
                 </div>
@@ -159,13 +159,13 @@
                         <div class='col-lg-3 col-sm-6 col-12 text-center'>
                             <input type="radio" name="theme" require id="img1" class="d-none imgbgchk" value="1">
                             <label for="img1">
-                                <img class="img-thumbnail rounded" src="{{asset('public/assets/admin/img/Theme-1.png')}}" alt="Image 1">
+                                <img class="img-thumbnail rounded" src="{{asset('assets/admin/img/Theme-1.png')}}" alt="Image 1">
                             </label>
                         </div>
                         <div class='col-lg-3 col-sm-6 col-12 text-center'>
                             <input type="radio" name="theme" require id="img2" class="d-none imgbgchk" value="2">
                             <label for="img2">
-                                <img class="img-thumbnail rounded" src="{{asset('public/assets/admin/img/Theme-2.png')}}" alt="Image 2">
+                                <img class="img-thumbnail rounded" src="{{asset('assets/admin/img/Theme-2.png')}}" alt="Image 2">
                             </label>
                         </div>
                         <div class="col-lg-6">
@@ -179,7 +179,7 @@
                                                     <small class="text-danger">* ( {{translate('messages.ratio')}} 1:1)</small>
                                                 </label>
                                                 <center class="my-auto py-3">
-                                                    <img class="initial--15" id="viewer" src="{{asset('public/assets/admin/img/400x400/img2.jpg')}}" alt="image" />
+                                                    <img class="initial--15" id="viewer" src="{{asset('assets/admin/img/400x400/img2.jpg')}}" alt="image" />
                                                 </center>
                                                 <div class="custom-file">
                                                     <input type="file" name="icon" id="customFileEg1" class="custom-file-input" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
@@ -194,7 +194,7 @@
                                                     <small class="text-danger">* ( {{translate('messages.ratio')}} 1:1)</small>
                                                 </label>
                                                 <center class="my-auto py-3">
-                                                    <img class="initial--15" id="viewer2" src="{{asset('public/assets/admin/img/400x400/img2.jpg')}}" alt="image" />
+                                                    <img class="initial--15" id="viewer2" src="{{asset('assets/admin/img/400x400/img2.jpg')}}" alt="image" />
                                                 </center>
                                                 <div class="custom-file">
                                                     <input type="file" name="thumbnail" id="customFileEg2" class="custom-file-input" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
@@ -218,7 +218,7 @@
                                         <small class="text-danger">* ( {{translate('messages.ratio')}} 1:1)</small>
                                     </label>
                                     <center class="my-auto py-3">
-                                        <img class="initial--15" id="viewer" src="{{asset('public/assets/admin/img/400x400/img2.jpg')}}" alt="image" />
+                                        <img class="initial--15" id="viewer" src="{{asset('assets/admin/img/400x400/img2.jpg')}}" alt="image" />
                                     </center>
                                     <div class="custom-file">
                                         <input type="file" name="icon" id="customFileEg1" class="custom-file-input" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
@@ -233,7 +233,7 @@
                                         <small class="text-danger">* ( {{translate('messages.ratio')}} 1:1)</small>
                                     </label>
                                     <center class="my-auto py-3">
-                                        <img class="initial--15" id="viewer2" src="{{asset('public/assets/admin/img/400x400/img2.jpg')}}" alt="image" />
+                                        <img class="initial--15" id="viewer2" src="{{asset('assets/admin/img/400x400/img2.jpg')}}" alt="image" />
                                     </center>
                                     <div class="custom-file">
                                         <input type="file" name="thumbnail" id="customFileEg2" class="custom-file-input" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
@@ -331,8 +331,8 @@
 </script>
 <script>
         $('#reset_btn').click(function(){
-            $('#viewer').attr('src','{{asset('public/assets/admin/img/400x400/img2.jpg')}}');
-            $('#viewer2').attr('src','{{asset('public/assets/admin/img/400x400/img2.jpg')}}');
+            $('#viewer').attr('src','{{asset('assets/admin/img/400x400/img2.jpg')}}');
+            $('#viewer2').attr('src','{{asset('assets/admin/img/400x400/img2.jpg')}}');
         })
 </script>
 @endpush

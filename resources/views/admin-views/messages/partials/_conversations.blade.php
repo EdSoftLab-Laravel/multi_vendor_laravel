@@ -5,7 +5,7 @@
             <div class="chat-user-info-img">
                 <img class="avatar-img"
                     src="{{asset('storage/app/public/profile/'.$user['image'])}}"
-                    onerror="this.src='{{asset('public/assets/admin')}}/img/160x160/img1.jpg'"
+                    onerror="this.src='{{asset('assets/admin')}}/img/160x160/img1.jpg'"
                     alt="Image Description">
             </div>
             <div class="chat-user-info-content">
@@ -212,7 +212,7 @@
             groupClassName: 'attc--img border-0',
             maxFileSize: '',
             placeholderImage: {
-                image: '{{ asset('public/assets/admin/img/gallery.png') }}',
+                image: '{{ asset('assets/admin/img/gallery.png') }}',
                 width: '100%'
             },
             dropFileLabel: "Drop Here",

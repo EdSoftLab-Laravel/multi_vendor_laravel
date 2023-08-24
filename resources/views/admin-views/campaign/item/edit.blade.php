@@ -3,7 +3,7 @@
 @section('title','Update campaign')
 
 @push('css_or_js')
-    <link href="{{asset('public/assets/admin/css/tags-input.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/css/tags-input.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.update')}} {{translate('messages.campaign')}}
@@ -20,7 +20,7 @@
             </h1>
         </div>
         <!-- End Page Header -->
-        <form action="{{route('admin.campaign.update-item', [$campaign->id])}}" method="post" 
+        <form action="{{route('admin.campaign.update-item', [$campaign->id])}}" method="post"
         id="campaign_form"
                 enctype="multipart/form-data">
                 <div class="row g-2">
@@ -130,7 +130,7 @@
 
                             <center id="image-viewer-section" class="py-3 my-auto">
                                 <img class="img--120" id="viewer"
-                                src="{{asset('storage/app/public/campaign')}}/{{$campaign->image}}" alt="campaign image" onerror='this.src="{{asset('public/assets/admin/img/100x100/2.png')}}"'/>
+                                src="{{asset('storage/app/public/campaign')}}/{{$campaign->image}}" alt="campaign image" onerror='this.src="{{asset('assets/admin/img/100x100/2.png')}}"'/>
                             </center>
                             <div class="custom-file">
                                 <input type="file" name="image" id="customFileEg1" class="custom-file-input"
@@ -454,7 +454,7 @@
             @endif
         });
     </script>
-    <script src="{{asset('public/assets/admin')}}/js/tags-input.min.js"></script>
+    <script src="{{asset('assets/admin')}}/js/tags-input.min.js"></script>
 
     <script>
         $('#choice_attributes').on('change', function () {

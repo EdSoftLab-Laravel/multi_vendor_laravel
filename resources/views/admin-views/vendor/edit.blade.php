@@ -11,7 +11,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{translate('messages.update')}} {{translate('messages.store')}}</span>
             </h1>
@@ -141,14 +141,14 @@
                                     </label>
                                     <center>
                                         <img class="img--110 min-height-170px min-width-170px" id="viewer"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload.png') }}'"
                                             src="{{asset('storage/app/public/store').'/'.$store->logo}}" alt="{{$store->name}}"
                                             alt="logo image" />
                                     </center>
                                     <input type="file" name="logo" id="customFileEg1" class="custom-file-input"
                                         accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
                                 </label>
-                                
+
                                 <label class="__custom-upload-img">
                                     @php($icon = \App\Models\BusinessSetting::where('key', 'icon')->first())
                                     @php($icon = $icon->value ?? '')
@@ -157,7 +157,7 @@
                                     </label>
                                     <center>
                                         <img class="img--vertical min-height-170px min-width-170px" id="coverImageViewer"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload-img.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
                                             src="{{asset('storage/app/public/store/cover/'.$store->cover_photo)}}"
                                             alt="Fav icon" />
                                     </center>
@@ -172,7 +172,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title m-0 d-flex align-items-center">
-                                <img class="mr-2 align-self-start w--20" src="{{asset('public/assets/admin/img/resturant.png')}}" alt="instructions">
+                                <img class="mr-2 align-self-start w--20" src="{{asset('assets/admin/img/resturant.png')}}" alt="instructions">
                                 <span>{{translate('store_information')}}</span>
                             </h4>
                         </div>
@@ -444,19 +444,19 @@
         function readURL(input, viewer) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-                
+
                 reader.onload = function (e) {
                     $('#'+viewer).attr('src', e.target.result);
                 }
-                
+
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        
+
         $("#customFileEg1").change(function () {
             readURL(this, 'viewer');
         });
-        
+
         $("#coverImageUpload").change(function () {
             readURL(this, 'coverImageViewer');
         });
@@ -474,7 +474,7 @@
         });
     </script>
 
-    <script src="{{asset('public/assets/admin/js/spartan-multi-image-picker.js')}}"></script>
+    <script src="{{asset('assets/admin/js/spartan-multi-image-picker.js')}}"></script>
     <script type="text/javascript">
         $(function () {
             $("#coba").spartanMultiImagePicker({
@@ -484,7 +484,7 @@
                 groupClassName: 'col-lg-2 col-md-4 col-sm-4 col-6',
                 maxFileSize: '',
                 placeholderImage: {
-                    image: '{{asset('public/assets/admin/img/400x400/img2.jpg')}}',
+                    image: '{{asset('assets/admin/img/400x400/img2.jpg')}}',
                     width: '100%'
                 },
                 dropFileLabel: "Drop Here",
@@ -667,9 +667,9 @@
     </script>
         <script>
             $('#reset_btn').click(function(){
-                $('#viewer').attr('src', "{{ asset('public/assets/admin/img/upload.png') }}");
+                $('#viewer').attr('src', "{{ asset('assets/admin/img/upload.png') }}");
                 $('#customFileEg1').val(null);
-                $('#coverImageViewer').attr('src', "{{ asset('public/assets/admin/img/upload-img.png') }}");
+                $('#coverImageViewer').attr('src', "{{ asset('assets/admin/img/upload-img.png') }}");
                 $('#coverImageUpload').val(null);
                 $('#choice_zones').val(null).trigger('change');
                 $('#module_id').val(null).trigger('change');
@@ -689,7 +689,7 @@
             }
             });
 
-            
+
 
             $('#module_id').select2({
                     ajax: {
@@ -745,7 +745,7 @@
         var type = $("#delivery_time_type").val();
         $("#floating--date").removeClass('active');
         $("#time_view").val(min+' to '+max+' '+type);
-        
+
     }
 </script>
 @endpush

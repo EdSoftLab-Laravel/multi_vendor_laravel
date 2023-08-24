@@ -4,7 +4,7 @@
 
 @push('css_or_js')
     <!-- Custom styles for this page -->
-    <link href="{{asset('public/assets/admin/css/croppie.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/css/croppie.css')}}" rel="stylesheet">
 
 @endpush
 
@@ -20,35 +20,35 @@
 
                         <div class="order-info-item"  onclick="location.href='{{route('admin.order.list',['all'])}}?vendor[]={{$store->id}}'">
                             <div class="order-info-icon">
-                                <img src="{{asset('public/assets/admin/img/navbar/all.png')}}" alt="public">
+                                <img src="{{asset('assets/admin/img/navbar/all.png')}}" alt="public">
                             </div>
                             <h6 class="card-subtitle">{{translate('messages.all')}}<span class="amount text--primary">{{\App\Models\Order::where('store_id', $store->id)->StoreOrder()->count()}}</span></h6>
                         </div>
                         <span class="order-info-seperator"></span>
                         <div class="order-info-item" onclick="location.href='{{route('admin.order.list',['scheduled'])}}?vendor[]={{$store->id}}'">
                             <div class="order-info-icon">
-                                <img src="{{asset('public/assets/admin/img/navbar/schedule.png')}}" alt="public">
+                                <img src="{{asset('assets/admin/img/navbar/schedule.png')}}" alt="public">
                             </div>
                             <h6 class="card-subtitle">{{translate('messages.scheduled')}}<span class="amount text--warning">{{\App\Models\Order::Scheduled()->where('store_id', $store->id)->StoreOrder()->count()}}</span></h6>
                         </div>
                         <span class="order-info-seperator"></span>
                         <div class="order-info-item" onclick="location.href='{{route('admin.order.list',['pending'])}}?vendor[]={{$store->id}}'">
                             <div class="order-info-icon">
-                                <img src="{{asset('public/assets/admin/img/navbar/pending.png')}}" alt="public">
+                                <img src="{{asset('assets/admin/img/navbar/pending.png')}}" alt="public">
                             </div>
                             <h6 class="card-subtitle">{{translate('messages.pending')}}<span class="amount text--info">{{\App\Models\Order::where(['order_status'=>'pending','store_id'=>$store->id])->StoreOrder()->OrderScheduledIn(30)->count()}}</span></h6>
                         </div>
                         <span class="order-info-seperator"></span>
                         <div class="order-info-item" onclick="location.href='{{route('admin.order.list',['delivered'])}}?vendor[]={{$store->id}}'">
                             <div class="order-info-icon">
-                                <img src="{{asset('public/assets/admin/img/navbar/delivered.png')}}" alt="public">
+                                <img src="{{asset('assets/admin/img/navbar/delivered.png')}}" alt="public">
                             </div>
                             <h6 class="card-subtitle">{{translate('messages.delivered')}}<span class="amount text--success">{{\App\Models\Order::where(['order_status'=>'delivered', 'store_id'=>$store->id])->StoreOrder()->count()}}</span></h6>
                         </div>
                         <span class="order-info-seperator"></span>
                         <div class="order-info-item" onclick="location.href='{{route('admin.order.list',['canceled'])}}?vendor[]={{$store->id}}'">
                             <div class="order-info-icon">
-                                <img src="{{asset('public/assets/admin/img/navbar/cancel.png')}}" alt="public">
+                                <img src="{{asset('assets/admin/img/navbar/cancel.png')}}" alt="public">
                             </div>
                             <h6 class="card-subtitle">{{translate('messages.canceled')}}<span class="amount text--success">{{\App\Models\Order::where(['order_status'=>'canceled', 'store_id'=>$store->id])->StoreOrder()->count()}}</span></h6>
                         </div>
@@ -87,13 +87,13 @@
                                     {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                                     <a id="export-copy" class="dropdown-item" href="javascript:;">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                            src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                             alt="Image Description">
                                         {{ translate('messages.copy') }}
                                     </a>
                                     <a id="export-print" class="dropdown-item" href="javascript:;">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                            src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                             alt="Image Description">
                                         {{ translate('messages.print') }}
                                     </a>
@@ -102,19 +102,19 @@
                                         {{ translate('messages.options') }}</span>
                                     <a id="export-excel" class="dropdown-item" href="{{route('admin.order.store-export', ['type'=>'excel', 'store_id'=>$store->id])}}">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                            src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                             alt="Image Description">
                                         {{ translate('messages.excel') }}
                                     </a>
                                     <a id="export-csv" class="dropdown-item" href="{{route('admin.order.store-export', ['type'=>'csv', 'store_id'=>$store->id])}}">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                            src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                             alt="Image Description">
                                         .{{ translate('messages.csv') }}
                                     </a>
                                     {{-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                         <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                            src="{{ asset('public/assets/admin') }}/svg/components/pdf.svg"
+                                            src="{{ asset('assets/admin') }}/svg/components/pdf.svg"
                                             alt="Image Description">
                                         {{ translate('messages.pdf') }}
                                     </a> --}}

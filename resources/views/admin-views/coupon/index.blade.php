@@ -8,7 +8,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/add.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/add.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('Add new coupon')}}
@@ -50,7 +50,7 @@
                                             </label>
                                             <input type="text" name="title[]" id="default_title"
                                                 class="form-control" placeholder="{{ translate('messages.new_coupon') }}"
-                                            
+
                                                 oninvalid="document.getElementById('en-link').click()">
                                         </div>
                                         <input type="hidden" name="lang[]" value="default">
@@ -384,7 +384,7 @@
                 },
                 language: {
                     zeroRecords: '<div class="text-center p-4">' +
-                    '<img class="w-7rem mb-3" src="{{asset('public/assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
+                    '<img class="w-7rem mb-3" src="{{asset('assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
 
                     '</div>'
                 }

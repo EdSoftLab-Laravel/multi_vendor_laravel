@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/edit.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/edit.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                    {{ $zone->name }} {{ translate('Zone_Settings') }}
@@ -30,7 +30,7 @@
                     <span class="badge badge-soft-danger mt-2">{{ translate('NB:_MUST_select_at_least_‘one’_payment_method.') }}</span>
                     <div class="check--item-wrapper mb-1">
                         @php($config=\App\CentralLogics\Helpers::get_business_settings('cash_on_delivery'))
-                        @if ($config && $config['status']==1)                         
+                        @if ($config && $config['status']==1)
                         <div class="check-item">
                             <div class="form-group form-check form--check">
                                 <input type="checkbox" name="cash_on_delivery" value="cash_on_delivery" class="form-check-input"
@@ -40,7 +40,7 @@
                         </div>
                         @endif
                         @php($digital_payment=\App\CentralLogics\Helpers::get_business_settings('digital_payment'))
-                        @if ($digital_payment && $digital_payment['status']==1)                     
+                        @if ($digital_payment && $digital_payment['status']==1)
                         <div class="check-item">
                             <div class="form-group form-check form--check">
                                 <input type="checkbox" name="digital_payment" value="digital_payment" class="form-check-input"
@@ -161,7 +161,7 @@
 @endsection
 
 @push('script_2')
-    <script src="{{ asset('public/assets/admin') }}/js/tags-input.min.js"></script>
+    <script src="{{ asset('assets/admin') }}/js/tags-input.min.js"></script>
     <script>
         let modules = <?php echo json_encode($modules_array); ?>;
         let mod = {{ count($zone->modules) }};

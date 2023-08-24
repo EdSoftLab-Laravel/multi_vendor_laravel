@@ -10,14 +10,14 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center __gap-15px">
                 <h1 class="page-header-title mr-3 mb-0">
                     <span class="page-header-icon">
-                        <img src="{{ asset('public/assets/admin/img/email-setting.png') }}" class="w--26" alt="">
+                        <img src="{{ asset('assets/admin/img/email-setting.png') }}" class="w--26" alt="">
                     </span>
                     <span>
                         {{ translate('messages.Email Templates') }}
                     </span>
-                </h1> 
-                @include('admin-views.business-settings.email-format-setting.partials.email-template-options')   
-            </div>            
+                </h1>
+                @include('admin-views.business-settings.email-format-setting.partials.email-template-options')
+            </div>
             @include('admin-views.business-settings.email-format-setting.partials.user-email-template-setting-links')
         </div>
         <div class="tab-content">
@@ -30,7 +30,7 @@
                             <h5 class="text-capitalize m-0 text--primary pl-2">
                                 {{translate('Send Mail on Refund Order ?')}}
                         <span class="form-label-secondary text--primary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Customers_will_get_an_automated_email_when_they_receive_a_refund_to_their_wallet_from_Admin_with_refund_details.') }}">
-                                    <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                    <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                 </span>
                             </h5>
                             <label class="toggle-switch toggle-switch-sm">
@@ -39,7 +39,7 @@
                                     <span class="toggle-switch-indicator"></span>
                                 </span>
                             </label>
-                        </div> 
+                        </div>
                         <form action="{{route('admin.business-settings.email-status',['user','refund-order',$mail_status == '1'?0:1])}}" method="get" id="mail-status_form">
                                             </form>
                     </div>
@@ -104,7 +104,7 @@
                                     <br>
                                     <div>
                                         <h5 class="card-title mb-3">
-                                            <img src="{{asset('public/assets/admin/img/pointer.png')}}" class="mr-2" alt="">
+                                            <img src="{{asset('assets/admin/img/pointer.png')}}" class="mr-2" alt="">
                                             {{translate('Header Content')}}
                                         </h5>
                                         @if ($language)
@@ -174,13 +174,13 @@
                                                         </span> --}}
                                                     </label>
                                                     <textarea class="ckeditor form-control" name="body[]">
-                                                        Hi Sabrina, 
+                                                        Hi Sabrina,
                                                     </textarea>
                                                 </div>
                                             </div>
                                             <input type="hidden" name="lang[]" value="default">
                                         @endif
-                                        
+
                                     </div>
                                     <br>
                                     {{-- <div>
@@ -195,7 +195,7 @@
                                     <br> --}}
                                     <div>
                                         <h5 class="card-title mb-3">
-                                            <img src="{{asset('public/assets/admin/img/pointer.png')}}" class="mr-2" alt="">
+                                            <img src="{{asset('assets/admin/img/pointer.png')}}" class="mr-2" alt="">
                                             {{translate('Footer Content')}}
                                         </h5>
                                         <div class="__bg-F8F9FC-card">
@@ -354,8 +354,8 @@
                         </div>
                     </div>
                 </form>
-                
-                
+
+
                 <!-- Update Status Modal -->
                 <div class="modal fade" id="place-order-status-modal">
                     <div class="modal-dialog status-warning-modal">
@@ -391,7 +391,7 @@
                                     </div> -->
                                     <div class="btn--container justify-content-center">
                                         <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                        <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                        <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                             {{translate("Cancel")}}
                                         </button>
                                     </div>
@@ -400,11 +400,11 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
-        
+
         <!-- Instructions Modal -->
 @include('admin-views.business-settings.email-format-setting.partials.email-template-instructions')
 
@@ -420,12 +420,12 @@
             $(".lang_link").removeClass('active');
             $(".lang_form").addClass('d-none');
             $(this).addClass('active');
-    
+
             let form_id = this.id;
             let lang = form_id.substring(0, form_id.length - 5);
-    
+
             console.log(lang);
-    
+
             $("#"+lang+"-form").removeClass('d-none');
             $("#"+lang+"-form1").removeClass('d-none');
             $("#"+lang+"-form2").removeClass('d-none');

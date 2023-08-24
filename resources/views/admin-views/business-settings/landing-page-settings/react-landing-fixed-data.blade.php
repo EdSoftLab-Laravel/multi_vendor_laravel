@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.react_landing_page') }}
@@ -101,7 +101,7 @@
                 <input type="hidden" name="model_name" value="DataSetting" >
                 <input type="hidden" name="image_path" value="promotional_banner" >
                 <input type="hidden" name="field_name" value="value" >
-            </form> 
+            </form>
             <form action="{{ route('admin.business-settings.react-landing-page-settings', 'fixed-newsletter') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <h5 class="card-title mb-3">
@@ -122,14 +122,14 @@
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Title')}} ({{ translate('messages.default') }})
                                     <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_30_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="30" name="fixed_newsletter_title[]" class="form-control" value="{{$fixed_newsletter_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Sub Title')}} ({{ translate('messages.default') }})
                                     <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_100_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="100" name="fixed_newsletter_sub_title[]" class="form-control" value="{{$fixed_newsletter_sub_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.sub_title_here...')}}">
                                 </div>
@@ -140,34 +140,34 @@
                                 if(isset($fixed_newsletter_title->translations)&&count($fixed_newsletter_title->translations)){
                                         $fixed_newsletter_title_translate = [];
                                         foreach($fixed_newsletter_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='fixed_newsletter_title'){
                                                 $fixed_newsletter_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                 if(isset($fixed_newsletter_sub_title->translations)&&count($fixed_newsletter_sub_title->translations)){
                                         $fixed_newsletter_sub_title_translate = [];
                                         foreach($fixed_newsletter_sub_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='fixed_newsletter_sub_title'){
                                                 $fixed_newsletter_sub_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_30_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="30" name="fixed_newsletter_title[]" class="form-control" value="{{ $fixed_newsletter_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Sub Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_100_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="100" name="fixed_newsletter_sub_title[]" class="form-control" value="{{ $fixed_newsletter_sub_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.sub_title_here...')}}">
                                         </div>
@@ -215,7 +215,7 @@
                             <div class="row g-3 lang_form default-form">
                                 <div class="col-12">
                                     <label class="form-label">{{translate('short_Description')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_120_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="120" name="fixed_footer_description[]" class="form-control" value="{{$fixed_footer_description?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
@@ -226,18 +226,18 @@
                                 if(isset($fixed_footer_description->translations)&&count($fixed_footer_description->translations)){
                                         $fixed_footer_description_translate = [];
                                         foreach($fixed_footer_description->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='fixed_footer_description'){
                                                 $fixed_footer_description_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form1">
                                         <div class="col-12">
                                             <label class="form-label">{{translate('short_Description')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_120_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="120" name="fixed_footer_description[]" class="form-control" value="{{ $fixed_footer_description_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
@@ -262,7 +262,7 @@
                     </div>
                 </div>
             </form>
-        
+
             <!-- Feature Modal -->
             <div class="modal fade" id="feature-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -298,7 +298,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>
@@ -307,7 +307,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Module Setup Section View -->
             <div class="modal fade" id="admin-earn-money">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -346,7 +346,7 @@
                         </div>
                     </div>
                 </div>
-            </div>         
+            </div>
         </div>
     </div>
 </div>

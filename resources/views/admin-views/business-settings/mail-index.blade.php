@@ -11,7 +11,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/email.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/email.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{ translate('messages.smtp') }} {{ translate('messages.mail') }}
                         {{ translate('messages.setup') }}
@@ -20,7 +20,7 @@
             @include('admin-views.business-settings.partials.third-party-links')
         </div>
         <!-- End Page Header -->
-        
+
         <div class="card min-h-60vh">
             <div class="card-header card-header-shadow pb-0">
                 <div class="d-flex flex-wrap justify-content-between w-100 row-gap-1">
@@ -53,7 +53,7 @@
                     <div class="tab-pane fade show active" id="mail-config">
                         @php($config = \App\Models\BusinessSetting::where(['key' => 'mail_config'])->first())
                         @php($data = $config ? json_decode($config['value'], true) : null)
-                        
+
                         <form action="{{route('admin.business-settings.third-party.mail-config-status')}}"
                         method="post" id="mail-config-disable_form">
                         @csrf
@@ -141,7 +141,7 @@
                                             <button type="reset" class="btn btn--reset">{{translate('messages.reset')}}</button>
                                             <button type="{{ env('APP_MODE') != 'demo' ? 'submit' : 'button' }}"
                                             onclick="{{ env('APP_MODE') != 'demo' ? '' : 'call_demo()' }}"
-                                            class="btn btn--primary" 
+                                            class="btn btn--primary"
                                             {{-- data-toggle="modal" data-target="#update-data-modal" --}}
                                             >{{ translate('messages.save') }}</button>
                                         </div>
@@ -154,7 +154,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Mail Sent -->
     <div class="modal fade" id="sent-mail-modal">
         <div class="modal-dialog status-warning-modal">

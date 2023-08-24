@@ -39,7 +39,7 @@
             <!-- Collected Cash Card Example -->
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="resturant-card card--bg-1">
-                    <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/1.png')}}" alt="public">
+                    <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/1.png')}}" alt="public">
                     <div class="title text-capitalize">{{$customer->wallet_balance??0}}</div>
                     <div class="subtitle">{{translate('messages.wallet')}} {{translate('messages.balance')}}</div>
                 </div>
@@ -48,7 +48,7 @@
             <!-- Pending Requests Card Example -->
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="resturant-card card--bg-2">
-                    <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/2.png')}}" alt="public">
+                    <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/2.png')}}" alt="public">
                     <div class="title text-capitalize">{{$customer->loyalty_point??0}}</div>
                     <div class="subtitle    ">{{translate('messages.loyalty_point_balance')}}</div>
                 </div>
@@ -152,7 +152,7 @@
                         <div class="card-body">
                             <div class="customer--information-single media align-items-center" href="javascript:">
                                 <div class="avatar avatar-circle">
-                                    <img class="avatar-img" onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'" src="{{asset('storage/app/public/profile/'.$customer->image)}}" alt="Image Description">
+                                    <img class="avatar-img" onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'" src="{{asset('storage/app/public/profile/'.$customer->image)}}" alt="Image Description">
                                 </div>
                                 <div class="media-body">
                                     <ul class="list-unstyled m-0">

@@ -10,7 +10,7 @@
     <div class="page-header">
         <h1 class="page-header-title">
             <span class="page-header-icon">
-                <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
             </span>
             <span>
                 {{translate('messages.Employee')}} {{translate('messages.update')}}
@@ -82,7 +82,7 @@
                         <label class="h-100 d-flex flex-column">
                             <center class="py-3 my-auto">
                                 <img class="img--100" id="viewer"
-                                onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
+                                onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
                                 src="{{asset('storage/app/public/admin')}}/{{$e['image']}}" alt="Employee thumbnail"/>
                             </center>
                             <div class="custom-file">

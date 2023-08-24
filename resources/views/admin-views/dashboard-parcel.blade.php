@@ -148,7 +148,7 @@
                             </select>
                         </div>
                         <div id="commission-overview-board">
-    
+
                             <div id="grow-sale-chart"></div>
                         </div>
                     </div>
@@ -165,8 +165,8 @@
                         <div id="stat_zone">
 
                             @include('admin-views.partials._zone-change',['data'=>$data])
-    
-    
+
+
                         </div>
                         <select class="custom-select border-0 text-center w-auto" name="user_overview"
                                 onchange="user_overview_stats_update(this.value)">
@@ -292,9 +292,9 @@
 @endsection
 
 @push('script')
-    <script src="{{asset('public/assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
-    <script src="{{asset('public/assets/admin')}}/vendor/chart.js.extensions/chartjs-extensions.js"></script>
-    <script src="{{asset('public/assets/admin')}}/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chart.js.extensions/chartjs-extensions.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
 
     <!-- Apex Charts -->
     <script src="{{asset('/public/assets/admin/js/apex-charts/apexcharts.js')}}"></script>

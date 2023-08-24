@@ -13,7 +13,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/item-report.png')}}" class="w--22" alt="">
+                    <img src="{{asset('assets/admin/img/item-report.png')}}" class="w--22" alt="">
                 </span>
                 <span>
                     {{translate('messages.item_report')}}
@@ -256,13 +256,13 @@
                             {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                             <a id="export-copy" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                     alt="Image Description">
                                 {{ translate('messages.copy') }}
                             </a>
                             <a id="export-print" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                     alt="Image Description">
                                 {{ translate('messages.print') }}
                             </a>
@@ -271,19 +271,19 @@
                                 {{ translate('messages.options') }}</span>
                             <a id="export-excel" class="dropdown-item" href="{{route('admin.report.item-wise-export', ['type'=>'excel',request()->getQueryString()])}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                     alt="Image Description">
                                 {{ translate('messages.excel') }}
                             </a>
                             <a id="export-csv" class="dropdown-item" href="{{route('admin.report.item-wise-export', ['type'=>'csv',request()->getQueryString()])}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                     alt="Image Description">
                                 .{{ translate('messages.csv') }}
                             </a>
                             {{-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/pdf.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/pdf.svg"
                                     alt="Image Description">
                                 {{ translate('messages.pdf') }}
                             </a> --}}
@@ -311,5 +311,5 @@
         });
     });
 </script>
-    
+
 @endpush

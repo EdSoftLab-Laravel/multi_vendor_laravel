@@ -362,7 +362,7 @@
                 },
                 language: {
                     zeroRecords: '<div class="text-center p-4">' +
-                    '<img class="w-7rem mb-3" src="{{asset('public/assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
+                    '<img class="w-7rem mb-3" src="{{asset('assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
                     '<p class="mb-0">{{ translate('No data to show') }}</p>' +
                     '</div>'
                 }
@@ -438,7 +438,7 @@
                 $(".lang_link").removeClass('active');
                 $(".lang_form").addClass('d-none');
                 $(this).addClass('active');
-    
+
                 let form_id = this.id;
                 let lang = form_id.substring(0, form_id.length - 5);
                 console.log(lang);

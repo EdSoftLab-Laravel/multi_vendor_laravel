@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{ translate('messages.business') }} {{ translate('messages.setup') }}
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-                
+
             <!-- Store Self Reg Modal -->
             {{-- <div class="modal fade" id="store-self-reg-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="btn--container justify-content-center">
                                     <button type="button" class="btn btn--primary min-w-120" data-dismiss="modal" onclick="confirmToggle('store_self_registration1','store-self-reg-modal')">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>

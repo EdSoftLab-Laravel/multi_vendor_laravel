@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.admin_landing_pages') }}
@@ -60,7 +60,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="80" name="why_choose_title[]" class="form-control" value="{{$why_choose_title?->getRawOriginal('value')}}" placeholder="{{translate('messages.title_here...')}}">
@@ -72,12 +72,12 @@
                                 if(isset($why_choose_title->translations)&&count($why_choose_title->translations)){
                                         $why_choose_title_translate = [];
                                         foreach($why_choose_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='why_choose_title'){
                                                 $why_choose_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
@@ -86,7 +86,7 @@
                                                 class="form-label-secondary" data-toggle="tooltip"
                                                 data-placement="right"
                                                 data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                     alt="">
                                             </span></label>
                                                 <input type="text" maxlength="80" name="why_choose_title[]" class="form-control" value="{{ $why_choose_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
@@ -101,7 +101,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="80" name="why_choose_title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
@@ -138,7 +138,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="40" name="title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
@@ -150,7 +150,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="40" name="title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
@@ -163,7 +163,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="40" name="title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
@@ -174,7 +174,7 @@
                                     <div>
 
                                         <label class="form-label">{{translate('Criteria Icon/ Image')}}<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Icon_ratio_(1:1)_and_max_size_2_MB.') }}">
-                                            <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                            <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                         </span></label>
                                     </div>
                                     <label class="upload-img-3 m-0">
@@ -201,7 +201,7 @@
                                         "order": [],
                                         "orderCellsTop": true,
                                         "paging":false
-                
+
                                     }'>
                                 <thead class="thead-light">
                                 <tr>
@@ -235,7 +235,7 @@
                                             <form action="{{route('admin.business-settings.criteria-status',[$criteria->id,$criteria->status?0:1])}}" method="get" id="status-{{$criteria->id}}_form">
                                             </form>
                                         </td>
-                
+
                                         <td>
                                             <div class="btn--container justify-content-center">
                                                 <a class="btn action-btn btn--primary btn-outline-primary" href="{{route('admin.business-settings.criteria-edit',[$criteria['id']])}}">
@@ -253,7 +253,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                
+
                         </div>
                         <!-- End Table -->
                     </div>
@@ -266,8 +266,8 @@
                     </div>
                     @endif
                 </div>
-        
-        
+
+
             <!--  Special Criteria Section View -->
             <div class="modal fade" id="criteria-section">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Single Criteria Modal -->
             <div class="modal fade" id="single-criteria-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -317,7 +317,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>

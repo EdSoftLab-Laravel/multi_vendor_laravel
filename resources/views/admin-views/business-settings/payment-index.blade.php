@@ -52,7 +52,7 @@
                                     <span class="line--limit-1">
                                         {{translate('Cash On Delivery')}}
                                     </span>
-                                    <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
+                                    <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
                                 </span>
                                 <input class="toggle-switch-input" type="checkbox" id="cash_on_delivery_status" onclick="toogleStatusModal(event,'cash_on_delivery_status','digital-payment-on.png','digital-payment-off.png','{{translate('By Turning ON Cash On Delivery Option')}}','{{translate('By Turning OFF Cash On Delivery Option')}}',`<p>{{translate('Customers will not be able to select COD as a payment method during checkout. Please review your settings and enable COD if you wish to offer this payment option to customers.')}}</p>`,`<p>{{translate('Customers will be able to select COD as a payment method during checkout.')}}</p>`)" name="status" value="1" {{$config?($config['status']==1?'checked':''):''}}>
                                 <span class="toggle-switch-label text">
@@ -71,7 +71,7 @@
                                     <span class="line--limit-1">
                                         {{translate('digital payment')}}
                                     </span>
-                                    <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
+                                    <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
                                 </span>
                                 <input class="toggle-switch-input" type="checkbox" id="digital_payment_status" onclick="toogleStatusModal(event,'digital_payment_status','digital-payment-on.png','digital-payment-off.png','{{translate('By Turning ON Digital Payment Option')}}','{{translate('By Turning OFF Digital Payment Option')}}',`<p>{{translate('Customers will not be able to select digital payment as a payment method during checkout. Please review your settings and enable digital payment if you wish to offer this payment option to customers.')}}</p>`,`<p>{{translate('Customers will be able to select digital payment as a payment method during checkout.')}}</p>`)" name="status" value="1" {{$digital_payment?($digital_payment['status']==1?'checked':''):''}}>
                                 <span class="toggle-switch-label text">
@@ -717,12 +717,12 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
 
-    
+
     <div class="modal fade" id="status-warning-modal">
         <div class="modal-dialog status-warning-modal">
             <div class="modal-content">

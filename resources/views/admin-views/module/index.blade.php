@@ -12,7 +12,7 @@
         <div class="page-header d-flex flex-wrap align-items-center justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/module.png')}}" alt="">
+                    <img src="{{asset('assets/admin/img/module.png')}}" alt="">
                 </span>
                 <span>
                     {{translate('messages.business_Module_list')}}
@@ -54,13 +54,13 @@
                             {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                             <a id="export-copy" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                     alt="Image Description">
                                 {{ translate('messages.copy') }}
                             </a>
                             <a id="export-print" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                     alt="Image Description">
                                 {{ translate('messages.print') }}
                             </a>
@@ -69,19 +69,19 @@
                                 {{ translate('messages.options') }}</span>
                             <a id="export-excel" class="dropdown-item" href="{{route('admin.business-settings.module.export', ['type'=>'excel'])}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                     alt="Image Description">
                                 {{ translate('messages.excel') }}
                             </a>
                             <a id="export-csv" class="dropdown-item" href="{{route('admin.business-settings.module.export', ['type'=>'csv'])}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                     alt="Image Description">
                                 .{{ translate('messages.csv') }}
                             </a>
                             {{-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/pdf.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/pdf.svg"
                                     alt="Image Description">
                                 {{ translate('messages.pdf') }}
                             </a> --}}
@@ -131,7 +131,7 @@
                                 </td>
                                 <td>
                                     <label class="toggle-switch toggle-switch-sm" for="status-{{$module->id}}">
-                                    <input type="checkbox" class="toggle-switch-input" onclick="toogleStatusModal(event,'status-{{$module->id}}','module-on.png','module-off.png','{{translate('Want_to_activate_this')}} <strong>{{translate('Business_Module?')}}</strong>','{{translate('Want_to_deactivate_this')}} <strong>{{translate('Business_Module?')}}</strong>',`<p>{{translate('If_you_activate_this_business_module,_all_its_features_and_functionalities_will_be_available_and_accessible_to_all_users.')}}</p>`,`<p>{{translate('If_you_deactivate_this_business_module,_all_its_features_and_functionalities_will_be_disabled_and_hidden_from_users.')}}</p>`)"  
+                                    <input type="checkbox" class="toggle-switch-input" onclick="toogleStatusModal(event,'status-{{$module->id}}','module-on.png','module-off.png','{{translate('Want_to_activate_this')}} <strong>{{translate('Business_Module?')}}</strong>','{{translate('Want_to_deactivate_this')}} <strong>{{translate('Business_Module?')}}</strong>',`<p>{{translate('If_you_activate_this_business_module,_all_its_features_and_functionalities_will_be_available_and_accessible_to_all_users.')}}</p>`,`<p>{{translate('If_you_deactivate_this_business_module,_all_its_features_and_functionalities_will_be_disabled_and_hidden_from_users.')}}</p>`)"
                                     {{-- onclick="location.href='{{route('admin.business-settings.module.status',[$module['id'],$module->status?0:1])}}'" --}}
                                     class="toggle-switch-input" id="status-{{$module->id}}" {{$module->status?'checked':''}}>
                                         <span class="toggle-switch-label">
@@ -174,7 +174,7 @@
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="warning-modal">
         <div class="modal-dialog modal-lg warning-modal">
             <div class="modal-content">

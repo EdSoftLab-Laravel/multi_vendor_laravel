@@ -11,15 +11,15 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('business_setup')}}
                 </span>
             </h1>
-            
+
             @include('admin-views.business-settings.partials.nav-menu')
-            
+
         </div>
         <!-- Page Header -->
 
@@ -165,7 +165,7 @@
                                             <span class="pr-2">{{ translate('Customer Can Earn Loyalty Point') }}</span>
                                             <input type="checkbox" class="toggle-switch-input"
                                             onclick="toogleModal(event,'customer_loyalty_point','loyalty-on.png','loyalty-off.png','{{translate('messages.Want_to_enable')}} <strong>{{translate('Loyalty Point')}}</strong>','{{translate('messages.Want_to_disable')}} <strong>{{translate('Loyalty Point')}}</strong>',`<p>{{translate('Customer will see loyalty point option in his profile settings & can earn & convert this point to wallet money')}}</p>`,`<p>{{translate('Customer will no see loyalty point option from his profile settings')}}</p>`)"
-                                                onchange="section_visibility('customer_loyalty_point')" 
+                                                onchange="section_visibility('customer_loyalty_point')"
                                                 name="customer_loyalty_point"
                                                 id="customer_loyalty_point" data-section="loyalty-point-section" value="1"
                                                 {{ isset($data['loyalty_point_status']) && $data['loyalty_point_status'] == 1 ? 'checked' : '' }}>

@@ -31,7 +31,7 @@
                         <div class="d-flex align-items-center">
                             <img class="avatar avatar-xxl avatar-4by3 mr-4"
                                  src="{{asset('storage/app/public/banner')}}/{{$banner->image}}"
-                                 onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                                 onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                                  alt="Image Description">
                             <div class="d-block">
 
@@ -122,7 +122,7 @@
                                     <td>
                                         <div class="inline--1">
                                             <img class="img--60 img--circle"
-                                                 onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                                 onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                                  src="{{asset('storage/app/public/store')}}/{{$dm['logo']}}">
                                         </div>
                                     </td>

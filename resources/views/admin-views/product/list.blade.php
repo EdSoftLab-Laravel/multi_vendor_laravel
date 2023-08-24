@@ -14,7 +14,7 @@
                 <div class="col-md-9 col-12">
                     <h1 class="page-header-title">
                         <span class="page-header-icon">
-                            <img src="{{asset('public/assets/admin/img/items.png')}}" class="w--22" alt="">
+                            <img src="{{asset('assets/admin/img/items.png')}}" class="w--22" alt="">
                         </span>
                         <span>
                             {{translate('messages.item')}} {{translate('messages.list')}} <span class="badge badge-soft-dark ml-2" id="foodCount">{{$items->total()}}</span>
@@ -70,7 +70,7 @@
                         </select>
                     </div>
                     <!-- End Unfold -->
-                    @if (Config::get('module.current_module_type') != 'food')                    
+                    @if (Config::get('module.current_module_type') != 'food')
                     <div>
                         <a href="{{ route('admin.report.stock-report') }}" class="btn btn--primary font-regular">{{translate('messages.limited_stock')}}</a>
                     </div>
@@ -89,13 +89,13 @@
                             {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                             <a id="export-copy" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                     alt="Image Description">
                                 {{ translate('messages.copy') }}
                             </a>
                             <a id="export-print" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                     alt="Image Description">
                                 {{ translate('messages.print') }}
                             </a>
@@ -104,19 +104,19 @@
                                 {{ translate('messages.options') }}</span>
                             <a id="export-excel" class="dropdown-item" href="{{url('/')}}/admin/item/export/excel?{{parse_url(url()->full(), PHP_URL_QUERY)}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                     alt="Image Description">
                                 {{ translate('messages.excel') }}
                             </a>
                             <a id="export-csv" class="dropdown-item" href="{{url('/')}}/admin/item/export/csv?{{parse_url(url()->full(), PHP_URL_QUERY)}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                     alt="Image Description">
                                 .{{ translate('messages.csv') }}
                             </a>
                             {{-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/pdf.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/pdf.svg"
                                     alt="Image Description">
                                 {{ translate('messages.pdf') }}
                             </a> --}}
@@ -270,7 +270,7 @@
                             <td>
                                 <a class="media align-items-center" href="{{route('admin.item.view',[$item['id']])}}">
                                     <img class="avatar avatar-lg mr-3" src="{{asset('storage/app/public/product')}}/{{$item['image']}}"
-                                            onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'" alt="{{$item->name}} image">
+                                            onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'" alt="{{$item->name}} image">
                                     <div class="media-body">
                                         <h5 class="text-hover-primary mb-0">{{Str::limit($item['name'],20,'...')}}</h5>
                                     </div>
@@ -352,7 +352,7 @@
           },
           language: {
             zeroRecords: '<div class="text-center p-4">' +
-                '<img class="w-7rem mb-3" src="{{asset('public/assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
+                '<img class="w-7rem mb-3" src="{{asset('assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
 
                 '</div>'
           }

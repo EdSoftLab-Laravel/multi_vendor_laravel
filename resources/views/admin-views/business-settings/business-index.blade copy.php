@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{ translate('messages.business') }} {{ translate('messages.setup') }}
@@ -1358,7 +1358,7 @@
                                     </h5>
                                     <center>
                                         <img class="img--vertical" id="viewer"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload-img.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
                                             src="{{ asset('storage/app/public/business/' . $logo) }}"
                                             alt="logo image" />
                                     </center>
@@ -1374,7 +1374,7 @@
                                     </h5>
                                     <center>
                                         <img class="img--110" id="iconViewer"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload-img.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
                                             src="{{ asset('storage/app/public/business/' . $icon) }}"
                                             alt="Fav icon" />
                                     </center>

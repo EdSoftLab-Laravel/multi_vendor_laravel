@@ -15,7 +15,7 @@
                 <div class="col-xl-10 col-md-9 col-sm-8 mb-3 mb-sm-0 {{$parcel_order ? 'mb-2':''}}">
                     <h1 class="page-header-title text-capitalize m-0">
                         <span class="page-header-icon">
-                            <img src="{{asset('public/assets/admin/img/order.png')}}" class="w--26" alt="">
+                            <img src="{{asset('assets/admin/img/order.png')}}" class="w--26" alt="">
                         </span>
                         <span>
                             @if ($parcel_order) {{translate('messages.parcel')}} {{translate('messages.orders')}}
@@ -76,13 +76,13 @@
                             <span class="dropdown-header">{{translate('messages.options')}}</span>
                             <a id="export-copy" class="dropdown-item" href="javascript:;" title="{{translate('messages.current_page_only')}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{asset('public/assets/admin')}}/svg/illustrations/copy.svg"
+                                        src="{{asset('assets/admin')}}/svg/illustrations/copy.svg"
                                         alt="Image Description">
                                 {{translate('messages.copy')}}
                             </a>
                             <a id="export-print" class="dropdown-item" href="javascript:;" title="{{translate('messages.current_page_only')}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{asset('public/assets/admin')}}/svg/illustrations/print.svg"
+                                        src="{{asset('assets/admin')}}/svg/illustrations/print.svg"
                                         alt="Image Description">
                                 {{translate('messages.print')}}
                             </a>
@@ -90,19 +90,19 @@
                             <span class="dropdown-header">{{translate('messages.download')}} {{translate('messages.options')}}</span>
                             <a id="export-excel" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{asset('public/assets/admin')}}/svg/components/excel.svg"
+                                        src="{{asset('assets/admin')}}/svg/components/excel.svg"
                                         alt="Image Description">
                                 {{translate('messages.excel')}}
                             </a>
                             <a id="export-csv" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{asset('public/assets/admin')}}/svg/components/placeholder-csv-format.svg"
+                                        src="{{asset('assets/admin')}}/svg/components/placeholder-csv-format.svg"
                                         alt="Image Description">
                                 .{{translate('messages.csv')}}
                             </a>
                             <!-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{asset('public/assets/admin')}}/svg/components/pdf.svg"
+                                        src="{{asset('assets/admin')}}/svg/components/pdf.svg"
                                         alt="Image Description">
                                 {{translate('messages.pdf')}}
                             </a> -->
@@ -607,7 +607,7 @@
 @endsection
 
 @push('script_2')
-    <!-- <script src="{{asset('public/assets/admin')}}/js/bootstrap-select.min.js"></script> -->
+    <!-- <script src="{{asset('assets/admin')}}/js/bootstrap-select.min.js"></script> -->
     <script>
         $(document).on('ready', function () {
             @if($filter_count>0)
@@ -703,7 +703,7 @@
                 },
                 language: {
                     zeroRecords: '<div class="text-center p-4">' +
-                        '<img class="w-7rem mb-3" src="{{asset('public/assets/admin')}}/svg/illustrations/sorry.svg" alt="Image Description">' +
+                        '<img class="w-7rem mb-3" src="{{asset('assets/admin')}}/svg/illustrations/sorry.svg" alt="Image Description">' +
 
                         '</div>'
                 }

@@ -12,14 +12,14 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/firebase.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/firebase.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{translate('messages.firebase')}} {{translate('messages.push')}} {{translate('messages.notification')}} {{translate('messages.setup')}}
                 </span>
             </h1>
         </div>
         <!-- End Page Header -->
-        <?php 
+        <?php
         $mod_type = 'grocery';
         if(request('module_type')){
             $mod_type = request('module_type');
@@ -102,19 +102,19 @@
                                 <div class="{{$lang != $default_lang ? 'd-none':''}} lang_form" id="{{$lang}}-form">
                                     <div class="row">
                                         @php($opm=\App\Models\NotificationMessage::with('translations')->where('module_type',$mod_type)->where('key','order_pending_message')->first())
-                                        @php($data=$opm?$opm:null)                         
+                                        @php($data=$opm?$opm:null)
                                         <?php
                                                 if(isset($opm->translations) && count($opm->translations)){
                                                     $translate = [];
                                                     foreach($opm->translations as $t)
-                                                    {   
+                                                    {
                                                         if($t->locale == $lang && $t->key=='order_pending_message'){
                                                             $translate[$lang]['message'] = $t->value;
                                                         }
                                                     }
-                                                    
+
                                                 }
-                                                ?>   
+                                                ?>
                                         <div class="col-md-6 col-lg-4">
                                             <div class="form-group">
                                                 <div class="d-flex flex-wrap justify-content-between mb-2">
@@ -124,22 +124,22 @@
                                                 @if ($lang == 'en')
                                                         <label class="switch--custom-label toggle-switch d-flex align-items-center"
                                                             for="pending_status">
-                                                            <input type="checkbox" onclick="toogleModal(event,'pending_status','pending-order-on.png','pending-order-off.png','{{translate('By Turning ON Order ')}} <strong>{{translate('pending Message')}}</strong>','{{translate('By Turning OFF Order ')}} <strong>{{translate('pending Message')}}</strong>',`<p>{{translate('User will get a clear message to know that order is pending')}}</p>`,`<p>{{translate('User can not get a clear message to know that order is pending or not')}}</p>`)" name="pending_status" class="toggle-switch-input" 
+                                                            <input type="checkbox" onclick="toogleModal(event,'pending_status','pending-order-on.png','pending-order-off.png','{{translate('By Turning ON Order ')}} <strong>{{translate('pending Message')}}</strong>','{{translate('By Turning OFF Order ')}} <strong>{{translate('pending Message')}}</strong>',`<p>{{translate('User will get a clear message to know that order is pending')}}</p>`,`<p>{{translate('User can not get a clear message to know that order is pending or not')}}</p>`)" name="pending_status" class="toggle-switch-input"
                                                             @if ($lang == 'en')
                                                             onchange="add_required_attribute('pending_status', 'pending_messages')"
-                                                            @endif 
+                                                            @endif
                                                                 value="1" id="pending_status" {{$data?($data['status']==1?'checked':''):''}}>
                                                             <span class="toggle-switch-label">
                                                                 <span class="toggle-switch-indicator"></span>
                                                             </span>
                                                         </label>
-                                                    
+
                                                 @endif
                                                 </div>
-                                                <textarea name="pending_message[]"  placeholder="{{translate('Write your message')}}" class="form-control pending_messages" oninvalid="document.getElementById('en-link').click()" 
+                                                <textarea name="pending_message[]"  placeholder="{{translate('Write your message')}}" class="form-control pending_messages" oninvalid="document.getElementById('en-link').click()"
                                                 @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate) && isset($translate[$lang]))?$translate[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -150,12 +150,12 @@
                                         if(isset($ocm->translations)&&count($ocm->translations)){
                                                 $translate_2 = [];
                                                 foreach($ocm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='order_confirmation_msg'){
                                                         $translate_2[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -175,7 +175,7 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                             </span>
                                                         </label>
-                                                        
+
                                                     @endif
                                                 </div>
                                                 <textarea name="confirm_message[]"  placeholder="{{translate('Write your message')}}" class="form-control confirm_message" oninvalid="document.getElementById('en-link').click()"
@@ -185,22 +185,22 @@
                                             </div>
                                         </div>
                                         @if ($mod_type != 'parcel')
-                                            
+
 
                                         @php($oprm=\App\Models\NotificationMessage::with('translations')->where('module_type',$mod_type)->where('key','order_processing_message')->first())
 
                                         @php($data=$oprm?$oprm:null)
-                                        
+
                                         <?php
                                         if(isset($oprm->translations) && count($oprm->translations)){
                                                 $translate_3 = [];
                                                 foreach($oprm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='order_processing_message'){
                                                         $translate_3[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -218,12 +218,12 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                             </span>
                                                         </label>
-                                                            
+
                                                     @endif
                                                 </div>
                                                 <textarea name="processing_message[]"  placeholder="{{translate('Write your message')}}" class="form-control processing_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_3) && isset($translate_3[$lang]))?$translate_3[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -234,12 +234,12 @@
                                         if(isset($dbs->translations) && count($dbs->translations)){
                                                 $translate_4 = [];
                                                 foreach($dbs->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='order_handover_message'){
                                                         $translate_4[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -261,12 +261,12 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                             </span>
                                                         </label>
-                                                        
+
                                                     @endif
                                                 </div>
                                                 <textarea name="order_handover_message[]"  placeholder="{{translate('Write your message')}}" class="form-control order_handover_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_4) && isset($translate_4[$lang]))?$translate_4[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -279,16 +279,16 @@
                                         if(isset($ofdm->translations) && count($ofdm->translations)){
                                                 $translate_5 = [];
                                                 foreach($ofdm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='out_for_delivery_message'){
                                                         $translate_5[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
-                                        
+
                                         <div class="col-md-6 col-lg-4">
                                             <div class="form-group">
                                                 <div class="d-flex flex-wrap justify-content-between mb-2">
@@ -310,7 +310,7 @@
                                                 </div>
                                                 <textarea name="out_for_delivery_message[]"  placeholder="{{translate('Write your message')}}" class="form-control out_for_delivery_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_5) && isset($translate_5[$lang]))?$translate_5[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -321,12 +321,12 @@
                                         if(isset($odm->translations)&&count($odm->translations)){
                                                 $translate_6 = [];
                                                 foreach($odm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='order_delivered_message'){
                                                         $translate_6[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -347,12 +347,12 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                                 </span>
                                                         </label>
-                                                        
+
                                                     @endif
                                                 </div>
                                                 <textarea name="delivered_message[]"  placeholder="{{translate('Write your message')}}" class="form-control delivered_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_6) && isset($translate_6[$lang]))?$translate_6[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -363,12 +363,12 @@
                                         if(isset($dba->translations) && count($dba->translations)){
                                                 $translate_7 = [];
                                                 foreach($dba->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='delivery_boy_assign_message'){
                                                         $translate_7[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -390,29 +390,29 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                             </span>
                                                         </label>
-                                                        
+
                                                     @endif
                                                 </div>
                                                 <textarea name="delivery_boy_assign_message[]"  placeholder="{{translate('Write your message')}}" class="form-control delivery_boy_assign_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_7) && isset($translate_7[$lang]))?$translate_7[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
 
                                         @php($dbc=\App\Models\NotificationMessage::with('translations')->where('module_type',$mod_type)->where('key','delivery_boy_delivered_message')->first())
-                                        
+
                                         @php($data=$dbc?$dbc:'')
                                         <?php
                                         if(isset($dbc->translations) && count($dbc->translations)){
                                                 $translate_8 = [];
                                                 foreach($dbc->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='delivery_boy_delivered_message'){
                                                         $translate_8[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -434,13 +434,13 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                                 </span>
                                                         </label>
-                                                        
+
                                                     @endif
                                                 </div>
 
                                                 <textarea name="delivery_boy_delivered_message[]"  placeholder="{{translate('Write your message')}}" class="form-control delivery_boy_delivered_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_8) && isset($translate_8[$lang]))?$translate_8[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -452,12 +452,12 @@
 
                                                 $translate_9 = [];
                                                 foreach($ocm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='order_cancled_message'){
                                                         $translate_9[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -479,13 +479,13 @@
                                                                 <span class="toggle-switch-indicator"></span>
                                                                 </span>
                                                         </label>
-                                                        
+
                                                     @endif
                                                 </div>
 
                                                 <textarea name="order_cancled_message[]"  placeholder="{{translate('Write your message')}}" class="form-control order_cancled_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_9) && isset($translate_9[$lang]))?$translate_9[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -496,12 +496,12 @@
                                         if(isset($orm->translations)&&count($orm->translations)){
                                                 $translate_10 = [];
                                                 foreach($orm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='order_refunded_message'){
                                                         $translate_10[$lang]['message'] = $t->value;
                                                     }
                                                 }
-                                        
+
                                             }
 
                                         ?>
@@ -528,7 +528,7 @@
 
                                                 <textarea name="order_refunded_message[]"  placeholder="{{translate('Write your message')}}" class="form-control order_refunded_message" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_10) && isset($translate_10[$lang]))?$translate_10[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>
@@ -539,7 +539,7 @@
                                         if(isset($rrcm->translations) && count($rrcm->translations)){
                                                 $translate_11 = [];
                                                 foreach($rrcm->translations as $t)
-                                                {   
+                                                {
                                                     if($t->locale == $lang && $t->key=='refund_request_canceled'){
                                                         $translate_11[$lang]['message'] = $t->value;
                                                     }
@@ -569,7 +569,7 @@
                                                 </div>
                                                 <textarea name="refund_request_canceled[]"  placeholder="{{translate('Write your message')}}" class="form-control refund_request_canceled" oninvalid="document.getElementById('en-link').click()"                                         @if ($lang == 'en')
                                                 {{$data?($data['status']==1?'required':''):''}}
-                                                @endif 
+                                                @endif
                                                 >{!! (isset($translate_11) && isset($translate_11[$lang]))?$translate_11[$lang]['message']:($data?$data['message']:'') !!}</textarea>
                                             </div>
                                         </div>

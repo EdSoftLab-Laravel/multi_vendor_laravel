@@ -204,7 +204,7 @@
                                     <span>{{ translate('messages.payment') }} {{ translate('messages.method') }}</span> <span>:</span>
                                     <span>{{ translate(str_replace('_', ' ', $order['payment_method'])) }}</span>
                                 </h6>
-                                 
+
                                 <h6 class="">
                                     @if ($order['transaction_reference'] == null)
                                         <span>{{ translate('messages.reference') }} {{ translate('messages.code') }}</span> <span>:</span>
@@ -266,7 +266,7 @@
                                                         data-target="#imagemodal{{ $key }}"
                                                         title="{{ translate('messages.order') }} {{ translate('messages.attachment') }}">
                                                         <div class="gallary-card ml-auto">
-                                                            <img src="{{ asset('storage/app/' . 'public/order/' . $item) }}"
+                                                            <img src="{{ asset('storage/app/' . 'order/' . $item) }}"
                                                                 alt="{{ translate('messages.prescription') }}"
                                                                 class="initial--22 object-cover">
                                                         </div>
@@ -285,12 +285,12 @@
                                                                         class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <img src="{{ asset('storage/app/' . 'public/order/' . $item) }}"
+                                                                <img src="{{ asset('storage/app/' . 'order/' . $item) }}"
                                                                     class="initial--22 w-100">
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <a class="btn btn-primary"
-                                                                    href="{{ route('admin.file-manager.download', base64_encode('public/order/' . $item)) }}"><i
+                                                                    href="{{ route('admin.file-manager.download', base64_encode('order/' . $item)) }}"><i
                                                                         class="tio-download"></i>
                                                                     {{ translate('messages.download') }}
                                                                 </a>
@@ -307,7 +307,7 @@
                                     <button class="btn w-100 px-0" data-toggle="modal" data-target="#imagemodal"
                                         title="{{ translate('messages.order') }} {{ translate('messages.attachment') }}">
                                         <div class="gallary-card ml-auto">
-                                            <img src="{{ asset('storage/app/' . 'public/order/' . $order->order_attachment) }}"
+                                            <img src="{{ asset('storage/app/' . 'order/' . $order->order_attachment) }}"
                                                 alt="{{ translate('messages.prescription') }}"
                                                 class="initial--22 object-cover">
                                         </div>
@@ -324,12 +324,12 @@
                                                             class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img src="{{ asset('storage/app/' . 'public/order/' . $order->order_attachment) }}"
+                                                    <img src="{{ asset('storage/app/' . 'order/' . $order->order_attachment) }}"
                                                         class="initial--22 w-100">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a class="btn btn-primary"
-                                                        href="{{ route('admin.file-manager.download', base64_encode('public/order/' . $order->order_attachment)) }}"><i
+                                                        href="{{ route('admin.file-manager.download', base64_encode('order/' . $order->order_attachment)) }}"><i
                                                             class="tio-download"></i> {{ translate('messages.download') }}
                                                     </a>
                                                 </div>
@@ -421,7 +421,7 @@
                                         title="{{ $order->parcel_category ? $order->parcel_category->name : translate('messages.parcel_category_not_found') }}">
                                         <img class="img-fluid"
                                             src="{{ asset('storage/app/public/parcel_category') }}/{{ $order->parcel_category ? $order->parcel_category->image : '' }}"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'">
+                                            onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'">
                                     </div>
                                     <div class="media-body">
                                         <div class="row">
@@ -523,7 +523,7 @@
                                                                             class="tio-edit"></i></span>
                                                                     <img class="img-fluid rounded aspect-ratio-1"
                                                                         src="{{ asset('storage/app/public/product') }}/{{ $detail->item['image'] }}"
-                                                                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                                                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </div>
                                                             @else
@@ -531,7 +531,7 @@
                                                                     href="{{ route('admin.item.view', [$detail->item['id'],'module_id' => $order->module_id]) }}">
                                                                     <img class="img-fluid rounded aspect-ratio-1"
                                                                         src="{{ asset('storage/app/public/product') }}/{{ $detail->item['image'] }}"
-                                                                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                                                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </a>
                                                             @endif
@@ -659,7 +659,7 @@
                                                                             class="tio-edit"></i></span>
                                                                     <img class="img-fluid rounded"
                                                                         src="{{ asset('storage/app/public/campaign') }}/{{ $detail->campaign['image'] }}"
-                                                                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                                                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </div>
                                                             @else
@@ -667,7 +667,7 @@
                                                                     href="{{ route('admin.campaign.view', ['item', $detail->campaign['id']]) }}">
                                                                     <img class="img-fluid rounded"
                                                                         src="{{ asset('storage/app/public/campaign') }}/{{ $detail->campaign['image'] }}"
-                                                                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                                                                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </a>
                                                             @endif
@@ -777,46 +777,46 @@
                             </div>
                             <?php
                             $coupon_discount_amount = $order['coupon_discount_amount'];
-                            
+
                             $total_price = $product_price + $total_addon_price - $store_discount_amount - $coupon_discount_amount;
-                            
+
                             $total_tax_amount = $order['total_tax_amount'];
                             if($order->tax_status == 'included'){
                                 $total_tax_amount=0;
                             }
                             $deliverman_tips = $order['dm_tips'];
-                            
+
                             if ($editing) {
                                 $store_discount = \App\CentralLogics\Helpers::get_store_discount($order->store);
                                 if (isset($store_discount)) {
                                     if ($product_price + $total_addon_price < $store_discount['min_purchase']) {
                                         $store_discount_amount = 0;
                                     }
-                            
+
                                     if ($store_discount_amount > $store_discount['max_discount'] && $store_discount_amount > $store_discount['max_discount']) {
                                         $store_discount_amount = $store_discount['max_discount'];
                                     }
                                 }
                                 $coupon_discount_amount = $coupon ? \App\CentralLogics\CouponLogic::get_discount($coupon, $product_price + $total_addon_price - $store_discount_amount) : $order['coupon_discount_amount'];
                                 $tax = $order->store->tax;
-                            
+
                                 $total_price = $product_price + $total_addon_price - $store_discount_amount - $coupon_discount_amount;
-                            
+
                                 $total_tax_amount = $tax > 0 ? ($total_price * $tax) / 100 : 0;
-                            
+
                                 $total_tax_amount = round($total_tax_amount, 2);
 
                                 $tax_included = \App\Models\BusinessSetting::where(['key'=>'tax_included'])->first() ?  \App\Models\BusinessSetting::where(['key'=>'tax_included'])->first()->value : 0;
                                 if ($tax_included ==  1){
                                     $total_tax_amount=0;
                                 }
-                            
+
                                 $store_discount_amount = round($store_discount_amount, 2);
-                            
+
                                 if ($order->store->free_delivery) {
                                     $del_c = 0;
                                 }
-                            
+
                                 $free_delivery_over = \App\Models\BusinessSetting::where('key', 'free_delivery_over')->first()->value;
                                 if (isset($free_delivery_over)) {
                                     if ($free_delivery_over <= $product_price + $total_addon_price - $coupon_discount_amount - $store_discount_amount) {
@@ -829,7 +829,7 @@
                             } else {
                                 $store_discount_amount = $order['store_discount_amount'];
                             }
-                            
+
                             ?>
                         @endif
                         <div class="mx-3">
@@ -954,7 +954,7 @@
                                             <div class="col-3">
                                                 <img class="img__aspect-1 rounded border w-100" data-toggle="modal"
                                                     data-target="#imagemodal{{ $key }}"
-                                                    onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}"
+                                                    onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}"
                                                     src="{{ asset('storage/app/public/refund') . '/' . $img }}">
                                             </div>
                                             <div class="modal fade" id="imagemodal{{ $key }}" tabindex="-1"
@@ -972,12 +972,12 @@
                                                                     class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <img src="{{ asset('storage/app/' . 'public/refund/' . $img) }}"
+                                                            <img src="{{ asset('storage/app/' . 'refund/' . $img) }}"
                                                                 class="initial--22 w-100">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <a class="btn btn-primary"
-                                                                href="{{ route('admin.file-manager.download', base64_encode('public/refund/' . $img)) }}"><i
+                                                                href="{{ route('admin.file-manager.download', base64_encode('refund/' . $img)) }}"><i
                                                                     class="tio-download"></i>
                                                                 {{ translate('messages.download') }}
                                                             </a>
@@ -989,8 +989,8 @@
                                     @else
                                         <div class="col-3">
                                             <img class="img__aspect-1 rounded border w-100"
-                                                onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}"
-                                                src="{{ asset('public/assets/admin/img/160x160/img2.jpg') }}">
+                                                onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}"
+                                                src="{{ asset('assets/admin/img/160x160/img2.jpg') }}">
                                         </div>
                                     @endif
                                 </div>
@@ -1137,7 +1137,7 @@
                                     href="{{ route('admin.users.delivery-man.preview', [$order->delivery_man['id']]) }}">
                                     <div class="avatar avatar-circle">
                                         <img class="avatar-img"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/160x160/img1.jpg') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
                                             src="{{ asset('storage/app/public/delivery-man/' . $order->delivery_man->image) }}"
                                             alt="Image Description">
                                     </div>
@@ -1200,7 +1200,7 @@
                                 href="{{ route('admin.users.customer.view', [$order->customer['id']]) }}">
                                 <div class="avatar avatar-circle">
                                     <img class="avatar-img"
-                                        onerror="this.src='{{ asset('public/assets/admin/img/160x160/img1.jpg') }}'"
+                                        onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
                                         src="{{ asset('storage/app/public/profile/' . $order->customer->image) }}"
                                         alt="Image Description">
                                 </div>
@@ -1318,7 +1318,7 @@
                                 href="{{ route('admin.store.view', [$order->store['id'],'module_id' => $order->module_id]) }}">
                                 <div class="avatar avatar-circle">
                                     <img class="avatar-img w-75px"
-                                        onerror="this.src='{{ asset('public/assets/admin/img/100x100/1.png') }}'"
+                                        onerror="this.src='{{ asset('assets/admin/img/100x100/1.png') }}'"
                                         src="{{ asset('storage/app/public/store/' . $order->store->logo) }}"
                                         alt="Image Description">
                                 </div>
@@ -1575,7 +1575,7 @@
                                     <li class="list-group-item">
                                         <span class="dm_list" role='button' data-id="{{ $dm['id'] }}">
                                             <img class="avatar avatar-sm avatar-circle mr-1"
-                                                onerror="this.src='{{ asset('public/assets/admin/img/160x160/img1.jpg') }}'"
+                                                onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
                                                 src="{{ asset('storage/app/public/delivery-man') }}/{{ $dm['image'] }}"
                                                 alt="{{ $dm['name'] }}">
                                             {{ $dm['name'] }}
@@ -2115,12 +2115,12 @@
                         position: new google.maps.LatLng({{ $address['latitude'] }},
                             {{ $address['longitude'] }}),
                         title: "{{ Str::limit($order->customer->f_name . ' ' . $order->customer->l_name, 15, '...') }}",
-                        // icon: "{{ asset('public/assets/admin/img/restaurant_map.png') }}"
+                        // icon: "{{ asset('assets/admin/img/restaurant_map.png') }}"
                     @else
                         position: new google.maps.LatLng({{ $order->store->latitude }},
                             {{ $order->store->longitude }}),
                         title: "{{ Str::limit($order->store->name, 15, '...') }}",
-                        icon: "{{ asset('public/assets/admin/img/restaurant_map.png') }}",
+                        icon: "{{ asset('assets/admin/img/restaurant_map.png') }}",
                     @endif
                     map: map,
 
@@ -2153,7 +2153,7 @@
                         position: point,
                         map: map,
                         title: deliveryMan[i].location,
-                        icon: "{{ asset('public/assets/admin/img/delivery_boy_map.png') }}"
+                        icon: "{{ asset('assets/admin/img/delivery_boy_map.png') }}"
                     });
                     dmMarkers[deliveryMan[i].id] = marker;
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -2347,7 +2347,7 @@
                             {{ $address['longitude'] }}),
                         map: map,
                         title: "{{ $order->customer->f_name }} {{ $order->customer->l_name }}",
-                        icon: "{{ asset('public/assets/admin/img/customer_location.png') }}"
+                        icon: "{{ asset('assets/admin/img/customer_location.png') }}"
                     });
 
                     google.maps.event.addListener(marker, 'click', (function(marker) {
@@ -2366,7 +2366,7 @@
                             {{ $order->dm_last_location['longitude'] }}),
                         map: map,
                         title: "{{ $order->delivery_man->f_name }} {{ $order->delivery_man->l_name }}",
-                        icon: "{{ asset('public/assets/admin/img/delivery_boy_map.png') }}"
+                        icon: "{{ asset('assets/admin/img/delivery_boy_map.png') }}"
                     });
 
                     google.maps.event.addListener(dmmarker, 'click', (function(dmmarker) {
@@ -2386,7 +2386,7 @@
                             {{ $order->store->longitude }}),
                         map: map,
                         title: "{{ Str::limit($order->store->name, 15, '...') }}",
-                        icon: "{{ asset('public/assets/admin/img/restaurant_map.png') }}"
+                        icon: "{{ asset('assets/admin/img/restaurant_map.png') }}"
                     });
 
                     google.maps.event.addListener(Retaurantmarker, 'click', (function(Retaurantmarker) {
@@ -2405,7 +2405,7 @@
                             {{ $receiver_details['longitude'] }}),
                         map: map,
                         title: "{{ Str::limit($receiver_details['contact_person_name'], 15, '...') }}",
-                        // icon: "{{ asset('public/assets/admin/img/restaurant_map.png') }}"
+                        // icon: "{{ asset('assets/admin/img/restaurant_map.png') }}"
                     });
 
                     google.maps.event.addListener(Receivermarker, 'click', (function(Receivermarker) {

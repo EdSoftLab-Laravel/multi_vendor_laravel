@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.react_landing_page') }}
@@ -49,7 +49,7 @@
                                 <div>
                                     <label class="form-label d-block mb-3">
                                         {{translate('Banner')}}  <span class="text--primary">{{translate('(size: 3:1)')}}</span><span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('If_you_want_to_upload_one_banner_then_you_have_to_upload_it_in_6:1_ratio_otherwise_the_ratio_will_be_same_as_before.') }}">
-                                            <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                            <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                         </span>
                                     </label>
                                     {{-- <label class="m-0 max-w-640">
@@ -76,7 +76,7 @@
                             <button type="reset" class="btn btn--reset">{{translate('Reset')}}</button>
                             <button type="submit" onclick="" class="btn btn--primary mb-2">{{translate('Add')}}</button>
                         </div>
-                        
+
                     </div>
                 </form>
                 @php($banners = \App\Models\DataSetting::where(['key'=>'promotion_banner','type'=>'react_landing_page'])->first())
@@ -115,7 +115,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                
+
                         </div>
                         <!-- End Table -->
                     </div>
@@ -128,8 +128,8 @@
                     </div>
                     @endif
                 </div>
-        
-        
+
+
             <!--  Special review Section View -->
             <div class="modal fade" id="testimonials-section">
                 <div class="modal-dialog modal-lg warning-modal">

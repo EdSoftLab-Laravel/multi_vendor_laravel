@@ -12,7 +12,7 @@
     <div class="page-header">
         <h1 class="page-header-title">
             <span class="page-header-icon">
-                <img src="{{asset('public/assets/admin/img/wallet.png')}}" class="w--26" alt="">
+                <img src="{{asset('assets/admin/img/wallet.png')}}" class="w--26" alt="">
             </span>
             <span>
                 {{translate('messages.store_wallet')}}
@@ -41,7 +41,7 @@
                         </h5>
                         <div class="d-flex align-items-center justify-content-center mt-3">
                             <div class="cash-icon mr-3">
-                            <img src="{{asset('public/assets/admin/img/cash.png')}}" alt="img">
+                            <img src="{{asset('assets/admin/img/cash.png')}}" alt="img">
                         </div>
                             <h2 class="cash--title text-white">{{\App\CentralLogics\Helpers::format_currency($wallet->balance)}}</h2>
                         </div>

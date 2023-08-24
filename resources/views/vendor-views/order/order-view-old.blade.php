@@ -157,7 +157,7 @@
                                     </h5>
                                     <button class="btn w-100"  data-toggle="modal" data-target="#imagemodal" title="{{translate('messages.order')}} {{translate('messages.attachment')}}">
                                         <div class="gallary-card">
-                                            <img src="{{asset('storage/app/'.'public/order/'.$order->order_attachment)}}" alt="{{translate('messages.prescription')}}" style="height:auto;width:50%;">
+                                            <img src="{{asset('storage/app/'.'order/'.$order->order_attachment)}}" alt="{{translate('messages.prescription')}}" style="height:auto;width:50%;">
                                         </div>
                                     </button>
                                     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -168,10 +168,10 @@
                                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img src="{{asset('storage/app/'.'public/order/'.$order->order_attachment)}}" style="width: 100%; height: auto;" >
+                                                    <img src="{{asset('storage/app/'.'order/'.$order->order_attachment)}}" style="width: 100%; height: auto;" >
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a class="btn btn-primary" href="{{route('admin.file-manager.download', base64_encode('public/order/'.$order->order_attachment))}}"><i class="tio-download"></i> {{translate('messages.download')}} </a>
+                                                    <a class="btn btn-primary" href="{{route('admin.file-manager.download', base64_encode('order/'.$order->order_attachment))}}"><i class="tio-download"></i> {{translate('messages.download')}} </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -216,7 +216,7 @@
                                 <a class="avatar avatar-xl mr-3 cursor-pointer" href="{{route('vendor.item.view',$detail->item['id'])}}">
                                     <img class="img-fluid"
                                             src="{{asset('storage/app/public/product')}}/{{$detail->item['image']}}"
-                                            onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                                            onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                                             alt="Image Description">
                                 </a>
 
@@ -275,7 +275,7 @@
                                     <div class="avatar avatar-xl mr-3">
                                         <img class="img-fluid"
                                              src="{{asset('storage/app/public/campaign')}}/{{$detail->campaign['image']}}"
-                                             onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                                             onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                                              alt="Image Description">
                                     </div>
 
@@ -403,7 +403,7 @@
                             <div class="avatar avatar-circle mr-3">
                                 <img
                                     class="avatar-img" style="width: 75px"
-                                    onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                    onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                     src="{{asset('storage/app/public/delivery-man/'.$order->delivery_man->image)}}"
                                     alt="Image Description">
                             </div>
@@ -493,7 +493,7 @@
                                 <div class="avatar avatar-circle mr-3">
                                     <img
                                         class="avatar-img" style="width: 75px"
-                                        onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                        onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                         src="{{asset('storage/app/public/profile/'.$order->customer->image)}}"
                                         alt="Image Description">
                                 </div>

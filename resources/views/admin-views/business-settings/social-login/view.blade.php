@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/captcha.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/captcha.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('Social Login Setup')}}
@@ -35,7 +35,7 @@
                                 </h5>
                                 <label class="toggle-switch toggle-switch-sm p-0">
                                     <span class="d-flex align-items-center switch--label">
-                                        <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
+                                        <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
                                     </span>
                                     <input class="toggle-switch-input" id="{{$socialLoginService['login_medium']}}_status" onclick="toogleModal(event,'{{$socialLoginService['login_medium']}}_status','{{$socialLoginService['login_medium']}}-on.png','{{$socialLoginService['login_medium']}}-off.png','{{translate('messages.'.$socialLoginService['login_medium'])}} {{translate('Login Turned ON ')}} ','{{translate('messages.'.$socialLoginService['login_medium'])}} {{translate('Login Turned OFF ')}}',`<p>{{translate('messages.'.$socialLoginService['login_medium'])}} {{translate('Login is now enabled. Customers will be able to sign up or log in using their social media accounts.')}}</p>`,`<p>{{translate('messages.'.$socialLoginService['login_medium'])}} {{translate('Login is now disabled. Customers will not be able to sign up or log in using their social media accounts. Please note that this may affect user experience and registration/login process.')}}</p>`)" type="checkbox" name="status" value="1" {{$socialLoginService['status']==1?'checked' :''}}>
                                     <span class="toggle-switch-label text p-0">
@@ -94,7 +94,7 @@
                                     </h5>
                                     <label class="toggle-switch toggle-switch-sm p-0">
                                         <span class="d-flex align-items-center switch--label">
-                                            <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
+                                            <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor set amet"><img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="Veg/non-veg toggle"> * </span>
                                         </span>
                                         <input class="toggle-switch-input" id="{{$appleLoginService['login_medium']}}_status" onclick="toogleModal(event,'{{$appleLoginService['login_medium']}}_status','{{$appleLoginService['login_medium']}}-on.png','{{$appleLoginService['login_medium']}}-off.png','{{translate('messages.'.$appleLoginService['login_medium'])}} {{translate('Login Turned ON ')}} ','{{translate('messages.'.$appleLoginService['login_medium'])}} {{translate('Login Turned OFF ')}}',`<p>{{translate('messages.'.$appleLoginService['login_medium'])}} {{translate('Login is now enabled. Customers will be able to sign up or log in using their social media accounts.')}}</p>`,`<p>{{translate('messages.'.$appleLoginService['login_medium'])}} {{translate('Login is now disabled. Customers will not be able to sign up or log in using their social media accounts. Please note that this may affect user experience and registration/login process.')}}</p>`)" type="checkbox" name="status" value="1" {{$appleLoginService['status']==1?'checked' :''}}>
                                         <span class="toggle-switch-label text p-0">
@@ -184,7 +184,7 @@
                             </div> -->
                             <div class="btn--container justify-content-center">
                                 <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                     {{translate("Cancel")}}
                                 </button>
                             </div>
@@ -193,7 +193,7 @@
                 </div>
             </div>
         </div> --}}
-        
+
 
         {{-- Modal Starts--}}
         <!-- Google -->
@@ -320,7 +320,7 @@
         {{-- Modal Ends--}}
 
 
-        
+
 @endsection
 @push('script_2')
     <script>

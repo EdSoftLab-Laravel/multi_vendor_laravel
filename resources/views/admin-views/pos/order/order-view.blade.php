@@ -151,7 +151,7 @@
                                     <a class="avatar avatar-xl mr-3" href="{{route('admin.item.view',$detail->item['id'])}}">
                                         <img class="img-fluid"
                                              src="{{asset('storage/app/public/product')}}/{{$detail->item['image']}}"
-                                             onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                                             onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                                              alt="Image Description">
                                     </a>
 
@@ -206,7 +206,7 @@
                                     <div class="avatar avatar-xl mr-3">
                                         <img class="img-fluid"
                                              src="{{asset('storage/app/public/campaign')}}/{{$detail->campaign['image']}}"
-                                             onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                                             onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                                              alt="Image Description">
                                     </div>
 
@@ -317,7 +317,7 @@
                         <div class="media align-items-center" href="javascript:">
                             <div class="avatar avatar-circle mr-3">
                                 <img
-                                    class="avatar-img img--75" onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                    class="avatar-img img--75" onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                     src="{{asset('storage/app/public/delivery-man/'.$order->delivery_man->image)}}"
                                     alt="Image Description">
                             </div>
@@ -408,7 +408,7 @@
                                 <div class="avatar avatar-circle mr-3">
                                     <img
                                         class="avatar-img img--75"
-                                        onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                        onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                         src="{{asset('storage/app/public/profile/'.$order->customer->image)}}"
                                         alt="Image Description">
                                 </div>
@@ -507,7 +507,7 @@
                             href="{{ route('admin.store.view', [$order->store['id']]) }}">
                             <div class="avatar avatar-circle mr-3">
                                 <img class="avatar-img img--75"
-                                    onerror="this.src='{{ asset('public/assets/admin/img/160x160/img1.jpg') }}'"
+                                    onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
                                     src="{{ asset('storage/app/public/store/' . $order->store->logo) }}"
                                     alt="Image Description">
                             </div>

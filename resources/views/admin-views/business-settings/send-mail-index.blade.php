@@ -11,7 +11,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/email.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/email.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{ translate('messages.smtp') }} {{ translate('messages.mail') }}
                         {{ translate('messages.setup') }}
@@ -20,7 +20,7 @@
             @include('admin-views.business-settings.partials.third-party-links')
         </div>
         <!-- End Page Header -->
-        
+
         <div class="card min-h-60vh">
             <div class="card-header card-header-shadow pb-0">
                 <div class="d-flex flex-wrap justify-content-between w-100 row-gap-1">

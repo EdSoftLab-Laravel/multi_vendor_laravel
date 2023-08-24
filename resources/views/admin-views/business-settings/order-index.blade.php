@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{ translate('messages.business') }} {{ translate('messages.settings') }}
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-sm-6 col-lg-4">
                                         @php($prescription_order_status = \App\Models\BusinessSetting::where('key', 'prescription_order_status')->first())
-                                        
+
                                         @php($prescription_order_status = $prescription_order_status ? $prescription_order_status->value : 0)
                                         <div class="form-group mb-0">
 
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="col-sm-6 col-lg-4">
                                         @php($home_delivery_status = \App\Models\BusinessSetting::where('key', 'home_delivery_status')->first())
-                                        
+
                                         @php($home_delivery_status = $home_delivery_status ? $home_delivery_status->value : 0)
                                         <div class="form-group mb-0">
                                             <label
@@ -112,7 +112,7 @@
                                     </div>
                                     <div class="col-sm-6 col-lg-4">
                                         @php($takeaway_status = \App\Models\BusinessSetting::where('key', 'takeaway_status')->first())
-                                        
+
                                         @php($takeaway_status = $takeaway_status ? $takeaway_status->value : 0)
                                         <div class="form-group mb-0">
                                             <label
@@ -211,7 +211,7 @@
             @csrf
             <div class="mt-4">
                 <h4 class="card-title mb-3">
-                    <i class="tio-document-text-outlined mr-1"></i> 
+                    <i class="tio-document-text-outlined mr-1"></i>
                     {{translate('Order Cancelation Messages')}}
                 </h4>
                 <div class="card">
@@ -289,7 +289,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                
+
                                 <!-- Table -->
                                 <div class="card-body p-0">
                                     <div class="table-responsive datatable-custom">
@@ -309,12 +309,12 @@
                                                     <th class="border-0 text-center">{{ translate('messages.action') }}</th>
                                                 </tr>
                                             </thead>
-                
+
                                             <tbody id="table-div">
                                                 @foreach ($reasons as $key => $reason)
                                                     <tr>
                                                         <td>{{ $key + $reasons->firstItem() }}</td>
-                
+
                                                         <td>
                                                             <span class="d-block font-size-sm text-body" title="{{ $reason->reason }}">
                                                                 {{ Str::limit($reason->reason, 25, '...') }}
@@ -333,18 +333,18 @@
                                                                 </span>
                                                             </label>
                                                         </td>
-                
+
                                                         <td>
                                                             <div class="btn--container justify-content-center">
-                
+
                                                                 <a class="btn btn-sm btn--primary btn-outline-primary action-btn"
                                                     title="{{ translate('messages.edit') }}"
                                                     onclick="edit_reason('{{ $reason['id'] }}')" data-toggle="modal"
                                                     data-target="#add_update_reason_{{ $reason->id }}"><i
                                                         class="tio-edit"></i>
                                                 </a>
-                
-                
+
+
                                                                 <a class="btn btn-sm btn--danger btn-outline-danger action-btn"
                                                                     href="javascript:"
                                                                     onclick="form_alert('order-cancellation-reason-{{ $reason['id'] }}','{{ translate('messages.If_you_want_to_delete_this_reason,_please_confirm_your_decision.') }}')"

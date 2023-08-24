@@ -12,7 +12,7 @@
         <div class="page-header d-flex flex-wrap align-items-center justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/setting.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/setting.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.app_settings')}}
@@ -53,7 +53,7 @@
         @php($app_minimum_version_android_deliveryman=$app_minimum_version_android_deliveryman?$app_minimum_version_android_deliveryman->value:null)
         @php($app_url_android_deliveryman=\App\Models\BusinessSetting::where(['key'=>'app_url_android_deliveryman'])->first())
         @php($app_url_android_deliveryman=$app_url_android_deliveryman?$app_url_android_deliveryman->value:null)
-        
+
         @php($app_minimum_version_ios_deliveryman=\App\Models\BusinessSetting::where(['key'=>'app_minimum_version_ios_deliveryman'])->first())
         @php($app_minimum_version_ios_deliveryman=$app_minimum_version_ios_deliveryman?$app_minimum_version_ios_deliveryman->value:null)
         @php($app_url_ios_deliveryman=\App\Models\BusinessSetting::where(['key'=>'app_url_ios_deliveryman'])->first())

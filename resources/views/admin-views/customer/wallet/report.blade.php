@@ -93,7 +93,7 @@
                             <span class="subtitle">
                                 {{\App\CentralLogics\Helpers::format_currency($debit)}}
                             </span>
-                            <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/1.png')}}" alt="dashboard">
+                            <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/1.png')}}" alt="dashboard">
                         </div>
                     </div>
                     <!--Debit earned End-->
@@ -104,7 +104,7 @@
                             <span class="subtitle">
                                 {{\App\CentralLogics\Helpers::format_currency($credit)}}
                             </span>
-                            <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/2.png')}}" alt="dashboard">
+                            <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/2.png')}}" alt="dashboard">
                         </div>
                     </div>
                     <!--credit earned end-->
@@ -115,7 +115,7 @@
                             <span class="subtitle">
                                 {{\App\CentralLogics\Helpers::format_currency($balance)}}
                             </span>
-                            <img class="resturant-icon" src="{{asset('public/assets/admin/img/customer-loyality/3.png')}}" alt="dashboard">
+                            <img class="resturant-icon" src="{{asset('assets/admin/img/customer-loyality/3.png')}}" alt="dashboard">
                         </div>
                     </div>
                     <!--balance earned end-->
@@ -215,10 +215,10 @@
 
 @push('script_2')
 
-    <script src="{{asset('public/assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
     <script
-        src="{{asset('public/assets/admin')}}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js"></script>
-    <script src="{{asset('public/assets/admin')}}/js/hs.chartjs-matrix.js"></script>
+        src="{{asset('assets/admin')}}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js"></script>
+    <script src="{{asset('assets/admin')}}/js/hs.chartjs-matrix.js"></script>
 
     <script>
         $(document).on('ready', function () {

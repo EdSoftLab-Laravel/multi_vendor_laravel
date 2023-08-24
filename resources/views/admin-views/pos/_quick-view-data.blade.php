@@ -15,7 +15,7 @@
         <div class="d-flex align-items-center justify-content-center active">
             <img class="img-responsive initial--30"
                 src="{{ asset('storage/app/public/product') }}/{{ $product['image'] }}"
-                onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'"
+                onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                 data-zoom="{{ asset('storage/app/public/product') }}/{{ $product['image'] }}" alt="Product image"
                 width="">
             <div class="cz-image-zoom-pane"></div>
@@ -70,7 +70,7 @@
                     }
                 }
             }
-            
+
             ?>
             <h2>{{ translate('messages.description') }}</h2>
             <span class="d-block text-dark text-break">
@@ -81,7 +81,7 @@
                 <input type="hidden" name="id" value="{{ $product->id }}">
                 @if ($product->module->module_type == 'food')
                     @if ($product->food_variations)
-                        
+
                         @foreach (json_decode($product->food_variations) as $key => $choice)
                             @if (isset($choice->price) == false)
                                 <div class="h3 p-0 pt-2">{{ $choice->name }} <small style="font-size: 12px"

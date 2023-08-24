@@ -3,9 +3,9 @@
 @section('title',translate('messages.edit_store'))
 @push('css_or_js')
     <!-- Custom styles for this page -->
-    <link href="{{asset('public/assets/admin')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="{{asset('assets/admin')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
      <!-- Custom styles for this page -->
-     <link href="{{asset('public/assets/admin/css/croppie.css')}}" rel="stylesheet">
+     <link href="{{asset('assets/admin/css/croppie.css')}}" rel="stylesheet">
      <meta name="csrf-token" content="{{ csrf_token() }}">
 @endpush
 @section('content')
@@ -57,7 +57,7 @@
                                             </label>
                                             <input type="text" name="name[]" id="default_name"
                                                 class="form-control" placeholder="{{ translate('messages.store_name') }}" value="{{$shop->getRawOriginal('name')}}"
-                                                
+
                                                 oninvalid="document.getElementById('en-link').click()">
                                         </div>
                                         <input type="hidden" name="lang[]" value="default">
@@ -150,7 +150,7 @@
                         <div class="card-body d-flex flex-column pt-0">
                             <center class="my-auto py-4 py-xl-5">
                                 <img class="store-banner" id="viewer"
-                                onerror="this.src='{{asset('public/assets/admin/img/image-place-holder.png')}}'"
+                                onerror="this.src='{{asset('assets/admin/img/image-place-holder.png')}}'"
                                 src="{{asset('storage/app/public/store/'.$shop->logo)}}" alt="Product thumbnail"/>
                             </center>
                             <div class="custom-file">
@@ -171,7 +171,7 @@
                         <div class="card-body d-flex flex-column pt-0">
                             <center class="my-auto py-4 py-xl-5">
                                 <img class="store-banner" id="coverImageViewer"
-                                onerror="this.src='{{asset('public/assets/admin/img/restaurant_cover.jpg')}}'"
+                                onerror="this.src='{{asset('assets/admin/img/restaurant_cover.jpg')}}'"
                                 src="{{asset('storage/app/public/store/cover/'.$shop->cover_photo)}}" alt="Product thumbnail"/>
                             </center>
                             <div class="custom-file">

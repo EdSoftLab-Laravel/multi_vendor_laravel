@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/addon.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/addon.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{translate('messages.add').' '.translate('messages.new')}} {{translate('messages.addon')}}
@@ -301,7 +301,7 @@
           },
           language: {
             zeroRecords: '<div class="text-center p-4">' +
-                '<img class="mb-3 w-7rem" src="{{asset('public/assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
+                '<img class="mb-3 w-7rem" src="{{asset('assets/admin/svg/illustrations/sorry.svg')}}" alt="Image Description">' +
 
                 '</div>'
           }

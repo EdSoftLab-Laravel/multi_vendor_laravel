@@ -26,7 +26,7 @@
                     <div class="col-sm-6">
                         <div class="__customer-statistics-card h-100">
                             <div class="title">
-                                <img src="{{asset('public/assets/admin/img/new-img/deliveryman/active.svg')}}" alt="new-img">
+                                <img src="{{asset('assets/admin/img/new-img/deliveryman/active.svg')}}" alt="new-img">
                                 <h4>{{$active_deliveryman}}</h4>
                             </div>
                             <h4 class="subtitle text-capitalize">{{translate('messages.active_delivery_man')}}</h4>
@@ -35,7 +35,7 @@
                     <div class="col-sm-6">
                         <div class="__customer-statistics-card h-100" style="--clr:#006AB4">
                             <div class="title">
-                                <img src="{{asset('public/assets/admin/img/new-img/deliveryman/newly.svg')}}" alt="new-img">
+                                <img src="{{asset('assets/admin/img/new-img/deliveryman/newly.svg')}}" alt="new-img">
                                 <h4>{{$unavailable_deliveryman}}</h4>
                             </div>
                             <h4 class="subtitle text-capitalize">{{translate('Available to assign more order')}}</h4>
@@ -44,7 +44,7 @@
                     <div class="col-sm-6">
                         <div class="__customer-statistics-card h-100">
                             <div class="title">
-                                <img src="{{asset('public/assets/admin/img/new-img/deliveryman/active.svg')}}" alt="new-img">
+                                <img src="{{asset('assets/admin/img/new-img/deliveryman/active.svg')}}" alt="new-img">
                                 <h4>{{ $unavailable_deliveryman }}</h4>
                             </div>
                             <h4 class="subtitle text-capitalize">{{ translate('Fully Booked Delivery Man')}}</h4>
@@ -53,7 +53,7 @@
                     <div class="col-sm-6">
                         <div class="__customer-statistics-card h-100" style="--clr:#FF5A54">
                             <div class="title">
-                                <img src="{{asset('public/assets/admin/img/new-img/deliveryman/in-active.svg')}}" alt="new-img">
+                                <img src="{{asset('assets/admin/img/new-img/deliveryman/in-active.svg')}}" alt="new-img">
                                 <h4>{{$inactive_deliveryman}}</h4>
                             </div>
                             <h4 class="subtitle text-capitalize">{{translate('messages.inactive_deliveryman')}}</h4>
@@ -68,7 +68,7 @@
                             <a class="order--card h-100" href="#">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="card-subtitle d-flex justify-content-between m-0 align-items-center">
-                                        <img src="{{asset('public/assets/admin/img/dashboard/food/unassigned.svg')}}" 
+                                        <img src="{{asset('assets/admin/img/dashboard/food/unassigned.svg')}}"
                                         alt="dashboard" class="oder--card-icon">
                                         <span>{{translate('messages.unassigned_orders')}}</span>
                                     </h6>
@@ -82,7 +82,7 @@
                             <a class="order--card h-100" href="#">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="card-subtitle d-flex justify-content-between m-0 align-items-center">
-                                        <img src="{{asset('public/assets/admin/img/dashboard/food/accepted.svg')}}" 
+                                        <img src="{{asset('assets/admin/img/dashboard/food/accepted.svg')}}"
                                         alt="dashboard" class="oder--card-icon">
                                         <span>{{translate('Accepted by Delivery Man')}}</span>
                                     </h6>
@@ -96,7 +96,7 @@
                             <a class="order--card h-100" href="#">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="card-subtitle d-flex justify-content-between m-0 align-items-center">
-                                        <img src="{{asset('public/assets/admin/img/dashboard/food/out-for.svg')}}" 
+                                        <img src="{{asset('assets/admin/img/dashboard/food/out-for.svg')}}"
                                         alt="dashboard" class="oder--card-icon">
                                         <span>{{translate('Out for Delivery')}}</span>
                                     </h6>
@@ -197,7 +197,7 @@
                         position: point,
                         map: map,
                         title: deliveryMan[i].image,
-                        icon: "{{ asset('public/assets/admin/img/delivery_boy_map.png') }}"
+                        icon: "{{ asset('assets/admin/img/delivery_boy_map.png') }}"
                     });
                     dmMarkers[deliveryMan[i].id] = marker;
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {

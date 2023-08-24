@@ -13,7 +13,7 @@
     <!-- Page Header -->
     <div class="page-header report-page-header">
         <div class="d-flex">
-            <img src="{{asset('public/assets/admin/img/store-report.svg')}}" class="page-header-icon" alt="">
+            <img src="{{asset('assets/admin/img/store-report.svg')}}" class="page-header-icon" alt="">
             <div class="w-0 flex-grow-1 pl-3">
                 <h1 class="page-header-title m-0">
                     {{translate('Store Wise Report')}}
@@ -259,13 +259,13 @@
                         {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                         <a id="export-copy" class="dropdown-item" href="javascript:;">
                             <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                 alt="Image Description">
                             {{ translate('messages.copy') }}
                         </a>
                         <a id="export-print" class="dropdown-item" href="javascript:;">
                             <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                 alt="Image Description">
                             {{ translate('messages.print') }}
                         </a>
@@ -274,13 +274,13 @@
                             {{ translate('messages.options') }}</span>
                         <a id="export-excel" class="dropdown-item" href="{{route('admin.store.export', ['type'=>'excel',request()->getQueryString()])}}">
                             <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                 alt="Image Description">
                             {{ translate('messages.excel') }}
                         </a>
                         <a id="export-csv" class="dropdown-item" href="{{route('admin.store.export', ['type'=>'csv',request()->getQueryString()])}}">
                             <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                 alt="Image Description">
                             .{{ translate('messages.csv') }}
                         </a>
@@ -323,7 +323,7 @@
                                 </div>
                             </td>
                             <td class="pl-0">
-                                078 8502 2342 
+                                078 8502 2342
                             </td>
                             <td class="pl-0">
                                 Visa Card
@@ -358,7 +358,7 @@
                                 </div>
                             </td>
                             <td class="pl-0">
-                                078 8502 2342 
+                                078 8502 2342
                             </td>
                             <td class="pl-0">
                                 Visa Card
@@ -393,7 +393,7 @@
                                 </div>
                             </td>
                             <td class="pl-0">
-                                078 8502 2342 
+                                078 8502 2342
                             </td>
                             <td class="pl-0">
                                 Visa Card
@@ -422,11 +422,11 @@
 
 
 @push('script')
-    <script src="{{asset('public/assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
-    <script src="{{asset('public/assets/admin')}}/vendor/chart.js.extensions/chartjs-extensions.js"></script>
-    <script src="{{asset('public/assets/admin')}}/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chart.js.extensions/chartjs-extensions.js"></script>
+    <script src="{{asset('assets/admin')}}/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
 
-    
+
     <!-- Apex Charts -->
     <script src="{{asset('/public/assets/admin/js/apex-charts/apexcharts.js')}}"></script>
     <!-- Apex Charts -->

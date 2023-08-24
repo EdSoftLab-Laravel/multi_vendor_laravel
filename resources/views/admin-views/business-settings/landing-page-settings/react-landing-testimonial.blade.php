@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.react_landing_page') }}
@@ -57,7 +57,7 @@
                             <div class="row g-3 lang_form" id="default-form">
                                 <div class="col-sm-12">
                                     <label class="form-label">{{translate('Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_50_characters') }}">
-                                        <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                        <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                     </span></label>
                             <input type="text"  maxlength="50" name="testimonial_title[]" class="form-control" value="{{$testimonial_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
@@ -68,18 +68,18 @@
                                 if(isset($testimonial_title->translations)&&count($testimonial_title->translations)){
                                         $testimonial_title_translate = [];
                                         foreach($testimonial_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='testimonial_title'){
                                                 $testimonial_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
                                         <div class="col-sm-12">
                                             <label class="form-label">{{translate('Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_50_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="50" name="testimonial_title[]" class="form-control" value="{{ $testimonial_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
@@ -130,7 +130,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <label class="form-label">{{translate('messages.review')}}<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_140_characters') }}">
-                                            <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                            <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                         </span></label>
                                         <textarea name="review"  maxlength="140" placeholder="{{translate('Very Good Company')}}" class="form-control h92px"></textarea>
                                     </div>
@@ -167,7 +167,7 @@
                             <button type="reset" class="btn btn--reset">{{translate('Reset')}}</button>
                             <button type="submit" onclick="" class="btn btn--primary mb-2">{{translate('Add')}}</button>
                         </div>
-                        
+
                     </div>
                 </form>
                     @php($reviews=\App\Models\ReactTestimonial::all())
@@ -224,7 +224,7 @@
                                             <form action="{{route('admin.business-settings.review-react-status',[$review->id,$review->status?0:1])}}" method="get" id="status-{{$review->id}}_form">
                                             </form>
                                         </td>
-                
+
                                         <td>
                                             <div class="btn--container justify-content-center">
                                                 <a class="btn action-btn btn--primary btn-outline-primary" href="{{route('admin.business-settings.review-react-edit',[$review['id']])}}">
@@ -242,7 +242,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                
+
                         </div>
                         <!-- End Table -->
                     </div>
@@ -255,8 +255,8 @@
                     </div>
                     @endif
                 </div>
-        
-        
+
+
             <!--  Special review Section View -->
             <div class="modal fade" id="testimonials-section">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -270,7 +270,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Testimonial Modal -->
             <div class="modal fade" id="testimonials-status-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -306,7 +306,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>

@@ -10,7 +10,7 @@
     <div class="page-header d-flex flex-wrap justify-content-between">
         <h1 class="page-header-title">
             <span class="page-header-icon">
-                <img src="{{asset('public/assets/admin/img/folder-logo.png')}}" class="w--26" alt="">
+                <img src="{{asset('assets/admin/img/folder-logo.png')}}" class="w--26" alt="">
             </span>
             <span>
                 {{translate('messages.gallery')}}
@@ -46,7 +46,7 @@
                         <div class="col-6 col-sm-auto">
                             @if($file['type']=='folder')
                             <a class="btn p-0 btn--folder"  href="{{route('admin.business-settings.file-manager.index', base64_encode($file['path']))}}">
-                                <img class="img-thumbnail border-0 p-0" src="{{asset('public/assets/admin/img/folder.png')}}" alt="">
+                                <img class="img-thumbnail border-0 p-0" src="{{asset('assets/admin/img/folder.png')}}" alt="">
                                 <p>{{Str::limit($file['name'],10)}}</p>
                             </a>
                             @elseif($file['type']=='file')

@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/deliveryman.png')}}" class="w--30" alt="">
+                    <img src="{{asset('assets/admin/img/deliveryman.png')}}" class="w--30" alt="">
                 </span>
                 <span>
                     {{translate('messages.add')}} {{translate('messages.new')}} {{translate('messages.deliveryman')}}
@@ -98,7 +98,7 @@
                         </div>
                         <div class="card-body d-flex flex-column">
                             <center class="my-auto py-3">
-                                <img class="img--100" id="viewer" src="{{asset('public/assets/admin/img/400x400/img2.jpg')}}" alt="delivery-man image"/>
+                                <img class="img--100" id="viewer" src="{{asset('assets/admin/img/400x400/img2.jpg')}}" alt="delivery-man image"/>
                             </center>
                             <div class="custom-file">
                                 <input type="file" name="image" id="customFileEg1" class="custom-file-input"
@@ -249,7 +249,7 @@
 
     </script>
 
-    <script src="{{asset('public/assets/admin/js/spartan-multi-image-picker.js')}}"></script>
+    <script src="{{asset('assets/admin/js/spartan-multi-image-picker.js')}}"></script>
     <script type="text/javascript">
         $(function () {
             $("#coba").spartanMultiImagePicker({
@@ -259,7 +259,7 @@
                 groupClassName: '',
                 maxFileSize: '',
                 placeholderImage: {
-                    image: '{{asset('public/assets/admin/img/400x400/img2.jpg')}}',
+                    image: '{{asset('assets/admin/img/400x400/img2.jpg')}}',
                     width: '100%'
                 },
                 dropFileLabel: "Drop Here",
@@ -326,7 +326,7 @@
     </script>
     <script>
         $('#reset_btn').click(function(){
-            $('#viewer').attr('src','{{asset('public/assets/admin/img/400x400/img2.jpg')}}');
+            $('#viewer').attr('src','{{asset('assets/admin/img/400x400/img2.jpg')}}');
             $("#coba").empty().spartanMultiImagePicker({
             fieldName: 'identity_image[]',
             maxCount: 5,
@@ -334,7 +334,7 @@
             groupClassName: 'col-6 spartan_item_wrapper size--md',
             maxFileSize: '',
             placeholderImage: {
-                image: '{{asset('public/assets/admin/img/400x400/img2.jpg')}}',
+                image: '{{asset('assets/admin/img/400x400/img2.jpg')}}',
                 width: '100%'
             },
             dropFileLabel: "Drop Here",

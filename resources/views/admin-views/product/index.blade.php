@@ -4,7 +4,7 @@
 
 @push('css_or_js')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('public/assets/admin/css/tags-input.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/admin/css/tags-input.min.css') }}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="page-header d-flex flex-wrap __gap-15px justify-content-between align-items-center">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/items.png') }}" class="w--22" alt="">
+                    <img src="{{ asset('assets/admin/img/items.png') }}" class="w--22" alt="">
                 </span>
                 <span>
                     {{ translate('messages.add_new_item') }}
@@ -142,7 +142,7 @@
                                         <small class="text-danger">* ( {{ translate('messages.ratio') }} 1:1 )</small>
                                     </label>
                                     <label class="d-inline-block m-0">
-                                        <img class="img--100" id="viewer" src="{{ asset('public/assets/admin/img/upload.png') }}" alt="thumbnail" />
+                                        <img class="img--100" id="viewer" src="{{ asset('assets/admin/img/upload.png') }}" alt="thumbnail" />
                                         <input type="file" name="image" id="customFileEg1" class="custom-file-input d-none"
                                             accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
                                     </label>
@@ -401,7 +401,7 @@
 
                                 <div class="col-md-12">
                                     <div class="table-responsive">
-                                        <div class="customer_choice_options d-flex __gap-24px" 
+                                        <div class="customer_choice_options d-flex __gap-24px"
                                         id="customer_choice_options">
 
                                         </div>
@@ -651,7 +651,7 @@
 
         }
     </script>
-    <script src="{{ asset('public/assets/admin') }}/js/tags-input.min.js"></script>
+    <script src="{{ asset('assets/admin') }}/js/tags-input.min.js"></script>
     <script>
     function foodModalClose() {
         $('#food-modal').hide();
@@ -878,7 +878,7 @@
 
         function add_more_customer_choice_option(i, name) {
             let n = name;
-            
+
             $('#customer_choice_options').append(
                 `<div class="__choos-item"><div><input type="hidden" name="choice_no[]" value="${i}"><input type="text" class="form-control d-none" name="choice[]" value="${n}" placeholder="{{ translate('messages.choice_title') }}" readonly> <label class="form-label">${n}</label> </div><div><input type="text" class="form-control" name="choice_options_${i}[]" placeholder="{{ translate('messages.enter_choice_values') }}" data-role="tagsinput" onchange="combination_update()"></div></div>`
             );
@@ -970,7 +970,7 @@
             }
         })
     </script>
-    <script src="{{ asset('public/assets/admin/js/spartan-multi-image-picker.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/spartan-multi-image-picker.js') }}"></script>
     <script type="text/javascript">
         $(function() {
             $("#coba").spartanMultiImagePicker({
@@ -980,7 +980,7 @@
                 groupClassName: 'spartan_item_wrapper min-w-100px max-w-100px',
                 maxFileSize: '',
                 placeholderImage: {
-                    image: "{{ asset('public/assets/admin/img/upload.png') }}",
+                    image: "{{ asset('assets/admin/img/upload.png') }}",
                     width: '100px'
                 },
                 dropFileLabel: "Drop Here",
@@ -1031,7 +1031,7 @@
                 groupClassName: 'spartan_item_wrapper min-w-100px max-w-100px',
                 maxFileSize: '',
                 placeholderImage: {
-                    image: "{{ asset('public/assets/admin/img/upload.png') }}",
+                    image: "{{ asset('assets/admin/img/upload.png') }}",
                     width: '100%'
                 },
                 dropFileLabel: "Drop Here",

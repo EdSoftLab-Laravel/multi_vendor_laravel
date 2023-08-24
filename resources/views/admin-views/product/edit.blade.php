@@ -4,7 +4,7 @@
 
 @push('css_or_js')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('public/assets/admin/css/tags-input.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/admin/css/tags-input.min.css') }}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -15,7 +15,7 @@
         <div class="page-header d-flex flex-wrap __gap-15px justify-content-between align-items-center">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/edit.png') }}" class="w--22" alt="">
+                    <img src="{{ asset('assets/admin/img/edit.png') }}" class="w--22" alt="">
                 </span>
                 <span>
                     {{ translate('messages.item_update') }}
@@ -166,7 +166,7 @@
                                     <label class="d-inline-block m-0">
                                         <img class="img--100" id="viewer"
                                             src="{{ asset('storage/app/public/product') }}/{{ $product['image'] }}"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload.png') }}'"
                                             alt="thumbnail" />
                                         <input type="file" name="image" id="customFileEg1"
                                             class="custom-file-input d-none"
@@ -422,7 +422,7 @@
                                     @endforeach
                                 @endif
                             </div>
-                            
+
                                 <!-- Empty Variation -->
                                 @if (!isset($product->food_variations) || count(json_decode($product->food_variations,true))<1)
                                 <div id="empty-variation">
@@ -719,7 +719,7 @@
 
     }
 </script>
-<script src="{{ asset('public/assets/admin') }}/js/tags-input.min.js"></script>
+<script src="{{ asset('assets/admin') }}/js/tags-input.min.js"></script>
 <script>
     function getStoreData(route, store_id, id) {
         $.get({
@@ -1095,7 +1095,7 @@
         $('input[name="current_stock"]').val(total_qty);
     });
 </script>
-<script src="{{ asset('public/assets/admin/js/spartan-multi-image-picker.js') }}"></script>
+<script src="{{ asset('assets/admin/js/spartan-multi-image-picker.js') }}"></script>
 <script type="text/javascript">
     $(function() {
         $("#coba").spartanMultiImagePicker({
@@ -1105,7 +1105,7 @@
             groupClassName: 'spartan_item_wrapper min-w-100px max-w-100px',
             maxFileSize: '',
             placeholderImage: {
-                image: "{{ asset('public/assets/admin/img/upload.png') }}",
+                image: "{{ asset('assets/admin/img/upload.png') }}",
                 width: '100px'
             },
             dropFileLabel: "Drop Here",
@@ -1156,7 +1156,7 @@
             groupClassName: 'spartan_item_wrapper min-w-100px max-w-100px',
             maxFileSize: '',
             placeholderImage: {
-                image: "{{ asset('public/assets/admin/img/upload.png') }}",
+                image: "{{ asset('assets/admin/img/upload.png') }}",
                 width: '100%'
             },
             dropFileLabel: "Drop Here",

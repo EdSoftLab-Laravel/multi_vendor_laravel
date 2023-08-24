@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.admin_landing_pages') }}
@@ -74,7 +74,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="40" name="earning_title[]" class="form-control" value="{{$earning_title?->getRawOriginal('value')}}" placeholder="{{translate('messages.title_here...')}}">
@@ -84,7 +84,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="80" name="earning_sub_title[]" class="form-control" value="{{$earning_sub_title?->getRawOriginal('value')}}" placeholder="{{translate('messages.sub_title_here...')}}">
@@ -96,22 +96,22 @@
                                 if(isset($earning_title->translations)&&count($earning_title->translations)){
                                         $earning_title_translate = [];
                                         foreach($earning_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_title'){
                                                 $earning_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                 if(isset($earning_sub_title->translations)&&count($earning_sub_title->translations)){
                                         $earning_sub_title_translate = [];
                                         foreach($earning_sub_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_sub_title'){
                                                 $earning_sub_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
@@ -120,7 +120,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="40" name="earning_title[]" class="form-control" value="{{ $earning_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
@@ -130,7 +130,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="80" name="earning_sub_title[]" class="form-control" value="{{ $earning_sub_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.sub_title_here...')}}">
@@ -145,7 +145,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="40" name="earning_title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
@@ -155,7 +155,7 @@
                                                         class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="">
                                                     </span></label>
                                                 <input type="text" maxlength="80" name="earning_sub_title[]" class="form-control" placeholder="{{translate('messages.sub_title_here...')}}">
@@ -209,7 +209,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5 class="card-title mb-2">
-                                    <img src="{{asset('public/assets/admin/img/playstore.png')}}" class="mr-2" alt="">
+                                    <img src="{{asset('assets/admin/img/playstore.png')}}" class="mr-2" alt="">
                                     {{translate('Playstore Button')}}
                                 </h5>
                                 <div class="__bg-F8F9FC-card">
@@ -234,7 +234,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5 class="card-title mb-2">
-                                    <img src="{{asset('public/assets/admin/img/ios.png')}}" class="mr-2" alt="">
+                                    <img src="{{asset('assets/admin/img/ios.png')}}" class="mr-2" alt="">
                                     {{translate('App Store Button')}}
                                 </h5>
                                 <div class="__bg-F8F9FC-card">
@@ -272,7 +272,7 @@
                 <input type="hidden" name="model_name" value="DataSetting" >
                 <input type="hidden" name="image_path" value="earning" >
                 <input type="hidden" name="field_name" value="value" >
-            </form> 
+            </form>
             <form action="{{ route('admin.business-settings.admin-landing-page-settings', 'earning-dm-link') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @php($dm_app_links = \App\Models\DataSetting::where(['key'=>'dm_app_earning_links','type'=>'admin_landing_page'])->first())
@@ -312,7 +312,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5 class="card-title mb-2">
-                                    <img src="{{asset('public/assets/admin/img/playstore.png')}}" class="mr-2" alt="">
+                                    <img src="{{asset('assets/admin/img/playstore.png')}}" class="mr-2" alt="">
                                     {{translate('Playstore Button')}}
                                 </h5>
                                 <div class="__bg-F8F9FC-card">
@@ -337,7 +337,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5 class="card-title mb-2">
-                                    <img src="{{asset('public/assets/admin/img/ios.png')}}" class="mr-2" alt="">
+                                    <img src="{{asset('assets/admin/img/ios.png')}}" class="mr-2" alt="">
                                     {{translate('App Store Button')}}
                                 </h5>
                                 <div class="__bg-F8F9FC-card">
@@ -375,8 +375,8 @@
                 <input type="hidden" name="model_name" value="DataSetting" >
                 <input type="hidden" name="image_path" value="earning" >
                 <input type="hidden" name="field_name" value="value" >
-            </form> 
-        
+            </form>
+
             <!-- Feature Modal -->
             <div class="modal fade" id="feature-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -412,7 +412,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>
@@ -421,7 +421,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Module Setup Section View -->
             <div class="modal fade" id="admin-earn-money">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -460,7 +460,7 @@
                         </div>
                     </div>
                 </div>
-            </div>         
+            </div>
         </div>
     </div>
 </div>

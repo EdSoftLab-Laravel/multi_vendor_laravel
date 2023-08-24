@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title text-break">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/delivery-man.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/delivery-man.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{translate('messages.deliveryman')}} {{translate('messages.reviews')}}<span class="badge badge-soft-dark ml-2" id="itemCount">{{$reviews->total()}}</span></span>
             </h1>
