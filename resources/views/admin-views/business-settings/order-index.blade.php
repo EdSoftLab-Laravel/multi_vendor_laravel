@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{ translate('messages.business') }} {{ translate('messages.settings') }}
@@ -46,7 +46,7 @@
                                                     <span class="form-label-secondary text-danger d-flex"
                                                         data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.When_a_deliveryman_arrives_for_delivery,_Customers_will_get_a_4-digit_verification_code_on_the_order_details_section_in_the_Customer_App_and_needs_to_provide_the_code_to_the_delivery_man_to_verify_the_order.') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('messages.order_varification_toggle') }}"> *
                                                     </span>
                                                 </span>
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-sm-6 col-lg-4">
                                         @php($prescription_order_status = \App\Models\BusinessSetting::where('key', 'prescription_order_status')->first())
-                                        
+
                                         @php($prescription_order_status = $prescription_order_status ? $prescription_order_status->value : 0)
                                         <div class="form-group mb-0">
 
@@ -73,7 +73,7 @@
                                                     <span class="form-label-secondary text-danger d-flex"
                                                         data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.With_this_feature,_customers_can_place_an_order_by_uploading_prescription._Stores_can_enable/disable_this_feature_from_the_store_settings_if_needed.') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('messages.prescription_order_status') }}"> * </span>
                                                 </span>
                                                 <input type="checkbox" onclick="toogleModal(event,'prescription_order_status','prescription-on.png','prescription-off.png','{{translate('messages.Want_to_enable')}} <strong>{{translate('messages.Place_Order_by_Prescription?')}}</strong>','{{translate('messages.Want_to_disable')}} <strong>{{translate('messages.Place_Order_by_Prescription?')}}</strong>',`<p>{{translate('messages.If_you_enable_this,_customers_can_place_an_order_by_simply_uploading_their_prescriptions_in_the_Pharmacy_module_from_the_Customer_App_or_Website._Stores_can_enable/disable_this_feature_from_store_settings_if_needed.')}}</p>`,`<p>{{translate('messages.If_disabled,_this_feature_will_be_hidden_from_the_Customer_App,_Website,_and_Store_App_&_Panel.')}}</p>`)" class="toggle-switch-input" value="1"
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="col-sm-6 col-lg-4">
                                         @php($home_delivery_status = \App\Models\BusinessSetting::where('key', 'home_delivery_status')->first())
-                                        
+
                                         @php($home_delivery_status = $home_delivery_status ? $home_delivery_status->value : 0)
                                         <div class="form-group mb-0">
                                             <label
@@ -99,7 +99,7 @@
                                                     <span class="form-label-secondary text-danger d-flex"
                                                         data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.If_you_enable_this_feature,_customers_can_choose_‘Home_Delivery’_and_get_the_product_delivered_to_their_preferred_location.') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('Home Delivery') }}"></span>
                                                 </span>
                                                 <input type="checkbox" onclick="toogleModal(event,'home_delivery','home-delivery-on.png','home-delivery-off.png','{{translate('messages.Want_to_enable')}} <strong>{{translate('messages.Home_Delivery?')}}</strong>','{{translate('messages.Want_to_disable')}} <strong>{{translate('messages.Home_Delivery?')}}</strong>',`<p>{{translate('messages.If_you_enable_this,_customers_can_use_Home_Delivery_Option_during_checkout_from_the_Customer_App_or_Website.')}}</p>`,`<p>{{translate('messages.If_you_disable_this,_the_Home_Delivery_feature_will_be_hidden_from_the_customer_app_and_website.')}}</p>`)" name ="home_delivery_status" id="home_delivery" value="1"
@@ -112,7 +112,7 @@
                                     </div>
                                     <div class="col-sm-6 col-lg-4">
                                         @php($takeaway_status = \App\Models\BusinessSetting::where('key', 'takeaway_status')->first())
-                                        
+
                                         @php($takeaway_status = $takeaway_status ? $takeaway_status->value : 0)
                                         <div class="form-group mb-0">
                                             <label
@@ -124,7 +124,7 @@
                                                     <span class="form-label-secondary text-danger d-flex"
                                                         data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.If_you_enable_this_feature,_customers_can_place_an_order_and_request_‘Takeaways’_or_‘self-pick-up’_from_stores.') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('Home Delivery') }}"></span>
                                                 </span>
                                                 <input type="checkbox" onclick="toogleModal(event,'take_away','takeaway-on.png','takeaway-off.png','{{translate('messages.Want_to_enable')}} <strong>{{translate('messages.the_Takeaway_feature?')}}</strong>','{{translate('messages.Want_to_disable')}} <strong>{{translate('messages.the_Takeaway_feature?')}}</strong>',`<p>{{translate('messages.If_you_enable_this,_customers_can_use_the_Takeaway_feature_during_checkout_from_the_Customer_App_or_Website.')}}</p>`,`<p>{{translate('messages.If_you_disable_this,_the_Takeaway_feature_will_be_hidden_from_the_Customer_App_or_Website.')}}</p>`)" class="toggle-switch-input" name="takeaway_status" value="1" id="take_away" {{ $takeaway_status == 1 ? 'checked' : '' }}>
@@ -148,7 +148,7 @@
                                                     <span class="form-label-secondary text-danger d-flex"
                                                         data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.With_this_feature,_customers_can_choose_their_preferred_delivery_slot._Customers_can_select_a_delivery_slot_for_ASAP_or_a_specific_date_(within_2_days_from_the_order).')}}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('messages.customer_varification_toggle') }}"> *
                                                     </span>
                                                 </span>
@@ -177,7 +177,7 @@
                                                     <span class="form-label-secondary text-danger"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('messages.By_activating_this_feature,_customers_can_choose_their_suitable_delivery_slot_according_to_a_30-minute_or_1-hour_interval_set_by_the_Admin.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('Home Delivery') }}"></span>
                                                 </span>
                                             </label>
@@ -211,7 +211,7 @@
             @csrf
             <div class="mt-4">
                 <h4 class="card-title mb-3">
-                    <i class="tio-document-text-outlined mr-1"></i> 
+                    <i class="tio-document-text-outlined mr-1"></i>
                     {{translate('Order Cancelation Messages')}}
                 </h4>
                 <div class="card">
@@ -258,7 +258,7 @@
                                     <span class="form-label-secondary text-danger d-flex" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('When this field is active, user can cancel an order with proper reason.') }}"><img
-                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                             alt="{{ translate('messages.prescription_order_status') }}"></span>
                                 </label>
                                 <select name="user_type" class="form-control h--45px" required>
@@ -289,7 +289,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                
+
                                 <!-- Table -->
                                 <div class="card-body p-0">
                                     <div class="table-responsive datatable-custom">
@@ -309,12 +309,12 @@
                                                     <th class="border-0 text-center">{{ translate('messages.action') }}</th>
                                                 </tr>
                                             </thead>
-                
+
                                             <tbody id="table-div">
                                                 @foreach ($reasons as $key => $reason)
                                                     <tr>
                                                         <td>{{ $key + $reasons->firstItem() }}</td>
-                
+
                                                         <td>
                                                             <span class="d-block font-size-sm text-body" title="{{ $reason->reason }}">
                                                                 {{ Str::limit($reason->reason, 25, '...') }}
@@ -333,18 +333,18 @@
                                                                 </span>
                                                             </label>
                                                         </td>
-                
+
                                                         <td>
                                                             <div class="btn--container justify-content-center">
-                
+
                                                                 <a class="btn btn-sm btn--primary btn-outline-primary action-btn"
                                                     title="{{ translate('messages.edit') }}"
                                                     onclick="edit_reason('{{ $reason['id'] }}')" data-toggle="modal"
                                                     data-target="#add_update_reason_{{ $reason->id }}"><i
                                                         class="tio-edit"></i>
                                                 </a>
-                
-                
+
+
                                                                 <a class="btn btn-sm btn--danger btn-outline-danger action-btn"
                                                                     href="javascript:"
                                                                     onclick="form_alert('order-cancellation-reason-{{ $reason['id'] }}','{{ translate('messages.If_you_want_to_delete_this_reason,_please_confirm_your_decision.') }}')"

@@ -159,7 +159,7 @@
                                     </span>
                                 </div>
                             </div>
-                        </td>     
+                        </td>
                     @else
                     <td style="width:100%;vertical-align: top;">
                         <div style="margin-top:10px;">
@@ -178,7 +178,7 @@
                                 </span>
                             </div>
                         </div>
-                    </td>                                         
+                    </td>
                     @endif
                 </tr>
             </tbody>
@@ -270,7 +270,7 @@
                             $total_discount_on_product += $details['discount'];
                             $total += $subtotal;
                             ?>
-                        @endforeach                    
+                        @endforeach
                     @endif
 
                     </tbody>
@@ -351,7 +351,7 @@
                             @foreach ($social_media as $social)
                                 <div style="display:inline-block;">
                                     <a href="{{ $social->link }}" target=”_blank”>
-                                        <img src="{{ asset('public/assets/admin/img/' . $social->name . '.png') }}"
+                                        <img src="{{ asset('assets/admin/img/' . $social->name . '.png') }}"
                                             alt="" style="height: 14px; width:14px; padding: 0px 3px 0px 5px;">
                                     </a>
                                 </div>

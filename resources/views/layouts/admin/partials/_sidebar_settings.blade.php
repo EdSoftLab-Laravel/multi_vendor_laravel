@@ -5,8 +5,8 @@
                 <!-- Logo -->
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
                 <a class="navbar-brand" href="{{ route('admin.business-settings.business-setup') }}" aria-label="Front">
-                    <img class="navbar-brand-logo initial--36" onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="Logo">
-                    <img class="navbar-brand-logo-mini initial--36" onerror="this.src='{{ asset('public/assets/admin/img/160x160/img2.jpg') }}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="Logo">
+                    <img class="navbar-brand-logo initial--36" onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="Logo">
+                    <img class="navbar-brand-logo-mini initial--36" onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="Logo">
                 </a>
                 <!-- End Logo -->
 
@@ -124,7 +124,7 @@
 
                         <li class="navbar-vertical-aside-has-menu {{ Request::is('admin/business-settings/pages/business-page*') ? 'active' : '' }}">
                             <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:" title="{{ translate('messages.business') }} {{ translate('messages.pages') }}">
-                                <span class="tio-circle nav-indicator-icon"></span>    
+                                <span class="tio-circle nav-indicator-icon"></span>
                                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{ translate('messages.business') }} {{ translate('messages.pages') }}</span>
                             </a>
                             <ul class="js-navbar-vertical-aside-submenu nav nav-sub"  style="display:{{ Request::is('admin/business-settings/pages/business-page*') ? 'block' : 'none' }}">
@@ -191,19 +191,19 @@
                     <ul class="js-navbar-vertical-aside-submenu nav nav-sub"  style="display:{{ Request::is('admin/business-settings/third-party*')|| Request::is('admin/business-settings/fcm*') ? 'block' : 'none' }}">
                         <li class="navbar-vertical-aside-has-menu {{ Request::is('admin/business-settings/third-party*') ? 'active' : '' }}">
                             <a class="nav-link " href="{{ route('admin.business-settings.third-party.payment-method') }}" title="{{ translate('messages.3rd_party') }}">
-                                <span class="tio-circle nav-indicator-icon"></span>    
+                                <span class="tio-circle nav-indicator-icon"></span>
                                 <span class="text-truncate">{{ translate('messages.3rd_party') }}</span>
                             </a>
                         </li>
                         <li class="navbar-vertical-aside-has-menu {{ Request::is('admin/business-settings/fcm*') ? 'active' : '' }}">
                             <a class="nav-link " href="{{ route('admin.business-settings.fcm-index') }}" title="{{ translate('messages.firebase_notification') }}">
-                                <span class="tio-circle nav-indicator-icon"></span>    
+                                <span class="tio-circle nav-indicator-icon"></span>
                                 <span class="text-truncate">{{ translate('messages.firebase_notification') }}</span>
                             </a>
                         </li>
                         <li class="navbar-vertical-aside-has-menu {{ Request::is('admin/business-settings/login-url-page*') ? 'active' : '' }}">
                             <a class="nav-link " href="{{ route('admin.business-settings.login_url_page') }}" title="{{ translate('messages.login_url_page') }}">
-                                <span class="tio-circle nav-indicator-icon"></span>    
+                                <span class="tio-circle nav-indicator-icon"></span>
                                 <span class="text-truncate">{{ translate('messages.login_url_page') }}</span>
                             </a>
                         </li>
@@ -255,7 +255,7 @@
                             <div class="cmn--media right-dropdown-icon d-flex align-items-center">
                                 <div class="avatar avatar-sm avatar-circle">
                                     <img class="avatar-img"
-                                        onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                        onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                         src="{{asset('storage/app/public/admin')}}/{{auth('admin')->user()->image}}"
                                         alt="Image Description">
                                     <span class="avatar-status avatar-sm-status avatar-status-success"></span>
@@ -276,7 +276,7 @@
                                 <div class="media align-items-center">
                                     <div class="avatar avatar-sm avatar-circle mr-2">
                                         <img class="avatar-img"
-                                                onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                                onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                                 src="{{asset('storage/app/public/admin')}}/{{auth('admin')->user()->image}}"
                                                 alt="Image Description">
                                     </div>
@@ -313,7 +313,7 @@
                                 showCancelButton: false,
                                 confirmButtonColor: '#FC6A57',
                                 confirmButtonText: '{{ translate('messages.ok') }}',
-                                }) 
+                                })
                                 }
                                 })">
                                 <span class="text-truncate pr-2" title="Sign out">{{translate('messages.sign_out')}}</span>

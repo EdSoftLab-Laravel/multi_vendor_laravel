@@ -147,7 +147,7 @@ font-weight: 700
         <tr>
             <td class="main-table-td">
                 <div class="text-center">
-                <img src="{{asset('/public/assets/admin/img/cash-collected.png')}}" alt="">
+                <img src="{{asset('/assets/admin/img/cash-collected.png')}}" alt="">
                     <h2>Collected Cash Transaction</h2>
                     <div class="mb-2">Transaction ID - 23984357sd834</div>
                     <div class="mb-2">Admin has collected cash from your wallet balance</div>
@@ -200,19 +200,19 @@ font-weight: 700
                 </span>
                 <span class="social" style="text-align:center">
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/pinterest.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/pinterest.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/instagram.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/instagram.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/facebook.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/facebook.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/linkedin.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/linkedin.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/twitter.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/twitter.png')}}" alt="">
                     </a>
                 </span>
                 <span class="copyright">

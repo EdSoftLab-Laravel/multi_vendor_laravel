@@ -10,7 +10,7 @@
     <div class="page-header">
         <h1 class="page-header-title">
             <span class="page-header-icon">
-                <img src="{{asset('public/assets/admin/img/role.png')}}" class="w--26" alt="">
+                <img src="{{asset('assets/admin/img/role.png')}}" class="w--26" alt="">
             </span>
             <span>
                 {{translate('messages.custom_role')}}
@@ -99,7 +99,7 @@
                                     id="addon">
                             <label class="form-check-label input-label qcont" for="addon">{{translate('messages.addons')}}</label>
                         </div>
-                    </div>                                
+                    </div>
                     @endif
                     <div class="check-item">
                         <div class="form-group form-check form--check">
@@ -260,7 +260,7 @@
                 </div>
                 @if(count($rl) === 0)
                 <div class="empty--data">
-                    <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                    <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                     <h5>
                         {{translate('no_data_found')}}
                     </h5>

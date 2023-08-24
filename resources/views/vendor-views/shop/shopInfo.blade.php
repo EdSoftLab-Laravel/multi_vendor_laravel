@@ -5,11 +5,11 @@
 @endpush
 
 @section('content')
-<div class="content container-fluid"> 
+<div class="content container-fluid">
     <div class="page-header">
         <div class="d-flex flex-wrap justify-content-between">
             <h2 class="page-header-title text-capitalize my-2">
-                <img class="w--26" src="{{asset('/public/assets/admin/img/store.png')}}" alt="public">
+                <img class="w--26" src="{{asset('/assets/admin/img/store.png')}}" alt="public">
                 <span>
                     {{translate('messages.my_store_info')}}
                 </span>
@@ -23,20 +23,20 @@
         <div class="card-body p-0">
             @if($shop->cover_photo)
             <div>
-                <img class="my-restaurant-img" src="{{asset('storage/app/public/store/cover/'.$shop->cover_photo)}}" onerror="this.src='{{asset('public/assets/admin/img/900x400/img1.jpg')}}'">
+                <img class="my-restaurant-img" src="{{asset('storage/app/public/store/cover/'.$shop->cover_photo)}}" onerror="this.src='{{asset('assets/admin/img/900x400/img1.jpg')}}'">
             </div>
             @endif
             <div class="my-resturant--card">
-                
+
                 @if($shop->image=='def.png')
                 <div class="my-resturant--avatar">
                     <img class="border"
-                    src="{{asset('public/assets/back-end')}}/img/shop.png"
-                    onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'" alt="User Pic">
+                    src="{{asset('assets/back-end')}}/img/shop.png"
+                    onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'" alt="User Pic">
                 </div>
                 @else
                     <div class="my-resturant--avatar">
-                        <img src="{{asset('storage/app/public/store/'.$shop->logo)}}" class="border" onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'" alt="">
+                        <img src="{{asset('storage/app/public/store/'.$shop->logo)}}" class="border" onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'" alt="">
                     </div>
                 @endif
 

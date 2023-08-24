@@ -3,7 +3,7 @@
 @section('title',translate('messages.profile_settings'))
 
 @push('css_or_js')
-<link href="{{asset('public/assets/back-end/css/croppie.css')}}" rel="stylesheet">
+<link href="{{asset('assets/back-end/css/croppie.css')}}" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @endpush
 
@@ -86,7 +86,7 @@
                             class="avatar avatar-xxl avatar-circle avatar-border-lg avatar-uploader profile-cover-avatar"
                             for="avatarUploader">
                             <img id="viewer"
-                                 onerror="this.src='{{asset('public/assets/back-end/img/160x160/img1.jpg')}}'"
+                                 onerror="this.src='{{asset('assets/back-end/img/160x160/img1.jpg')}}'"
                                  class="avatar-img"
                                  src="{{asset('storage/app/public/seller')}}/{{$data->image}}"
                                  alt="Image">
@@ -192,7 +192,7 @@
                             <div class="row form-group">
                                 <label for="newPassword" class="col-sm-3 col-form-label input-label"> {{translate('messages.New')}}
                                     {{translate('messages.password')}}<span class="form-label-secondary" data-toggle="tooltip" data-placement="right"
-        data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/public/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span></label>
+        data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span></label>
 
                                 <div class="col-sm-9">
                                     <input type="password" class="js-pwstrength form-control" name="password"

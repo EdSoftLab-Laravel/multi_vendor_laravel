@@ -43,7 +43,7 @@
                 <tr>
                     <td class="media align-items-center cursor-pointer" onclick="quickViewCartItem({{$cartItem['id']}}, {{$key}})">
                         <img class="avatar avatar-sm mr-1" src="{{asset('storage/app/public/product')}}/{{$cartItem['image']}}"
-                                onerror="this.src='{{asset('public/assets/admin/img/100x100/2.png')}}'" alt="{{$cartItem['name']}} image">
+                                onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="{{$cartItem['name']}} image">
                         <div class="media-body">
                             <h5 class="text-hover-primary mb-0">{{Str::limit($cartItem['name'], 10)}}</h5>
                             <small>{{Str::limit($cartItem['variant'], 20)}}</small>
@@ -330,7 +330,7 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 @endif
             </div>
         </div>

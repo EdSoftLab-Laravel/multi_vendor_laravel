@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.admin_landing_pages') }}
@@ -27,7 +27,7 @@
             @include('admin-views.business-settings.landing-page-settings.top-menu-links.admin-landing-page-links')
         </div>
     </div>
-    
+
     @php($testimonial_title=\App\Models\DataSetting::withoutGlobalScope('translate')->where('type','admin_landing_page')->where('key','testimonial_title')->first())
     @php($language=\App\Models\BusinessSetting::where('key','language')->first())
     @php($language = $language->value ?? null)
@@ -61,7 +61,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                        <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="40" name="testimonial_title[]" class="form-control" value="{{$testimonial_title?->getRawOriginal('value')}}" placeholder="{{translate('messages.title_here...')}}">
@@ -73,12 +73,12 @@
                                 if(isset($testimonial_title->translations)&&count($testimonial_title->translations)){
                                         $testimonial_title_translate = [];
                                         foreach($testimonial_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='testimonial_title'){
                                                 $testimonial_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
@@ -87,7 +87,7 @@
                                                 class="form-label-secondary" data-toggle="tooltip"
                                                 data-placement="right"
                                                 data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                                <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                     alt="">
                                             </span></label>
                                         <input type="text" maxlength="40" name="testimonial_title[]" class="form-control" value="{{ $testimonial_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
@@ -102,7 +102,7 @@
                                             class="form-label-secondary" data-toggle="tooltip"
                                             data-placement="right"
                                             data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                            <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                            <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                 alt="">
                                         </span></label>
                                     <input type="text" maxlength="40" name="testimonial_title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
@@ -148,7 +148,7 @@
                                             class="form-label-secondary" data-toggle="tooltip"
                                             data-placement="right"
                                             data-original-title="{{ translate('Write_the_title_within_250_characters') }}">
-                                            <img src="{{ asset('public/assets/admin/img/info-circle.svg') }}"
+                                            <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                 alt="">
                                         </span></label>
                                         <textarea name="review" maxlength="250" placeholder="{{translate('Very Good Company')}}" class="form-control h92px"></textarea>
@@ -186,7 +186,7 @@
                             <button type="reset" class="btn btn--reset">{{translate('Reset')}}</button>
                             <button type="submit" onclick="" class="btn btn--primary mb-2">{{translate('Add')}}</button>
                         </div>
-                        
+
                     </div>
                 </form>
                     @php($reviews=\App\Models\AdminTestimonial::all())
@@ -227,11 +227,11 @@
                                         </td>
                                         <td>
                                             <img src="{{asset('storage/app/public/reviewer_image')}}/{{$review->reviewer_image}}"
-                                            onerror="this.src='{{asset('/public/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
+                                            onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                         </td>
                                         <td>
                                             <img src="{{asset('storage/app/public/reviewer_company_image')}}/{{$review->company_image}}"
-                                            onerror="this.src='{{asset('/public/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
+                                            onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                         </td>
                                         <td>
                                             <label class="toggle-switch toggle-switch-sm">
@@ -243,7 +243,7 @@
                                             <form action="{{route('admin.business-settings.review-status',[$review->id,$review->status?0:1])}}" method="get" id="status-{{$review->id}}_form">
                                             </form>
                                         </td>
-                
+
                                         <td>
                                             <div class="btn--container justify-content-center">
                                                 <a class="btn action-btn btn--primary btn-outline-primary" href="{{route('admin.business-settings.review-edit',[$review['id']])}}">
@@ -261,21 +261,21 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                
+
                         </div>
                         <!-- End Table -->
                     </div>
                     @if(count($reviews) === 0)
                     <div class="empty--data">
-                        <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                        <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                         <h5>
                             {{translate('no_data_found')}}
                         </h5>
                     </div>
                     @endif
                 </div>
-        
-        
+
+
             <!--  Special review see_the_changes_here -->
             <div class="modal fade" id="testimonials-section">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -284,12 +284,12 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate(' Special review')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
             </div>
-        
+
             <!-- Testimonial Modal -->
             <div class="modal fade" id="testimonials-status-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -303,7 +303,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/this-review-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/this-review-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('This review')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -314,7 +314,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/this-review-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/this-review-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('This review')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -325,7 +325,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>

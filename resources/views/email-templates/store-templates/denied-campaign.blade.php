@@ -127,11 +127,11 @@ font-weight: 700
         <tr>
             <td class="main-table-td">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('/public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
                 <h2>You Request Has Been Denied !</h2>
                 <div class="mb-1 text-base">Hi Morning Mart,</div>
                 <div class="mb-3">We are sorry to inform you that your request to join the campaign has been denied by admin. for further query please contact with <span class="text-base">Admin</span> </div>
-                <img src="{{asset('/public/assets/admin/img/campaign-denied.png')}}" alt="">
+                <img src="{{asset('/assets/admin/img/campaign-denied.png')}}" alt="">
                 <hr>
                 <div class="mb-2">
                     Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help. 
@@ -151,19 +151,19 @@ font-weight: 700
                 </span>
                 <span class="social" style="text-align:center">
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/pinterest.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/pinterest.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/instagram.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/instagram.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/facebook.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/facebook.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/linkedin.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/linkedin.png')}}" alt="">
                     </a>
                     <a href="" style="margin: 0 5px;text-decoration:none">
-                        <img src="{{asset('/public/assets/admin/img/img/twitter.png')}}" alt="">
+                        <img src="{{asset('/assets/admin/img/img/twitter.png')}}" alt="">
                     </a>
                 </span>
                 <span class="copyright">

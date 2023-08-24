@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{ translate('messages.business') }} {{ translate('messages.setup') }}
@@ -921,7 +921,7 @@
                                                     for="latitude">{{ translate('messages.latitude') }}<span
                                                         class="form-label-secondary" data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.click_on_the_map_select_your_defaul_location') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('messages.click_on_the_map_select_your_defaul_location') }}"></span></label>
                                                 <input type="text" id="latitude" name="latitude" class="form-control"
                                                     placeholder="{{ translate('messages.Ex:') }} -94.22213"
@@ -935,7 +935,7 @@
                                                     for="longitude">{{ translate('messages.longitude') }}<span
                                                         class="form-label-secondary" data-toggle="tooltip" data-placement="right"
                                                         data-original-title="{{ translate('messages.click_on_the_map_select_your_defaul_location') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('messages.click_on_the_map_select_your_defaul_location') }}"></span></label>
                                                 <input type="text" name="longitude" class="form-control"
                                                     placeholder="{{ translate('messages.Ex:') }} 103.344322" id="longitude"
@@ -989,7 +989,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('After activating this field, customers are able to place scheduled orders.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.customer_varification_toggle') }}"> *
                                                 </span>
                                             </span>
@@ -1017,7 +1017,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('Turning on this, admin will get a popup notification with sound for all orders.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.customer_varification_toggle') }}"> *
                                                 </span>
                                             </span>
@@ -1046,7 +1046,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('If this field is active, customers have to provide a 4-digit code to the delivery man to deliver an order successfully. Customers will get this code in order details.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.order_varification_toggle') }}"> *
                                                 </span>
                                             </span>
@@ -1073,7 +1073,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('messages.customer_varification_toggle') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.customer_varification_toggle') }}"> *
                                                 </span>
                                             </span>
@@ -1100,7 +1100,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('When this field is active, the stores and the customers both can see the veg/non-veg tag.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.veg_non_veg') }}"> * </span>
                                             </span>
                                             <input type="checkbox" class="toggle-switch-input" value="1"
@@ -1125,7 +1125,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('If this field is active, stores can register themself using the store app, user app, or website.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.store_self_registration') }}"> *
                                                 </span>
                                             </span>
@@ -1153,7 +1153,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('When this field is active, delivery men can register themself using the delivery man app, user app, or website.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.dm_self_registration') }}"> * </span>
                                             </span>
                                             <input type="checkbox" class="toggle-switch-input" value="1"
@@ -1181,7 +1181,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('When this field is active, store will get prescription order option.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.prescription_order_status') }}"> * </span>
                                             </span>
                                             <input type="checkbox" class="toggle-switch-input" value="1"
@@ -1295,7 +1295,7 @@
                                                 class="text-danger"><span class="form-label-secondary"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('messages.free_over_delivery_message') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.free_over_delivery_message') }}"></span>
                                                 *</small></span>
                                             <span class="toggle-switch toggle-switch-sm pr-sm-3">
@@ -1358,7 +1358,7 @@
                                     </h5>
                                     <center>
                                         <img class="img--vertical" id="viewer"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload-img.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
                                             src="{{ asset('storage/app/public/business/' . $logo) }}"
                                             alt="logo image" />
                                     </center>
@@ -1374,7 +1374,7 @@
                                     </h5>
                                     <center>
                                         <img class="img--110" id="iconViewer"
-                                            onerror="this.src='{{ asset('public/assets/admin/img/upload-img.png') }}'"
+                                            onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
                                             src="{{ asset('storage/app/public/business/' . $icon) }}"
                                             alt="Fav icon" />
                                     </center>

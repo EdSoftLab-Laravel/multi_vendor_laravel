@@ -11,7 +11,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/items.png')}}" class="w--22" alt="">
+                    <img src="{{asset('assets/admin/img/items.png')}}" class="w--22" alt="">
                 </span>
                 <span>
                     {{translate('messages.items_bulk_import')}}
@@ -64,8 +64,8 @@
                 <div class="text-center pb-4">
                     <h3 class="mb-3 export--template-title">{{translate('download_spreadsheet_template')}}</h3>
                     <div class="btn--container justify-content-center export--template-btns">
-                        <a href="{{asset('public/assets/restaurant_panel/items_bulk_format.xlsx')}}" download="" class="btn btn-dark">{{translate('template_with_existing_data')}}</a>
-                        <a href="{{asset('public/assets/restaurant_panel/items_bulk_format_nodata.xlsx')}}" download="" class="btn btn-dark">{{translate('template_without_data')}}</a>
+                        <a href="{{asset('assets/restaurant_panel/items_bulk_format.xlsx')}}" download="" class="btn btn-dark">{{translate('template_with_existing_data')}}</a>
+                        <a href="{{asset('assets/restaurant_panel/items_bulk_format_nodata.xlsx')}}" download="" class="btn btn-dark">{{translate('template_without_data')}}</a>
                     </div>
                 </div>
             </div>
@@ -351,7 +351,7 @@
 
     }
 </script>
-<script src="{{ asset('public/assets/admin') }}/js/tags-input.min.js"></script>
+<script src="{{ asset('assets/admin') }}/js/tags-input.min.js"></script>
 
 <script>
     $('#choice_attributes').on('change', function() {
@@ -505,7 +505,7 @@
             if (result.value) {
                 $('#btn_value').val(data);
                 $("#import_form").submit();
-            } 
+            }
             // else {
             //     toastr.success("{{ translate('Cancelled') }}");
             // }

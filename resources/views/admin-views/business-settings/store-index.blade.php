@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title mr-3">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                    <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                     {{ translate('messages.business') }} {{ translate('messages.setup') }}
@@ -73,7 +73,7 @@
                                                 <span class="form-label-secondary text-danger d-flex"
                                                     data-toggle="tooltip" data-placement="right"
                                                     data-original-title="{{ translate('messages.A_store_can_send_a_registration_request_through_their_store_or_customer.') }}"><img
-                                                        src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                        src="{{ asset('/assets/admin/img/info-circle.svg') }}"
                                                         alt="{{ translate('messages.store_self_registration') }}"> *
                                                 </span>
                                             </span>
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-                
+
             <!-- Store Self Reg Modal -->
             {{-- <div class="modal fade" id="store-self-reg-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -112,7 +112,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div class="confirm-toogle d-none">
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/store-self-reg-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/store-self-reg-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('Store Self Registration')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="cancel-toogle d-none">
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/store-self-reg-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/store-self-reg-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('Store Self Registration')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="btn--container justify-content-center">
                                     <button type="button" class="btn btn--primary min-w-120" data-dismiss="modal" onclick="confirmToggle('store_self_registration1','store-self-reg-modal')">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>

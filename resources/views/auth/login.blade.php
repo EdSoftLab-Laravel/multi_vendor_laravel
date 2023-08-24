@@ -20,18 +20,18 @@
     <title>{{translate('messages.login')}}</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('public/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{asset('public/assets/admin')}}/css/vendor.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/admin')}}/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="{{asset('assets/admin')}}/css/vendor.min.css">
+    <link rel="stylesheet" href="{{asset('assets/admin')}}/vendor/icon-set/style.css">
     <!-- CSS Front Template -->
-    <link rel="stylesheet" href="{{asset('public/assets/admin/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/admin/css/theme.minc619.css?v=1.0')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/admin/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/admin')}}/css/toastr.css">
+    <link rel="stylesheet" href="{{asset('assets/admin/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin/css/theme.minc619.css?v=1.0')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin')}}/css/toastr.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         <div class="auth-wrapper-left">
             <div class="auth-left-cont">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img onerror="this.src='{{asset('/public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
                 <h2 class="title">{{translate('Your')}} <span class="d-block">{{translate('All Service')}}</span> <strong class="text--039D55">{{translate('in one field')}}....</strong></h2>
             </div>
         </div>
@@ -77,7 +77,7 @@
                         </select>
                     </div> --}}
                     <!-- End Form Group -->
-                    
+
                     <!-- Form Group -->
                     <div class="js-form-message form-group">
                         <label class="input-label text-capitalize" for="signinSrEmail">{{translate('messages.your')}} {{translate('messages.email')}}</label>
@@ -158,7 +158,7 @@
                                 <img src="<?php echo $custome_recaptcha->inline(); ?>" class="rounded w-100" />
                                 <div class="p-3 pr-0 capcha-spin" onclick="reloadCaptcha()">
                                     <i class="tio-cached"></i>
-                                </div>  
+                                </div>
                                 {{-- <a class="" onclick="reloadCaptcha()">
                                     <i class="tio-edit"></i>
                                 </a> --}}
@@ -201,7 +201,7 @@
                 @endif
             </div>
             <!-- End Card -->
-                
+
         </div>
     </div>
 </main>
@@ -216,11 +216,11 @@
       </div>
       <div class="modal-body">
         <div class="forget-pass-content">
-            <img src="{{asset('/public/assets/admin/img/send-mail.svg')}}" alt="">
+            <img src="{{asset('/assets/admin/img/send-mail.svg')}}" alt="">
             <!-- After Succeed -->
-            <!-- <img src="{{asset('/public/assets/admin/img/sent-mail.svg')}}" alt=""> -->
+            <!-- <img src="{{asset('/assets/admin/img/sent-mail.svg')}}" alt=""> -->
             <h4>
-                {{ translate('Send_Mail_to_Your_Email') }} ? 
+                {{ translate('Send_Mail_to_Your_Email') }} ?
             </h4>
             <p>
                 {{ translate('A mail will be send to your registered email with a  link to change passowrd') }}
@@ -246,15 +246,15 @@
       </div>
       <div class="modal-body">
         <div class="forget-pass-content">
-            <img src="{{asset('/public/assets/admin/img/send-mail.svg')}}" alt="">
+            <img src="{{asset('/assets/admin/img/send-mail.svg')}}" alt="">
             <!-- After Succeed -->
-            <!-- <img src="{{asset('/public/assets/admin/img/sent-mail.svg')}}" alt=""> -->
+            <!-- <img src="{{asset('/assets/admin/img/sent-mail.svg')}}" alt=""> -->
             <h4>
-                {{ translate('messages.Send_Mail_to_Your_Email') }} ? 
+                {{ translate('messages.Send_Mail_to_Your_Email') }} ?
             </h4>
             <form class="" action="{{ route('vendor-reset-password') }}" method="post">
                 @csrf
-                
+
                 <input type="email" name="email" id="" class="form-control" placeholder="{{ translate('messages.plesae_enter_your_registerd_email') }}" required>
                 <button type="submit" class="btn btn-lg btn-block btn--primary mt-3">{{ translate('messages.Send Mail') }}</button>
             </form>
@@ -274,7 +274,7 @@
         <div class="modal-body">
           <div class="forget-pass-content">
               <!-- After Succeed -->
-              <img src="{{asset('/public/assets/admin/img/sent-mail.svg')}}" alt="">
+              <img src="{{asset('/assets/admin/img/sent-mail.svg')}}" alt="">
               <h4>
                 {{ translate('A mail has been sent to your registered email') }}!
               </h4>
@@ -287,11 +287,11 @@
     </div>
   </div>
 <!-- JS Implementing Plugins -->
-<script src="{{asset('public/assets/admin')}}/js/vendor.min.js"></script>
+<script src="{{asset('assets/admin')}}/js/vendor.min.js"></script>
 
 <!-- JS Front -->
-<script src="{{asset('public/assets/admin')}}/js/theme.min.js"></script>
-<script src="{{asset('public/assets/admin')}}/js/toastr.js"></script>
+<script src="{{asset('assets/admin')}}/js/theme.min.js"></script>
+<script src="{{asset('assets/admin')}}/js/toastr.js"></script>
 {!! Toastr::message() !!}
 
 @if ($errors->any())
@@ -307,7 +307,7 @@
 @if ($log_email_succ)
 @php(session()->forget('log_email_succ'))
     <script>
-        $('#successMailModal').modal('show'); 
+        $('#successMailModal').modal('show');
     </script>
 @endif
 
@@ -413,7 +413,7 @@
 
 <!-- IE Support -->
 <script>
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{{asset('public//assets/admin')}}/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{{asset('/assets/admin')}}/vendor/babel-polyfill/polyfill.min.js"><\/script>');
 </script>
 </body>
 </html>

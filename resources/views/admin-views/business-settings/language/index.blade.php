@@ -12,7 +12,7 @@
     <div class="page-header">
         <h1 class="page-header-title mr-3 mb-0">
             <span class="page-header-icon">
-                <img src="{{ asset('public/assets/admin/img/business.png') }}" class="w--26" alt="">
+                <img src="{{ asset('assets/admin/img/business.png') }}" class="w--26" alt="">
             </span>
             <span>
                 {{ translate('messages.business') }} {{ translate('messages.setup') }}
@@ -59,9 +59,9 @@
                                 "info": {
                                 "totalQty": "#datatableWithPaginationInfoTotalQty"
                                 },
-        
+
                                 "entries": "#datatableEntries",
-        
+
                                 "isResponsive": false,
                                 "isShowPaging": false,
                                 "paging":false
@@ -370,7 +370,7 @@
             </div>
         </div>
         @if ($language)
-            
+
         @foreach(json_decode($language['value'],true) as $key =>$data)
             <div class="modal fade" id="lang-modal-update-{{$data['code']}}" tabindex="-1" role="dialog"
                  aria-hidden="true">

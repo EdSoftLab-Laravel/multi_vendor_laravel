@@ -13,7 +13,7 @@
             <div class="d-flex flex-wrap justify-content-between">
                 <h1 class="page-header-title text-break">
                     <span class="page-header-icon">
-                        <img src="{{asset('public/assets/admin/img/items.png')}}" class="w--22" alt="">
+                        <img src="{{asset('assets/admin/img/items.png')}}" class="w--22" alt="">
                     </span>
                     <span>{{$product['name']}}</span>
                 </h1>
@@ -34,7 +34,7 @@
                             <div class="d-flex flex-wrap align-items-center food--media">
                                 <img class="avatar avatar-xxl avatar-4by3 mr-4"
                                         src="{{asset('storage/app/public/product')}}/{{$product['image']}}"
-                                        onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                                        onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                                         alt="Image Description">
                                         <div class="d-block">
                                             <div class="rating--review">
@@ -344,8 +344,8 @@
                                 @endif
                                 @if ($product->tags)
                                 <td>
-                                    @foreach($product->tags as $c) 
-                                        {{$c->tag.','}} 
+                                    @foreach($product->tags as $c)
+                                        {{$c->tag.','}}
                                     @endforeach
                                 </td>
                             @endif
@@ -400,7 +400,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-circle">
                                             <img class="avatar-img" width="75" height="75"
-                                                onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
+                                                onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
                                                 src="{{asset('storage/app/public/profile/'.$review->customer->image)}}"
                                                 alt="Image Description">
                                         </div>

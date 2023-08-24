@@ -8,7 +8,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.update')}} {{translate('messages.banner')}}
@@ -20,7 +20,7 @@
             <div class="col-sm-12 col-lg-12 mb-3 mb-lg-2">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('admin.banner.update', [$banner->id])}}" method="post" 
+                        <form action="{{route('admin.banner.update', [$banner->id])}}" method="post"
                             id="banner_form"
                             >
                             @csrf
@@ -142,7 +142,7 @@
                                             <small class="text-danger">* ( {{translate('messages.ratio')}} 900x300 )</small>
                                         </label>
                                         <center class="py-3 my-auto">
-                                            <img class="img--vertical" id="viewer" onerror="this.src='{{asset('public/assets/admin/img/900x400/img1.jpg')}}'" src="{{asset('storage/app/public/banner')}}/{{$banner['image']}}" alt="banner image"/>
+                                            <img class="img--vertical" id="viewer" onerror="this.src='{{asset('assets/admin/img/900x400/img1.jpg')}}'" src="{{asset('storage/app/public/banner')}}/{{$banner['image']}}" alt="banner image"/>
                                         </center>
                                         <div class="custom-file">
                                             <input type="file" name="image" id="customFileEg1" class="custom-file-input"
@@ -343,7 +343,7 @@
                 $(".lang_link").removeClass('active');
                 $(".lang_form").addClass('d-none');
                 $(this).addClass('active');
-    
+
                 let form_id = this.id;
                 let lang = form_id.substring(0, form_id.length - 5);
                 console.log(lang);

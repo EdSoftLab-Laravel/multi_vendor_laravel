@@ -11,10 +11,10 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{ asset('public/assets/admin/img/report.png') }}" class="w--22" alt="">
+                    <img src="{{ asset('assets/admin/img/report.png') }}" class="w--22" alt="">
                 </span>
                 <span>
-                    {{ translate('messages.transection_report') }} 
+                    {{ translate('messages.transection_report') }}
                     @if (isset($filter) && $filter != 'all_time')
                     <span class="mb-0 h6 badge badge-soft-success ml-2"
                         id="itemCount">( {{ session('from_date') }} - {{ session('to_date') }} )</span>
@@ -198,14 +198,14 @@
                                     ->sum('order_amount');
                             @endphp
                             <a class="__card-3 h-100" href="#">
-                                <img src="{{ asset('/public/assets/admin/img/report/new/trx1.png') }}" class="icon"
+                                <img src="{{ asset('/assets/admin/img/report/new/trx1.png') }}" class="icon"
                                     alt="report/new">
                                 <h3 class="title text-008958">{{ \App\CentralLogics\Helpers::number_format_short($delivered) }}
                                 </h3>
                                 <h6 class="subtitle">{{ translate('Completed Transaction') }}</h6>
                                 <div class="info-icon" data-toggle="tooltip" data-placement="top"
                                     data-original-title="{{ translate('When the order is successfully delivered full order amount goes to this section.') }}">
-                                    <img src="{{ asset('/public/assets/admin/img/report/new/info1.png') }}"
+                                    <img src="{{ asset('/assets/admin/img/report/new/info1.png') }}"
                                         alt="report/new">
                                 </div>
                             </a>
@@ -251,14 +251,14 @@
                                     ->sum('order_amount');
                             @endphp
                             <a class="__card-3 h-100" href="#">
-                                <img src="{{ asset('/public/assets/admin/img/report/new/trx2.png') }}" class="icon"
+                                <img src="{{ asset('/assets/admin/img/report/new/trx2.png') }}" class="icon"
                                     alt="report/new">
                                 <h3 class="title text-006AB4">{{ \App\CentralLogics\Helpers::number_format_short($returned) }}
                                 </h3>
                                 <h6 class="subtitle">{{ translate('On-Hold Transactions') }}</h6>
                                 <div class="info-icon" data-toggle="tooltip" data-placement="top"
                                     data-original-title="This is dummy information text for report card">
-                                    <img src="{{ asset('/public/assets/admin/img/report/new/info2.png') }}"
+                                    <img src="{{ asset('/assets/admin/img/report/new/info2.png') }}"
                                         alt="report/new">
                                 </div>
                             </a>
@@ -305,14 +305,14 @@
                                     ->sum(DB::raw('order_amount - delivery_charge - dm_tips'));
                             @endphp
                             <a class="__card-3 h-100" href="#">
-                                <img src="{{ asset('/public/assets/admin/img/report/new/trx3.png') }}" class="icon"
+                                <img src="{{ asset('/assets/admin/img/report/new/trx3.png') }}" class="icon"
                                     alt="report/new">
                                 <h3 class="title text-FF5A54">{{ \App\CentralLogics\Helpers::number_format_short($canceled) }}
                                 </h3>
                                 <h6 class="subtitle">{{ translate('Refunded Transaction') }}</h6>
                                 <div class="info-icon" data-toggle="tooltip" data-placement="top"
                                     data-original-title="{{ translate('If the order is successfully refunded, the full order amount goes to this section without the delivery fee and delivery tips.') }}">
-                                    <img src="{{ asset('/public/assets/admin/img/report/new/info3.png') }}"
+                                    <img src="{{ asset('/assets/admin/img/report/new/info3.png') }}"
                                         alt="report/new">
                                 </div>
                             </a>
@@ -331,12 +331,12 @@
                             <div class="__card-vertical">
                                 <div class="__card-vertical-img">
                                     <img class="img"
-                                        src="{{ asset('/public/assets/admin/img/report/new/admin-earning.png') }}"
+                                        src="{{ asset('/assets/admin/img/report/new/admin-earning.png') }}"
                                         alt="">
                                     <h4 class="name">{{ translate('Admin Earning') }}</h4>
                                     <div class="info-icon" data-toggle="tooltip" data-placement="right"
                                         data-original-title="{{ translate('Deducting the admin discount from the admin net income amount goes to this section.') }}">
-                                        <img src="{{ asset('/public/assets/admin/img/report/new/info1.png') }}"
+                                        <img src="{{ asset('/assets/admin/img/report/new/info1.png') }}"
                                             alt="report/new">
                                     </div>
                                 </div>
@@ -348,12 +348,12 @@
                             <div class="__card-vertical">
                                 <div class="__card-vertical-img">
                                     <img class="img"
-                                        src="{{ asset('/public/assets/admin/img/report/new/store-earning.png') }}"
+                                        src="{{ asset('/assets/admin/img/report/new/store-earning.png') }}"
                                         alt="">
                                     <h4 class="name">{{ translate('Store Earning') }}</h4>
                                     <div class="info-icon" data-toggle="tooltip" data-placement="right"
                                         data-original-title="{{ translate('If self-delivery is off, deducting delivery man earnings & admin commission order amount goes to store earnings otherwise deducting admin commission all order amount goes to this section.') }}">
-                                        <img src="{{ asset('/public/assets/admin/img/report/new/info2.png') }}"
+                                        <img src="{{ asset('/assets/admin/img/report/new/info2.png') }}"
                                             alt="report/new">
                                     </div>
                                 </div>
@@ -365,13 +365,13 @@
                             <div class="__card-vertical">
                                 <div class="__card-vertical-img">
                                     <img class="img"
-                                        src="{{ asset('/public/assets/admin/img/report/new/deliveryman-earning.png') }}"
+                                        src="{{ asset('/assets/admin/img/report/new/deliveryman-earning.png') }}"
                                         alt="">
                                     <h4 class="name">{{ translate('Deliveryman Earning') }}</h4>
                                     <div class="info-icon" data-toggle="tooltip" data-placement="right"
                                         data-original-title="{{ translate('Deducting the admin commission on the delivery fee, the delivery fee & tips amount goes to
                                         earning section.') }}">
-                                        <img src="{{ asset('/public/assets/admin/img/report/new/info3.png') }}"
+                                        <img src="{{ asset('/assets/admin/img/report/new/info3.png') }}"
                                             alt="report/new">
                                     </div>
                                 </div>
@@ -421,14 +421,14 @@
                             <a id="export-excel" class="dropdown-item"
                                 href="{{ route('admin.transactions.report.day-wise-report-export', ['type' => 'excel', request()->getQueryString()]) }}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin/svg/components/excel.svg') }}"
+                                    src="{{ asset('assets/admin/svg/components/excel.svg') }}"
                                     alt="Image Description">
                                 {{ translate('messages.excel') }}
                             </a>
                             <a id="export-csv" class="dropdown-item"
                                 href="{{ route('admin.transactions.report.day-wise-report-export', ['type' => 'csv', request()->getQueryString()]) }}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin/svg/components/placeholder-csv-format.svg') }}"
+                                    src="{{ asset('assets/admin/svg/components/placeholder-csv-format.svg') }}"
                                     alt="Image Description">
                                 .{{ translate('messages.csv') }}
                             </a>
@@ -468,7 +468,7 @@
                                 <th class="border-0">{{ translate('messages.payment_status') }}</th>
                                 <th class="border-0">{{ translate('messages.action') }}</th>
                             </tr>
-                        </thead> 
+                        </thead>
                         <tbody id="set-rows">
                             @foreach ($order_transactions as $k => $ot)
                                 <tr scope="row">
@@ -552,7 +552,7 @@
                                           </span>
                                         @endif
                                     </td>
-                    
+
                                     <td>
                                         <div class="btn--container justify-content-center">
                                             <a class="btn btn-outline-success square-btn btn-sm mr-1 action-btn"  href="{{route('admin.report.generate-statement',[$ot['id']])}}">
@@ -575,7 +575,7 @@
             </div>
             @if (count($order_transactions) === 0)
                 <div class="empty--data">
-                    <img src="{{ asset('/public/assets/admin/svg/illustrations/sorry.svg') }}" alt="public">
+                    <img src="{{ asset('/assets/admin/svg/illustrations/sorry.svg') }}" alt="public">
                     <h5>
                         {{ translate('no_data_found') }}
                     </h5>
@@ -590,10 +590,10 @@
 @endpush
 
 @push('script_2')
-    <script src="{{ asset('public/assets/admin') }}/vendor/chart.js/dist/Chart.min.js"></script>
-    <script src="{{ asset('public/assets/admin') }}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js">
+    <script src="{{ asset('assets/admin') }}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{ asset('assets/admin') }}/vendor/chartjs-chart-matrix/dist/chartjs-chart-matrix.min.js">
     </script>
-    <script src="{{ asset('public/assets/admin') }}/js/hs.chartjs-matrix.js"></script>
+    <script src="{{ asset('assets/admin') }}/js/hs.chartjs-matrix.js"></script>
 
     <script>
         $(document).on('ready', function() {

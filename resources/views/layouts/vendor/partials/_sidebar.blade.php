@@ -7,9 +7,9 @@
 
                 @php($store_data=\App\CentralLogics\Helpers::get_store_data())
                 <a class="navbar-brand" href="{{route('vendor.dashboard')}}" aria-label="Front">
-                    <img class="navbar-brand-logo initial--36" onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                    <img class="navbar-brand-logo initial--36" onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                          src="{{asset('storage/app/public/store/'.$store_data->logo)}}" alt="Logo">
-                    <img class="navbar-brand-logo-mini initial--36" onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'"
+                    <img class="navbar-brand-logo-mini initial--36" onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
                          src="{{asset('storage/app/public/store/'.$store_data->logo)}}" alt="Logo">
                 </a>
                 <!-- End Logo -->
@@ -485,7 +485,7 @@
                         <small class="nav-subtitle" title="{{translate('messages.Report')}} {{translate('messages.section')}}">{{translate('messages.Report')}} {{translate('messages.section')}}</small>
                         <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                     </li>
-                    
+
                     @if(\App\CentralLogics\Helpers::employee_module_permission_check('report'))
                     <li class="navbar-vertical-aside-has-menu {{ Request::is('vendor/report/expense-report') ? 'active' : '' }}">
                         <a class="nav-link " href="{{ route('vendor.report.expense-report') }}" title="{{ translate('messages.expense_report') }}">

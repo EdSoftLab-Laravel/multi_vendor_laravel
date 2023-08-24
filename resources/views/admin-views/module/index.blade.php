@@ -12,7 +12,7 @@
         <div class="page-header d-flex flex-wrap align-items-center justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/module.png')}}" alt="">
+                    <img src="{{asset('assets/admin/img/module.png')}}" alt="">
                 </span>
                 <span>
                     {{translate('messages.business_Module_list')}}
@@ -54,13 +54,13 @@
                             {{-- <span class="dropdown-header">{{ translate('messages.options') }}</span>
                             <a id="export-copy" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/copy.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/copy.svg"
                                     alt="Image Description">
                                 {{ translate('messages.copy') }}
                             </a>
                             <a id="export-print" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/illustrations/print.svg"
+                                    src="{{ asset('assets/admin') }}/svg/illustrations/print.svg"
                                     alt="Image Description">
                                 {{ translate('messages.print') }}
                             </a>
@@ -69,19 +69,19 @@
                                 {{ translate('messages.options') }}</span>
                             <a id="export-excel" class="dropdown-item" href="{{route('admin.business-settings.module.export', ['type'=>'excel'])}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                     alt="Image Description">
                                 {{ translate('messages.excel') }}
                             </a>
                             <a id="export-csv" class="dropdown-item" href="{{route('admin.business-settings.module.export', ['type'=>'csv'])}}">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                     alt="Image Description">
                                 .{{ translate('messages.csv') }}
                             </a>
                             {{-- <a id="export-pdf" class="dropdown-item" href="javascript:;">
                                 <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                    src="{{ asset('public/assets/admin') }}/svg/components/pdf.svg"
+                                    src="{{ asset('assets/admin') }}/svg/components/pdf.svg"
                                     alt="Image Description">
                                 {{ translate('messages.pdf') }}
                             </a> --}}
@@ -131,7 +131,7 @@
                                 </td>
                                 <td>
                                     <label class="toggle-switch toggle-switch-sm" for="status-{{$module->id}}">
-                                    <input type="checkbox" class="toggle-switch-input" onclick="toogleStatusModal(event,'status-{{$module->id}}','module-on.png','module-off.png','{{translate('Want_to_activate_this')}} <strong>{{translate('Business_Module?')}}</strong>','{{translate('Want_to_deactivate_this')}} <strong>{{translate('Business_Module?')}}</strong>',`<p>{{translate('If_you_activate_this_business_module,_all_its_features_and_functionalities_will_be_available_and_accessible_to_all_users.')}}</p>`,`<p>{{translate('If_you_deactivate_this_business_module,_all_its_features_and_functionalities_will_be_disabled_and_hidden_from_users.')}}</p>`)"  
+                                    <input type="checkbox" class="toggle-switch-input" onclick="toogleStatusModal(event,'status-{{$module->id}}','module-on.png','module-off.png','{{translate('Want_to_activate_this')}} <strong>{{translate('Business_Module?')}}</strong>','{{translate('Want_to_deactivate_this')}} <strong>{{translate('Business_Module?')}}</strong>',`<p>{{translate('If_you_activate_this_business_module,_all_its_features_and_functionalities_will_be_available_and_accessible_to_all_users.')}}</p>`,`<p>{{translate('If_you_deactivate_this_business_module,_all_its_features_and_functionalities_will_be_disabled_and_hidden_from_users.')}}</p>`)"
                                     {{-- onclick="location.href='{{route('admin.business-settings.module.status',[$module['id'],$module->status?0:1])}}'" --}}
                                     class="toggle-switch-input" id="status-{{$module->id}}" {{$module->status?'checked':''}}>
                                         <span class="toggle-switch-label">
@@ -164,7 +164,7 @@
                 <!-- End Pagination -->
                 @if(count($modules) === 0)
                 <div class="empty--data">
-                    <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                    <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                     <h5>
                         {{translate('no_data_found')}}
                     </h5>
@@ -174,7 +174,7 @@
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="warning-modal">
         <div class="modal-dialog modal-lg warning-modal">
             <div class="modal-content">
@@ -190,7 +190,7 @@
                             {{translate("Otherwise this zone won't function properly & will work show anything against this zone")}}
                         </p>
                     </div>
-                    <img src="{{asset('/public/assets/admin/img/zone-settings-popup-arrow.gif')}}" alt="admin/img" class="w-100">
+                    <img src="{{asset('/assets/admin/img/zone-settings-popup-arrow.gif')}}" alt="admin/img" class="w-100">
                     {{-- <div class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
                         <label class="form-check form--check m-0">
                             <input type="checkbox" class="form-check-input rounded">
@@ -218,7 +218,7 @@
                 <div class="modal-body">
                     <div class="how-it-works">
                         <div class="item">
-                            <img src="{{asset('/public/assets/admin/img/how/how1.png')}}" alt="">
+                            <img src="{{asset('/assets/admin/img/how/how1.png')}}" alt="">
                             <h2 class="serial">{{ translate('1') }}</h2>
                             <h5>{{ translate('Create_Business_Module') }}</h5>
                             <p>
@@ -226,7 +226,7 @@
                             </p>
                         </div>
                         <div class="item">
-                            <img src="{{asset('/public/assets/admin/img/how/how2.png')}}" alt="">
+                            <img src="{{asset('/assets/admin/img/how/how2.png')}}" alt="">
                             <h2 class="serial">{{ translate('2') }}</h2>
                             <h5>{{ translate('Add_Module_to_Zone') }}</h5>
                             <p>
@@ -234,7 +234,7 @@
                             </p>
                         </div>
                         <div class="item">
-                            <img src="{{asset('/public/assets/admin/img/how/how3.png')}}" alt="">
+                            <img src="{{asset('/assets/admin/img/how/how3.png')}}" alt="">
                             <h2 class="serial">{{ translate('3') }}</h2>
                             <h5>{{ translate('Create_Stores') }}</h5>
                             <p>

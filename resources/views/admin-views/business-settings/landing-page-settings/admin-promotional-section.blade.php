@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.admin_landing_pages') }}
@@ -27,7 +27,7 @@
             @include('admin-views.business-settings.landing-page-settings.top-menu-links.admin-landing-page-links')
         </div>
     </div>
-    
+
     @php($language=\App\Models\BusinessSetting::where('key','language')->first())
     @php($language = $language->value ?? null)
     @php($default_lang = str_replace('_', '-', app()->getLocale()))
@@ -57,13 +57,13 @@
                             <div class="row g-3 lang_form" id="default-form">
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                         <input type="text"  maxlength="20" name="title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Sub Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                         <input type="text"  maxlength="80" name="sub_title[]" class="form-control" placeholder="{{translate('messages.sub_title_here...')}}">
                                 </div>
@@ -73,13 +73,13 @@
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                         <input type="text"  maxlength="20" name="title[]" class="form-control" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Sub Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                         <input type="text"  maxlength="80" name="sub_title[]" class="form-control" placeholder="{{translate('messages.sub_title_here...')}}">
                                         </div>
@@ -106,7 +106,7 @@
                                 </label>
                                 <label class="upload-img-3 m-0 d-block">
                                     <div class="img">
-                                        <img src="" onerror='this.src="{{asset('/public/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                        <img src="" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                     </div>
                                         <input type="file" name="image"  hidden>
                                 </label>
@@ -123,7 +123,7 @@
             <div class="card">
                 <div class="card-header py-2">
                     <div class="search--button-wrapper">
-                        <h5 class="card-title">{{translate('Promotional_Banner_List')}} 
+                        <h5 class="card-title">{{translate('Promotional_Banner_List')}}
                             {{-- <span class="badge badge-secondary ml-1">5</span>  --}}
                         </h5>
                         {{-- <form action="javascript:" id="search-form" class="search-form">
@@ -133,7 +133,7 @@
                                 <input id="datatableSearch_" type="search" name="search" class="form-control"
                                         placeholder="{{translate('Search by ID or name')}}" aria-label="{{translate('messages.search')}}" required>
                                 <button type="submit" class="btn btn--secondary"><i class="tio-search"></i></button>
-            
+
                             </div>
                             <!-- End Search -->
                         </form> --}}
@@ -146,19 +146,19 @@
                                     }'>
                                 <i class="tio-download-to mr-1"></i> {{ translate('messages.export') }}
                             </a>
-            
+
                             <div id="usersExportDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm-right">
                                 <span class="dropdown-header">{{ translate('messages.download') }}
                                     {{ translate('messages.options') }}</span>
                                 <a id="export-excel" class="dropdown-item" href="{{route('admin.store.export', ['type'=>'excel',request()->getQueryString()])}}">
                                     <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{ asset('public/assets/admin') }}/svg/components/excel.svg"
+                                        src="{{ asset('assets/admin') }}/svg/components/excel.svg"
                                         alt="Image Description">
                                     {{ translate('messages.excel') }}
                                 </a>
                                 <a id="export-csv" class="dropdown-item" href="{{route('admin.store.export', ['type'=>'csv',request()->getQueryString()])}}">
                                     <img class="avatar avatar-xss avatar-4by3 mr-2"
-                                        src="{{ asset('public/assets/admin') }}/svg/components/placeholder-csv-format.svg"
+                                        src="{{ asset('assets/admin') }}/svg/components/placeholder-csv-format.svg"
                                         alt="Image Description">
                                     .{{ translate('messages.csv') }}
                                 </a>
@@ -176,7 +176,7 @@
                                     "order": [],
                                     "orderCellsTop": true,
                                     "paging":false
-            
+
                                 }'>
                             <thead class="thead-light">
                             <tr>
@@ -204,7 +204,7 @@
                                     </td>
                                     <td>
                                         <img src="{{asset('storage/app/public/promotional_banner')}}/{{$banner->image}}"
-                                        onerror="this.src='{{asset('/public/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
+                                        onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                     </td>
                                     <td>
                                         <label class="toggle-switch toggle-switch-sm">
@@ -216,7 +216,7 @@
                                         <form action="{{route('admin.business-settings.promotional-status',[$banner->id,$banner->status?0:1])}}" method="get" id="status-{{$banner->id}}_form">
                                         </form>
                                     </td>
-            
+
                                     <td>
                                         <div class="btn--container justify-content-center">
                                             <a class="btn action-btn btn--primary btn-outline-primary" href="{{route('admin.business-settings.promotional-edit',[$banner['id']])}}">
@@ -234,13 +234,13 @@
                                 @endforeach
                             </tbody>
                         </table>
-            
+
                     </div>
                     <!-- End Table -->
                 </div>
                 @if(count($banners) === 0)
                 <div class="empty--data">
-                    <img src="{{asset('/public/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
+                    <img src="{{asset('/assets/admin/svg/illustrations/sorry.svg')}}" alt="public">
                     <h5>
                         {{translate('no_data_found')}}
                     </h5>

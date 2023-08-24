@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/captcha.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/captcha.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.reCaptcha')}} {{translate('messages.credentials')}} {{translate('messages.setup')}}
@@ -43,7 +43,7 @@
                                 <span class="line--limit-1">
                                     @if (isset($config) && $config['status'] == 1)
                                     {{translate('Turn OFF')}}
-                                    @else  
+                                    @else
                                     {{translate('Turn ON')}}
                                     @endif
                                 </span>
@@ -123,10 +123,10 @@
                             {{translate("Otherwise this zone won't function properly & will work show anything against this zone")}}
                         </p>
                     </div>
-                    <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                    <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
 
 @endsection

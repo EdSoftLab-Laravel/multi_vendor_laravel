@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.react_landing_page') }}
@@ -78,14 +78,14 @@
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Title')}} ({{ translate('messages.default') }})
                                     <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="40" name="earning_title[]" class="form-control" value="{{$earning_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Sub Title')}} ({{ translate('messages.default') }})
                                     <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="80" name="earning_sub_title[]" class="form-control" value="{{$earning_sub_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.sub_title_here...')}}">
                                 </div>
@@ -96,34 +96,34 @@
                                 if(isset($earning_title->translations)&&count($earning_title->translations)){
                                         $earning_title_translate = [];
                                         foreach($earning_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_title'){
                                                 $earning_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                 if(isset($earning_sub_title->translations)&&count($earning_sub_title->translations)){
                                         $earning_sub_title_translate = [];
                                         foreach($earning_sub_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_sub_title'){
                                                 $earning_sub_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form">
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_40_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="40" name="earning_title[]" class="form-control" value="{{ $earning_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Sub Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="80" name="earning_sub_title[]" class="form-control" value="{{ $earning_sub_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.sub_title_here...')}}">
                                         </div>
@@ -171,13 +171,13 @@
                             <div class="row g-3 lang_form default-form">
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_30_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="30" name="earning_seller_title[]" class="form-control" value="{{$earning_seller_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Sub Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_65_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="65" name="earning_seller_sub_title[]" class="form-control" value="{{$earning_seller_sub_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.sub_title_here...')}}">
                                 </div>
@@ -188,34 +188,34 @@
                                 if(isset($earning_seller_title->translations)&&count($earning_seller_title->translations)){
                                         $earning_seller_title_translate = [];
                                         foreach($earning_seller_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_seller_title'){
                                                 $earning_seller_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                 if(isset($earning_seller_sub_title->translations)&&count($earning_seller_sub_title->translations)){
                                         $earning_seller_sub_title_translate = [];
                                         foreach($earning_seller_sub_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_seller_sub_title'){
                                                 $earning_seller_sub_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form1">
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_30_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="30" name="earning_seller_title[]" class="form-control" value="{{ $earning_seller_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Sub Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_65_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="65" name="earning_seller_sub_title[]" class="form-control" value="{{ $earning_seller_sub_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.sub_title_here...')}}">
                                         </div>
@@ -239,7 +239,7 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h5 class="card-title">
-                                        <img src="{{asset('public/assets/admin/img/btn-cont.png')}}" class="mr-2" alt="">
+                                        <img src="{{asset('assets/admin/img/btn-cont.png')}}" class="mr-2" alt="">
                                         {{translate('Button Content')}}
                                     </h5>
                                 </div>
@@ -252,7 +252,7 @@
                                                     <label class="form-label text-capitalize">
                                                         {{translate('Button Name')}}({{ translate('messages.default') }})
                                                         <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                                        <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                        <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                                     </span></label>
                                             <input type="text" maxlength="20" name="earning_seller_button_name[]" value="{{ $earning_seller_button_name?->getRawOriginal('value')??'' }}"  placeholder="{{translate('Ex: Order now')}}" class="form-control h--45px" value="">
                                                 </div>
@@ -261,19 +261,19 @@
                                             if(isset($earning_seller_button_name->translations)&&count($earning_seller_button_name->translations)){
                                                     $earning_seller_button_name_translate = [];
                                                     foreach($earning_seller_button_name->translations as $t)
-                                                    {   
+                                                    {
                                                         if($t->locale == $lang && $t->key=='earning_seller_button_name'){
                                                             $earning_seller_button_name_translate[$lang]['value'] = $t->value;
                                                         }
                                                     }
-                                            
+
                                                 }
                                                 ?>
                                                 <div class="form-group d-none lang_form" id="{{$lang}}-form2">
                                                     <label class="form-label text-capitalize">
                                                         {{translate('Button Name')}}({{strtoupper($lang)}})
                                                         <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                                        <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                        <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                                     </span></label>
                                             <input type="text" maxlength="20" name="earning_seller_button_name[]" value="{{ $earning_seller_button_name_translate[$lang]['value']??'' }}"  placeholder="{{translate('Ex: Order now')}}" class="form-control h--45px" value="">
                                                 </div>
@@ -291,7 +291,7 @@
                                         @endif
                                         </div>
                                         <div class="col-md-6">
-    
+
                                             <div class="form-group mb-md-0">
                                                 <label class="form-label text-capitalize">
                                                     {{translate('Redirect Link')}}
@@ -335,13 +335,13 @@
                             <div class="row g-3 lang_form default-form">
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_30_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="30" name="earning_dm_title[]" class="form-control" value="{{$earning_dm_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.title_here...')}}">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">{{translate('Sub Title')}} ({{ translate('messages.default') }})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_65_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="65" name="earning_dm_sub_title[]" class="form-control" value="{{$earning_dm_sub_title?->getRawOriginal('value')??''}}" placeholder="{{translate('messages.sub_title_here...')}}">
                                 </div>
@@ -352,34 +352,34 @@
                                 if(isset($earning_dm_title->translations)&&count($earning_dm_title->translations)){
                                         $earning_dm_title_translate = [];
                                         foreach($earning_dm_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_dm_title'){
                                                 $earning_dm_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                 if(isset($earning_dm_sub_title->translations)&&count($earning_dm_sub_title->translations)){
                                         $earning_dm_sub_title_translate = [];
                                         foreach($earning_dm_sub_title->translations as $t)
-                                        {   
+                                        {
                                             if($t->locale == $lang && $t->key=='earning_dm_sub_title'){
                                                 $earning_dm_sub_title_translate[$lang]['value'] = $t->value;
                                             }
                                         }
-                                
+
                                     }
                                     ?>
                                     <div class="row g-3 d-none lang_form" id="{{$lang}}-form3">
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_30_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="30" name="earning_dm_title[]" class="form-control" value="{{ $earning_dm_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.title_here...')}}">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label">{{translate('Sub Title')}} ({{strtoupper($lang)}})<span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_65_characters') }}">
-                                                <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                             </span></label>
                                     <input type="text"  maxlength="65" name="earning_dm_sub_title[]" class="form-control" value="{{ $earning_dm_sub_title_translate[$lang]['value']?? '' }}" placeholder="{{translate('messages.sub_title_here...')}}">
                                         </div>
@@ -403,7 +403,7 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h5 class="card-title">
-                                        <img src="{{asset('public/assets/admin/img/btn-cont.png')}}" class="mr-2" alt="">
+                                        <img src="{{asset('assets/admin/img/btn-cont.png')}}" class="mr-2" alt="">
                                         {{translate('Button Content')}}
                                     </h5>
                                 </div>
@@ -416,7 +416,7 @@
                                                     <label class="form-label text-capitalize">
                                                         {{translate('Button Name')}}({{ translate('messages.default') }})
                                                         <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                                        <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                        <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                                     </span></label>
                                             <input type="text" maxlength="20" name="earning_dm_button_name[]" value="{{ $earning_dm_button_name?->getRawOriginal('value')??'' }}"  placeholder="{{translate('Ex: Order now')}}" class="form-control h--45px" value="">
                                                 </div>
@@ -425,19 +425,19 @@
                                             if(isset($earning_dm_button_name->translations)&&count($earning_dm_button_name->translations)){
                                                     $earning_dm_button_name_translate = [];
                                                     foreach($earning_dm_button_name->translations as $t)
-                                                    {   
+                                                    {
                                                         if($t->locale == $lang && $t->key=='earning_dm_button_name'){
                                                             $earning_dm_button_name_translate[$lang]['value'] = $t->value;
                                                         }
                                                     }
-                                            
+
                                                 }
                                                 ?>
                                                 <div class="form-group d-none lang_form" id="{{$lang}}-form4">
                                                     <label class="form-label text-capitalize">
                                                         {{translate('Button Name')}}({{strtoupper($lang)}})
                                                         <span class="form-label-secondary" data-toggle="tooltip" data-placement="right" data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                                        <img src="{{asset('public/assets/admin/img/info-circle.svg')}}" alt="">
+                                                        <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="">
                                                     </span></label>
                                             <input type="text" maxlength="20" name="earning_dm_button_name[]" value="{{ $earning_dm_button_name_translate[$lang]['value']??'' }}"  placeholder="{{translate('Ex: Order now')}}" class="form-control h--45px" value="">
                                                 </div>
@@ -455,7 +455,7 @@
                                         @endif
                                         </div>
                                         <div class="col-md-6">
-    
+
                                             <div class="form-group mb-md-0">
                                                 <label class="form-label text-capitalize">
                                                     {{translate('Redirect Link')}}
@@ -477,7 +477,7 @@
                     </div>
                 </div>
             </form>
-        
+
             <!-- Feature Modal -->
             <div class="modal fade" id="feature-modal">
                 <div class="modal-dialog status-warning-modal">
@@ -491,7 +491,7 @@
                             <div class="max-349 mx-auto mb-20">
                                 <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/feature-list-off.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/feature-list-off.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning OFF ')}} <strong>{{translate('Feature List Section')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -502,7 +502,7 @@
                                 </div>
                                 <!-- <div>
                                     <div class="text-center">
-                                        <img src="{{asset('/public/assets/admin/img/modal/feature-list-on.png')}}" alt="" class="mb-20">
+                                        <img src="{{asset('/assets/admin/img/modal/feature-list-on.png')}}" alt="" class="mb-20">
                                         <h5 class="modal-title">{{translate('By Turning ON ')}} <strong>{{translate('Feature List Section')}}</strong></h5>
                                     </div>
                                     <div class="text-center">
@@ -513,7 +513,7 @@
                                 </div> -->
                                 <div class="btn--container justify-content-center">
                                     <button type="submit" class="btn btn--primary min-w-120" data-dismiss="modal">{{translate('Ok')}}</button>
-                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">                
+                                    <button id="reset_btn" type="reset" class="btn btn--cancel min-w-120" data-dismiss="modal">
                                         {{translate("Cancel")}}
                                     </button>
                                 </div>
@@ -522,7 +522,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Module Setup Section View -->
             <div class="modal fade" id="admin-earn-money">
                 <div class="modal-dialog modal-lg warning-modal">
@@ -531,7 +531,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Admin Earn Money')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -544,7 +544,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Download Seller App Section')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -557,11 +557,11 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Download Delivery Man App Section ')}}</h3>
                             </div>
-                            <img src="{{asset('/public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>
-            </div>         
+            </div>
         </div>
     </div>
 </div>

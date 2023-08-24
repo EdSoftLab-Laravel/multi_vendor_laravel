@@ -19,7 +19,7 @@
             <div class="card-body">
                 <div class="row align-items-md-center gx-md-5">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img class="rounded initial--5" src="{{asset('storage/app/public/campaign')}}/{{$campaign->image}}" onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg')}}'" alt="Image Description">
+                        <img class="rounded initial--5" src="{{asset('storage/app/public/campaign')}}/{{$campaign->image}}" onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'" alt="Image Description">
                     </div>
 
                     <div class="col-md-8">
@@ -99,7 +99,7 @@
                         <tr>
                             <td>{{$key+1}}</td>
                             <td>
-                                <img width="45" class="img--circle" onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'" src="{{asset('storage/app/public/store')}}/{{$store['logo']}}">
+                                <img width="45" class="img--circle" onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'" src="{{asset('storage/app/public/store')}}/{{$store['logo']}}">
                             </td>
                             <td>
                                 <a href="{{route('admin.store.view', $store->id)}}" class="d-block font-size-sm text-body">
@@ -153,14 +153,14 @@
                                     <div></div>
                                 </div>
                                 @elseif ($store->pivot && $store->pivot->campaign_status == 'rejected')
-                
+
                                 <div class="btn--container justify-content-center">
                                     <a class="btn btn-sm btn--primary btn-outline-primary action-btn"
                                         onclick="status_change_alert('{{ route('admin.campaign.store_confirmation', [$campaign->id, $store->id, 'confirmed']) }}', '{{ translate('messages.you_want_to_confirm_this_store') }}', event)"
                                         class="toggle-switch-input" data-toggle="tooltip" data-placement="top" title="{{translate('Approve')}}">
                                         <i class="tio-done font-weight-bold"></i>
                                     </a>
-                
+
                                 </div>
                                 @else
                                 <div class="btn--container justify-content-center">
