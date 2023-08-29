@@ -142,7 +142,7 @@
                                     <center>
                                         <img class="img--110 min-height-170px min-width-170px" id="viewer"
                                             onerror="this.src='{{ asset('assets/admin/img/upload.png') }}'"
-                                            src="{{asset('storage/app/public/store').'/'.$store->logo}}" alt="{{$store->name}}"
+                                            src="{{asset('storage/store').'/'.$store->logo}}" alt="{{$store->name}}"
                                             alt="logo image" />
                                     </center>
                                     <input type="file" name="logo" id="customFileEg1" class="custom-file-input"
@@ -158,7 +158,7 @@
                                     <center>
                                         <img class="img--vertical min-height-170px min-width-170px" id="coverImageViewer"
                                             onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
-                                            src="{{asset('storage/app/public/store/cover/'.$store->cover_photo)}}"
+                                            src="{{asset('storage/store/cover/'.$store->cover_photo)}}"
                                             alt="Fav icon" />
                                     </center>
                                     <input type="file" name="cover_photo" id="coverImageUpload"  class="custom-file-input"

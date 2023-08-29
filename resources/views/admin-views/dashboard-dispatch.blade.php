@@ -189,7 +189,7 @@
             map.fitBounds(dmbounds);
             for (var i = 0; i < deliveryMan.length; i++) {
                 if (deliveryMan[i].lat) {
-                    var contentString = "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man') }}/"+deliveryMan[i].image+"'></div><div style='float:right; padding: 10px;'><b>"+deliveryMan[i].name+"</b><br/> "+deliveryMan[i].location+"</div>";
+                    var contentString = "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man') }}/"+deliveryMan[i].image+"'></div><div style='float:right; padding: 10px;'><b>"+deliveryMan[i].name+"</b><br/> "+deliveryMan[i].location+"</div>";
                     var point = new google.maps.LatLng(deliveryMan[i].lat, deliveryMan[i].lng);
                     dmbounds.extend(point);
                     map.fitBounds(dmbounds);
@@ -203,7 +203,7 @@
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man') }}/" +
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man') }}/" +
                                 deliveryMan[i].image +
                                 "'></div><div style='float:right; padding: 10px;'><b>" + deliveryMan[i]
                                 .name + "</b><br/> " + deliveryMan[i].location + "</b><br/> " + 'Assigned Order: ' + deliveryMan[i].assigned_order_count + "</div>"

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('assets/landing/css/main.css') }}"/>
 
     @php($icon = \App\Models\BusinessSetting::where(['key' => 'icon'])->first()->value ?? '')
-    <link rel="icon" type="image/x-icon" href="{{ asset('storage/app/public/business/' . $icon ?? asset('assets/landing/img/favicon.svg')) }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('storage/business/' . $icon ?? asset('assets/landing/img/favicon.svg')) }}">
     @stack('css_or_js')
     @php($backgroundChange = \App\Models\BusinessSetting::where(['key' => 'backgroundChange'])->first())
     @php($backgroundChange = isset($backgroundChange) && $backgroundChange->value ? json_decode($backgroundChange->value,true):'')
@@ -62,7 +62,7 @@
                     <a href="{{route('home')}}" class="logo">
                         <img
                         onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
-                    src="{{ asset('storage/app/public/business/' . $fav) }}" alt="">
+                    src="{{ asset('storage/business/' . $fav) }}" alt="">
                     </a>
                     <ul class="menu">
                         <li>
@@ -210,7 +210,7 @@
                         <div class="footer-logo">
                             <a class="logo">
                                 <img onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
-                            src="{{ asset('storage/app/public/business/' . $logo) }}" alt="">
+                            src="{{ asset('storage/business/' . $logo) }}" alt="">
                             </a>
                         </div>
                         <div class="txt">

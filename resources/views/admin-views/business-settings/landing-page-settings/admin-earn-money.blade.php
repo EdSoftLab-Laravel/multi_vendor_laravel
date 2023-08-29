@@ -196,7 +196,7 @@
                                 <label class="upload-img-3 m-0 d-block">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/earning')}}/{{ $earning_seller_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                        <img src="{{asset('storage/earning')}}/{{ $earning_seller_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                     </div>
                                         <input type="file" name="earning_seller_image"  hidden>
                                             @if (isset($earning_seller_image['value']))
@@ -299,7 +299,7 @@
                                 <label class="upload-img-3 m-0 d-block">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/earning')}}/{{ $earning_delivery_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                        <img src="{{asset('storage/earning')}}/{{ $earning_delivery_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                     </div>
                                         <input type="file" name="earning_delivery_image"  hidden>
                                             @if (isset($earning_delivery_image['value']))

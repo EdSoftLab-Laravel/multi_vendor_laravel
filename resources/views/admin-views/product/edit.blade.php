@@ -165,7 +165,7 @@
                                     </label>
                                     <label class="d-inline-block m-0">
                                         <img class="img--100" id="viewer"
-                                            src="{{ asset('storage/app/public/product') }}/{{ $product['image'] }}"
+                                            src="{{ asset('storage/product') }}/{{ $product['image'] }}"
                                             onerror="this.src='{{ asset('assets/admin/img/upload.png') }}'"
                                             alt="thumbnail" />
                                         <input type="file" name="image" id="customFileEg1"

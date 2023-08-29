@@ -164,7 +164,7 @@
                     <li class="nav-item __nav-item">
                         <a href="javascript:void(0)" class="__nav-link module--nav-icon" id="tourb-0">
                             @if ($mod)
-                            <img src="{{asset('storage/app/public/module')}}/{{$mod->icon}}" onerror="this.src='{{asset('/assets/admin/img/new-img/module-icon.svg')}}'" width="20px" alt="public/img">
+                            <img src="{{asset('storage/module')}}/{{$mod->icon}}" onerror="this.src='{{asset('/assets/admin/img/new-img/module-icon.svg')}}'" width="20px" alt="public/img">
                             @else
                             <img src="{{asset('/assets/admin/img/new-img/module-icon.svg')}}" alt="public/img">
                             @endif
@@ -191,7 +191,7 @@
                                     @foreach ($modules as $module)
                                         <a href="javascript:;" onclick="set_filter('{{route('admin.dashboard')}}','{{ $module->id }}','module_id')" class="__nav-module-item {{Config::get('module.current_module_id') == $module->id?'active':''}}">
                                             <div class="img">
-                                                <img src="{{asset('storage/app/public/module')}}/{{$module->icon}}"
+                                                <img src="{{asset('storage/module')}}/{{$module->icon}}"
                                                 onerror="this.src='{{asset('assets/admin/img/new-img/module/e-shop.svg')}}'"
                                                 alt="new-img">
                                             </div>

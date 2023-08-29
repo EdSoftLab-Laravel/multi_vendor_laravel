@@ -236,7 +236,7 @@
                                 <label class="upload-img-3 m-0">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/download_user_app_image')}}/{{ $download_user_app_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/aspect-1.png')}}"' alt="" class="img__aspect-1 min-w-187px max-w-187px">
+                                        <img src="{{asset('storage/download_user_app_image')}}/{{ $download_user_app_image['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/aspect-1.png')}}"' alt="" class="img__aspect-1 min-w-187px max-w-187px">
                                     </div>
                                       <input type="file"  name="image" hidden>
                                             @if (isset($download_user_app_image['value']))

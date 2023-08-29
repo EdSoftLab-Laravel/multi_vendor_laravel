@@ -90,7 +90,7 @@
                                 <div class="btn--container" id="coba">
                                     @foreach(json_decode($delivery_man['identity_image'],true) as $img)
                                         <div>
-                                            <img class="img--120" src="{{asset('storage/app/public/delivery-man').'/'.$img}}">
+                                            <img class="img--120" src="{{asset('storage/delivery-man').'/'.$img}}">
                                         </div>
                                     @endforeach
                                 </div>
@@ -108,7 +108,7 @@
                             <div class="my-auto">
                                 <center class="pt-3">
                                     <img class="img--120" id="viewer"
-                                        src="{{asset('storage/app/public/delivery-man').'/'.$delivery_man['image']}}" alt="delivery-man image"/>
+                                        src="{{asset('storage/delivery-man').'/'.$delivery_man['image']}}" alt="delivery-man image"/>
                                 </center>
                             </div>
                             <div class="custom-file mt-3">
@@ -337,7 +337,7 @@
     <script>
         $('#reset_btn').click(function(){
             location.reload(true);
-        //     $('#viewer').attr('src','{{asset('storage/app/public/delivery-man').'/'.$delivery_man['image']}}');
+        //     $('#viewer').attr('src','{{asset('storage/delivery-man').'/'.$delivery_man['image']}}');
         //     $("#coba").empty().spartanMultiImagePicker({
         //     fieldName: 'identity_image[]',
         //     maxCount: 5,

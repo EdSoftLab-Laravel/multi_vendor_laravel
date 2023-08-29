@@ -391,7 +391,7 @@
                                             <center>
                                                 <img class="img--vertical" id="viewer"
                                                     onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
-                                                    src="{{ asset('storage/app/public/business/' . $logo) }}"
+                                                    src="{{ asset('storage/business/' . $logo) }}"
                                                     alt="logo image" />
                                             </center>
                                             <input type="file" name="logo" id="customFileEg1"
@@ -408,7 +408,7 @@
                                             <center>
                                                 <img class="img--110" id="iconViewer"
                                                     onerror="this.src='{{ asset('assets/admin/img/upload-img.png') }}'"
-                                                    src="{{ asset('storage/app/public/business/' . $icon) }}"
+                                                    src="{{ asset('storage/business/' . $icon) }}"
                                                     alt="Fav icon" />
                                             </center>
                                             <input type="file" name="icon" id="favIconUpload"

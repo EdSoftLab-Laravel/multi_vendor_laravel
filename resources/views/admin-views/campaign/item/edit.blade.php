@@ -130,7 +130,7 @@
 
                             <center id="image-viewer-section" class="py-3 my-auto">
                                 <img class="img--120" id="viewer"
-                                src="{{asset('storage/app/public/campaign')}}/{{$campaign->image}}" alt="campaign image" onerror='this.src="{{asset('assets/admin/img/100x100/2.png')}}"'/>
+                                src="{{asset('storage/campaign')}}/{{$campaign->image}}" alt="campaign image" onerror='this.src="{{asset('assets/admin/img/100x100/2.png')}}"'/>
                             </center>
                             <div class="custom-file">
                                 <input type="file" name="image" id="customFileEg1" class="custom-file-input"

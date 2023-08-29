@@ -79,7 +79,7 @@ font-weight: 700
             <td style="padding:30px 30px 0">
                 <img src="{{asset('/assets/admin/img/reg-denied.png')}}" alt="">
                 <h3 style="font-size:17px;font-weight:500">Registration Denied !</h3>
-                
+
             </td>
         </tr>
         <tr>
@@ -98,7 +98,7 @@ font-weight: 700
                 <span class="d-block" style="margin-bottom:20px">6amMart</span>
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
 
-                <img style="width:120px;display:block;margin:10px auto" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px auto" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/business/' . $store_logo) }}" alt="public/img">
                 <span class="privacy">
                     <a href="">Privacy Policy</a><a href="">Contact Us</a>
                 </span>

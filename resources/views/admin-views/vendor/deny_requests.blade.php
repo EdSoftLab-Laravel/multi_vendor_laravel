@@ -109,7 +109,7 @@
                                 <div>
                                     <a href="{{route('admin.store.view', $store->id)}}" class="table-rest-info" alt="view store">
                                     <img class="img--60 circle" onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
-                                            src="{{asset('storage/app/public/store')}}/{{$store['logo']}}">
+                                            src="{{asset('storage/store')}}/{{$store['logo']}}">
                                         <div class="info"><div class="text--title">
                                             {{Str::limit($store->name,20,'...')}}
                                             </div>

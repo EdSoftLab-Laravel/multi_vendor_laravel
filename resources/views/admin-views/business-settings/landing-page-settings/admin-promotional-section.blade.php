@@ -203,7 +203,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <img src="{{asset('storage/app/public/promotional_banner')}}/{{$banner->image}}"
+                                        <img src="{{asset('storage/promotional_banner')}}/{{$banner->image}}"
                                         onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                     </td>
                                     <td>

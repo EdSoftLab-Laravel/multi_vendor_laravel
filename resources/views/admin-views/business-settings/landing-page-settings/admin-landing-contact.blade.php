@@ -167,7 +167,7 @@
                                     <label class="upload-img-3 m-0 d-block">
                                         <div class="position-relative">
                                         <div class="img">
-                                            <img src="{{asset('storage/app/public/contact_us_image')}}/{{ $contact_us_image['value']??'' }}" class="vertical-img mw-100" alt="" onerror="this.src='{{asset("public/assets/admin/img/upload-4.png")}}'">
+                                            <img src="{{asset('storage/contact_us_image')}}/{{ $contact_us_image['value']??'' }}" class="vertical-img mw-100" alt="" onerror="this.src='{{asset("public/assets/admin/img/upload-4.png")}}'">
                                         </div>
                                           <input type="file"  name="image" hidden="">
                                           @if (isset($contact_us_image['value']))

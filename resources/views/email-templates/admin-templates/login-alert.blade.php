@@ -139,7 +139,7 @@ font-weight: 700
         <tr>
             <td class="main-table-td">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/business/' . $store_logo) }}" alt="public/img">
                 <h2>Login Alert !</h2>
                 <div class="mb-1">Hi Admin,</div>
                 <div class="mb-4">Your account has been been login from a <span class="text-base">new IP 192.167. 12.46.</span></div>
@@ -150,7 +150,7 @@ font-weight: 700
                 </span>
                 <hr>
                 <div class="mb-2">
-                    Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help. 
+                    Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help.
                 </div>
                 <div>
                     Thanks & Regards,
@@ -190,6 +190,6 @@ font-weight: 700
     </tbody>
 </table>
 
-    
+
 </body>
 </html>

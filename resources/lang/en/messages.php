@@ -4123,4 +4123,7 @@
   'please_select_a_store_first' => 'Please select a store first',
   'module_created_successfully' => 'Module created successfully',
   'dg' => 'Dg',
+  'Without configuring this section map functionality will not work properly. Thus the whole
+                                 system will not work as it planned' => 'Without configuring this section map functionality will not work properly. Thus the whole
+                                 system will not work as it planned',
 );

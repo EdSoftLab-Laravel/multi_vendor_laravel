@@ -121,7 +121,7 @@
                                 <div class="position-relative">
                                     <label class="upload-img-3 m-0 d-block">
                                         <div class="img">
-                                            <img  src="{{asset('storage/app/public/promotional_banner')}}/{{$banner['image']}}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                            <img  src="{{asset('storage/promotional_banner')}}/{{$banner['image']}}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                         </div>
                                             <input type="file" name="image"  hidden>
                                     </label>

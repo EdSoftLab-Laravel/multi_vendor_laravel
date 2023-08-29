@@ -83,7 +83,7 @@
                             <center class="py-3 my-auto">
                                 <img class="img--100" id="viewer"
                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                src="{{asset('storage/app/public/admin')}}/{{$e['image']}}" alt="Employee thumbnail"/>
+                                src="{{asset('storage/admin')}}/{{$e['image']}}" alt="Employee thumbnail"/>
                             </center>
                             <div class="custom-file">
                                 <input type="file" name="image" id="customFileUpload" class="custom-file-input"
@@ -221,7 +221,7 @@
     </script>
     <script>
         $('#reset_btn').click(function(){
-            $('#viewer').attr('src', "{{asset('storage/app/public/admin')}}/{{$e['image']}}') }}");
+            $('#viewer').attr('src', "{{asset('storage/admin')}}/{{$e['image']}}') }}");
             $('#customFileUpload').val(null);
             $('#zone_id').val("{{ $e->zone_id  }}").trigger('change');
             $('#role_id').val("{{ $e['role_id'] }}").trigger('change');

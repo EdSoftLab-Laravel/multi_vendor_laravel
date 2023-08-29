@@ -42,7 +42,7 @@
                             <td class="media align-items-center cursor-pointer"
                                 onclick="quickViewCartItem({{ $cartItem['id'] }}, {{ $key }})">
                                 <img class="avatar avatar-sm mr-1"
-                                    src="{{ asset('storage/app/public/product') }}/{{ $cartItem['image'] }}"
+                                    src="{{ asset('storage/product') }}/{{ $cartItem['image'] }}"
                                     onerror="this.src='{{ asset('assets/admin/img/100x100/2.png') }}'"
                                     alt="{{ $cartItem['name'] }} image">
                                 <div class="media-body">

@@ -68,7 +68,7 @@
                                 <center class="mb-auto">
                                     <img class="store-banner" id="viewer"
                                     onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
-                                    src="{{asset('storage/app/public/vendor')}}/{{$e['image']}}" alt="Employee thumbnail"/>
+                                    src="{{asset('storage/vendor')}}/{{$e['image']}}" alt="Employee thumbnail"/>
                                 </center>
 
                                 <div class="form-group mt-3 mb-0">
@@ -213,7 +213,7 @@
     </script>
             <script>
                 $('#reset_btn').click(function(){
-                    $('#viewer').attr('src','{{asset('storage/app/public/vendor')}}/{{$e['image']}}');
+                    $('#viewer').attr('src','{{asset('storage/vendor')}}/{{$e['image']}}');
                 })
             </script>
 @endpush

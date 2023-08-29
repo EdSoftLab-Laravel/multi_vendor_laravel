@@ -72,7 +72,7 @@
                                         <label class="upload-img-3 m-0 d-block">
                                             <div class="position-relative">
                                             <div class="img">
-                                                <img src="{{asset('storage/app/public/reviewer_image')}}/{{$review->reviewer_image}}" onerror="this.src='{{asset("/public/assets/admin/img/aspect-1.png")}}'" class="img__aspect-1 min-w-187px max-w-187px" alt="">
+                                                <img src="{{asset('storage/reviewer_image')}}/{{$review->reviewer_image}}" onerror="this.src='{{asset("/public/assets/admin/img/aspect-1.png")}}'" class="img__aspect-1 min-w-187px max-w-187px" alt="">
                                             </div>
                                             <input type="file"  name="reviewer_image" hidden="">
                                             @if (isset($review->reviewer_image))
@@ -88,7 +88,7 @@
                                         </label>
                                         <label class="upload-img-4 m-0 d-block my-auto">
                                             <div class="img">
-                                                <img src="{{asset('storage/app/public/reviewer_company_image')}}/{{$review->company_image}}" onerror="this.src='{{asset("/public/assets/admin/img/aspect-3-1.png")}}'" class="vertical-img min-w-187px max-w-187px" alt="">
+                                                <img src="{{asset('storage/reviewer_company_image')}}/{{$review->company_image}}" onerror="this.src='{{asset("/public/assets/admin/img/aspect-3-1.png")}}'" class="vertical-img min-w-187px max-w-187px" alt="">
                                             </div>
                                             <input type="file" id="image-upload-2" name="company_image" hidden="">
                                         </label>

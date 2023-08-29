@@ -97,7 +97,7 @@
                                     <tr>
                                         <td>{{ $key+1 }}</td>
                                         <td>
-                                            <img src="{{asset('storage/app/public/promotional_banner')}}/{{$banner['img']}}"
+                                            <img src="{{asset('storage/promotional_banner')}}/{{$banner['img']}}"
                                             onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105 mw-100" alt="">
                                         </td>
                                         <td>

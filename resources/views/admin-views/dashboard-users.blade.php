@@ -48,7 +48,7 @@
                             +{{$total_customers >= 4 ? $total_customers - 2 : $total_customers}}
                         </div>
                         @foreach ($customers as $key => $customer)
-                            <img src="{{ asset('storage/app/public/profile') }}/{{ $customer['image'] }}"
+                            <img src="{{ asset('storage/profile') }}/{{ $customer['image'] }}"
                             onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
                         @endforeach
                     </div>
@@ -64,7 +64,7 @@
                             +{{$total_deliveryman >= 4 ? $total_deliveryman - 2 :  $total_deliveryman}}
                         </div>
                         @foreach ($delivery_man as $key => $dm)
-                            <img src="{{ asset('storage/app/public/delivery-man') }}/{{ $dm['image'] }}"
+                            <img src="{{ asset('storage/delivery-man') }}/{{ $dm['image'] }}"
                             onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
                         @endforeach
                     </div>
@@ -83,7 +83,7 @@
                         @if ($key == 2)
                             @break
                         @endif
-                        <img src="{{ asset('storage/app/public/delivery-man') }}/{{ $item['image'] }}"
+                        <img src="{{ asset('storage/delivery-man') }}/{{ $item['image'] }}"
                         onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'" alt="new-img">
                         @endforeach
                     </div>
@@ -447,7 +447,7 @@
             map.fitBounds(dmbounds);
             for (var i = 0; i < deliveryMan.length; i++) {
                 if (deliveryMan[i].lat) {
-                    var contentString = "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man') }}/"+deliveryMan[i].image+"'></div><div style='float:right; padding: 10px;'><b>"+deliveryMan[i].name+"</b><br/> "+deliveryMan[i].location+"</div>";
+                    var contentString = "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man') }}/"+deliveryMan[i].image+"'></div><div style='float:right; padding: 10px;'><b>"+deliveryMan[i].name+"</b><br/> "+deliveryMan[i].location+"</div>";
                     var point = new google.maps.LatLng(deliveryMan[i].lat, deliveryMan[i].lng);
                     dmbounds.extend(point);
                     map.fitBounds(dmbounds);
@@ -461,7 +461,7 @@
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man') }}/" +
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man') }}/" +
                                 deliveryMan[i].image +
                                 "'></div><div style='float:right; padding: 10px;'><b>" + deliveryMan[i]
                                 .name + "</b><br/> " + deliveryMan[i].location + "</b><br/> " + 'Assigned Order: ' + deliveryMan[i].assigned_order_count + "</div>"

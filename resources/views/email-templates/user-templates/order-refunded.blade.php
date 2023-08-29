@@ -205,7 +205,7 @@ Refunded. The refunded amount has been transferred to your wallet.</div>
                             <td class="p-10">
                                 <span class="d-block text-center">
                                     @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                                    <img style="width: 125px" class="mb-" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="">
+                                    <img style="width: 125px" class="mb-" src="{{ asset('storage/business/' . $store_logo) }}" alt="">
                                     <h3 class="mb-3 mt-0">Order Info</h3>
                                 </span>
                             </td>
@@ -317,7 +317,7 @@ Refunded. The refunded amount has been transferred to your wallet.</div>
                 </table>
                 <hr>
                 <div class="mb-2">
-                    Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help. 
+                    Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help.
                 </div>
                 <div>
                     Thanks & Regards,
@@ -357,6 +357,6 @@ Refunded. The refunded amount has been transferred to your wallet.</div>
     </tbody>
 </table>
 
-    
+
 </body>
 </html>

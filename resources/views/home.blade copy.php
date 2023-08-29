@@ -18,7 +18,7 @@
             <div class="banner-content wow fadeInUp">
                 <h1 class="title">{{ isset($landing_page_text['header_title_1']) ? $landing_page_text['header_title_1'] : '' }}</h1>
                 <img class="w-100" onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
-                    src="{{ asset('storage/app/public/business/' . $logo) }}" alt="">
+                    src="{{ asset('storage/business/' . $logo) }}" alt="">
                 <div class="text">
                     {{ isset($landing_page_text['header_title_2']) ? $landing_page_text['header_title_2'] : '' }}
                 </div>
@@ -1896,7 +1896,7 @@
                     <div class="owl-theme owl-carousel" id="sync2">
                         @foreach ($modules as $key => $item)
                         <div class="item">
-                            <img class="__img-50" src="{{ asset('storage/app/public/module/') }}/{{ isset($item['icon']) ? $item['icon'] : null }}" onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="">
+                            <img class="__img-50" src="{{ asset('storage/module/') }}/{{ isset($item['icon']) ? $item['icon'] : null }}" onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="">
                             <div class="txt d-block">{{translate("messages.{$item->module_name}")}}</div>
                         </div>
                         @endforeach
@@ -1915,7 +1915,7 @@
                         </div>
                         <div class="col-lg-6 col-md-8">
                             <div class="venture-img mx-1">
-                                <img src="{{ asset('storage/app/public/module/') }}/{{ isset($item['thumbnail']) ? $item['thumbnail'] : null }}" onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="">
+                                <img src="{{ asset('storage/module/') }}/{{ isset($item['thumbnail']) ? $item['thumbnail'] : null }}" onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="">
                             </div>
                         </div>
                     </div>
@@ -3533,7 +3533,7 @@
                     @php($fav = \App\Models\BusinessSetting::where(['key' => 'icon'])->first()->value ?? '')
                     <div class="right-side d-flex word-nowrap align-items-center">
                         <img onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
-                        src="{{ asset('storage/app/public/business/' . $fav) }}" alt="">
+                        src="{{ asset('storage/business/' . $fav) }}" alt="">
                         {{translate("messages.Still increasing")}}
                     </div>
                 </div>

@@ -101,7 +101,7 @@
                                 <label>{{translate('messages.deliveryman')}} {{translate('messages.image')}} <small class="text-danger">* ( {{translate('messages.ratio')}} 1:1 )</small></label>
                                 <center class="py-3 my-auto">
                                     <img class="img--100 rounded" id="viewer"
-                                            src="{{asset('storage/app/public/delivery-man').'/'.$delivery_man['image']}}"
+                                            src="{{asset('storage/delivery-man').'/'.$delivery_man['image']}}"
                                             onerror='this.src="{{asset('/assets/admin/img/admin.png')}}"'
                                             alt="delivery-man image"/>
                                 </center>
@@ -157,7 +157,7 @@
                                         </div>
                                         @foreach(json_decode($delivery_man['identity_image'],true) as $img)
                                         <div class="col-6 spartan_item_wrapper size--sm">
-                                            <img class="rounded border" src="{{asset('storage/app/public/delivery-man').'/'.$img}}">
+                                            <img class="rounded border" src="{{asset('storage/delivery-man').'/'.$img}}">
                                         </div>
                                         @endforeach
                                     </div>
@@ -354,7 +354,7 @@
     </script>
     <script>
         $('#reset_btn').click(function(){
-            $('#viewer').attr('src','{{asset('storage/app/public/delivery-man')}}/{{$delivery_man['image']}}');
+            $('#viewer').attr('src','{{asset('storage/delivery-man')}}/{{$delivery_man['image']}}');
             $("#coba").empty().spartanMultiImagePicker({
                 fieldName: 'identity_image[]',
                 maxCount: 5,

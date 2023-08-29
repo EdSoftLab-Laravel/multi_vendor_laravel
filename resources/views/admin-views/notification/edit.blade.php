@@ -71,7 +71,7 @@
                                 </label>
                                 <center class="py-3 my-auto">
                                     <img class="img--vertical" id="viewer"
-                                        src="{{asset('storage/app/public/notification')}}/{{$notification['image']}}"  onerror="src='{{asset('assets/admin/img/900x400/img1.jpg')}}'" alt="image"/>
+                                        src="{{asset('storage/notification')}}/{{$notification['image']}}"  onerror="src='{{asset('assets/admin/img/900x400/img1.jpg')}}'" alt="image"/>
                                 </center>
                                 <div class="custom-file">
                                     <input type="file" name="image" id="customFileEg1" class="custom-file-input"
@@ -114,7 +114,7 @@
         <script>
             $('#reset_btn').click(function(){
                 $('#zone').val("{{$notification->zone_id}}").trigger('change');
-                $('#viewer').attr('src', "{{asset('storage/app/public/notification')}}/{{$notification['image']}}");
+                $('#viewer').attr('src', "{{asset('storage/notification')}}/{{$notification['image']}}");
             })
         </script>
 @endpush

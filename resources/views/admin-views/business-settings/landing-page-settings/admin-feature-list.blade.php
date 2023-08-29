@@ -376,7 +376,7 @@
                         </div>
                         </td>
                         <td>
-                            <img src="{{ asset('storage/app/public/admin_feature') }}/{{ $feature->image }}"
+                            <img src="{{ asset('storage/admin_feature') }}/{{ $feature->image }}"
                                 onerror="this.src='{{ asset('/assets/admin/img/upload-3.png') }}'"
                                 class="__size-105" alt="">
                         </td>

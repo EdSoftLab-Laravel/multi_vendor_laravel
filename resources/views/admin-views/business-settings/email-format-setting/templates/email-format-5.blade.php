@@ -5,7 +5,7 @@ $company_name = App\Models\BusinessSetting::where('key', 'business_name')->first
     <tr>
         <td style="padding:30px 30px 0">
             <img class="mail-img-2" onerror="this.src='{{ asset('/assets/admin/img/blank3.png') }}'"
-            src="{{ asset('storage/app/public/email_template/') }}/{{ $data['icon']??'' }}" id="iconViewer" alt="">
+            src="{{ asset('storage/email_template/') }}/{{ $data['icon']??'' }}" id="iconViewer" alt="">
             <h3 style="font-size:17px;font-weight:500" class="mt-2" id="mail-title">{{ $data['title']?? translate('Main_Title_or_Subject_of_the_Mail') }}</h3>
 
         </td>
@@ -25,7 +25,7 @@ $company_name = App\Models\BusinessSetting::where('key', 'business_name')->first
             <span class="d-block">{{ translate('Thanks_&_Regards') }},</span>
             <span class="d-block" style="margin-bottom:20px">{{ $company_name }}</span>
             @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-            <img style="width:100px;display:block;margin:10px auto" onerror="this.src='{{ asset('storage/app/public/business/' . $store_logo) }}'" src="{{ asset('storage/app/public/email_template/') }}/{{ $data['logo']??'' }}" alt="public/img">
+            <img style="width:100px;display:block;margin:10px auto" onerror="this.src='{{ asset('storage/business/' . $store_logo) }}'" src="{{ asset('storage/email_template/') }}/{{ $data['logo']??'' }}" alt="public/img">
             <span class="privacy">
                 <a href="#" id="privacy-check" style="{{ (isset($data['privacy']) && $data['privacy'] == 1)?'':'display:none;' }}"><span class="dot"></span>{{ translate('Privacy_Policy')}}</a>
                 <a href="#" id="refund-check" style="{{ (isset($data['refund']) && $data['refund'] == 1)?'':'display:none;' }}"><span class="dot"></span>{{ translate('Refund_Policy') }}</a>

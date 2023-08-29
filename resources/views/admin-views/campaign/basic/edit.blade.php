@@ -140,7 +140,7 @@
                                 </label>
                                 <center class="py-3 my-auto">
                                     <img class="initial--4" id="viewer"
-                                         src="{{asset('storage/app/public/campaign')}}/{{$campaign->image}}"
+                                         src="{{asset('storage/campaign')}}/{{$campaign->image}}"
                                          onerror='this.src="{{ asset('assets/admin/img/900x400/img1.jpg') }}"' alt="campaign image"/>
                                 </center>
                                 <div class="custom-file">
@@ -259,7 +259,7 @@
     </script>
         <script>
             $('#reset_btn').click(function(){
-                $('#viewer').attr('src','{{asset('storage/app/public/campaign')}}/{{$campaign->image}}');
+                $('#viewer').attr('src','{{asset('storage/campaign')}}/{{$campaign->image}}');
             })
         </script>
 @endpush

@@ -11,7 +11,7 @@
         <div class="chat-user-info w-100 d-flex align-items-center">
             <div class="chat-user-info-img">
                 <img class="avatar-img"
-                    src="{{asset('storage/app/public/profile/'.$user['image'])}}"
+                    src="{{asset('storage/profile/'.$user['image'])}}"
                     onerror="this.src='{{asset('assets/admin')}}/img/160x160/img1.jpg'"
                     alt="Image Description">
             </div>
@@ -34,7 +34,7 @@
                             @foreach (json_decode($con->file) as $img)
                             <br>
                                 <img style="width:100%"
-                                src="{{asset('storage/app/public/conversation').'/'.$img}}">
+                                src="{{asset('storage/conversation').'/'.$img}}">
                                 @endforeach
                             @endif
                         </div>
@@ -50,7 +50,7 @@
                             @foreach (json_decode($con->file) as $img)
                             <br>
                                 <img style="width:100%"
-                                src="{{asset('storage/app/public/conversation').'/'.$img}}">
+                                src="{{asset('storage/conversation').'/'.$img}}">
                                 @endforeach
                             @endif
                         </div>

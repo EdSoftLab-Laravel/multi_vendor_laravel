@@ -127,7 +127,7 @@ font-weight: 700
         <tr>
             <td class="main-table-td">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/business/' . $store_logo) }}" alt="public/img">
                 <h2>
                     <img src="{{asset('/assets/admin/img/suspended.png')}}" alt=""> Your Account Has Been Suspended !
                 </h2>
@@ -138,7 +138,7 @@ font-weight: 700
                 <img src="{{asset('/assets/admin/img/campaign-suspended.png')}}" alt="">
                 <hr>
                 <div class="mb-2">
-                    Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help. 
+                    Please <a href="" class="text-base">contact us</a> for any queries, we’re always happy to help.
                 </div>
                 <div>
                     Thanks & Regards,
@@ -178,6 +178,6 @@ font-weight: 700
     </tbody>
 </table>
 
-    
+
 </body>
 </html>

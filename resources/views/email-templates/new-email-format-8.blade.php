@@ -135,7 +135,7 @@ font-weight: 700
             object-fit: cover
         }
 .social img {
-width: 24px;    
+width: 24px;
 }
     </style>
 
@@ -149,7 +149,7 @@ width: 24px;
             <tr>
                 <td class="main-table-td">
                     <img class="mail-img-1"  @if ($data?->logo)
-                    src="{{ asset('storage/app/public/email_template/') }}/{{ $data['logo']??'' }}"
+                    src="{{ asset('storage/email_template/') }}/{{ $data['logo']??'' }}"
                     @else
                     src='{{ asset('/assets/admin/img/blank1.png') }}'
                     @endif id="logoViewer" alt="">

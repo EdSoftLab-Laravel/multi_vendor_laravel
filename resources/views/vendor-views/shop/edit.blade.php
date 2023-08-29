@@ -151,7 +151,7 @@
                             <center class="my-auto py-4 py-xl-5">
                                 <img class="store-banner" id="viewer"
                                 onerror="this.src='{{asset('assets/admin/img/image-place-holder.png')}}'"
-                                src="{{asset('storage/app/public/store/'.$shop->logo)}}" alt="Product thumbnail"/>
+                                src="{{asset('storage/store/'.$shop->logo)}}" alt="Product thumbnail"/>
                             </center>
                             <div class="custom-file">
                                 <input type="file" name="image" id="customFileUpload" class="custom-file-input"
@@ -172,7 +172,7 @@
                             <center class="my-auto py-4 py-xl-5">
                                 <img class="store-banner" id="coverImageViewer"
                                 onerror="this.src='{{asset('assets/admin/img/restaurant_cover.jpg')}}'"
-                                src="{{asset('storage/app/public/store/cover/'.$shop->cover_photo)}}" alt="Product thumbnail"/>
+                                src="{{asset('storage/store/cover/'.$shop->cover_photo)}}" alt="Product thumbnail"/>
                             </center>
                             <div class="custom-file">
                                 <input type="file" name="photo" id="coverImageUpload" class="custom-file-input"

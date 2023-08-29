@@ -88,7 +88,7 @@ $company_links = json_decode(BusinessSetting::where('key','landing_page_links')-
                 <td>
                     <div style="text-align: end; margin-inline-end:15px;">
                         <img class="w-100" onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
-                        src="{{ asset('storage/app/public/business/'. $logo) }}" alt="">
+                        src="{{ asset('storage/business/'. $logo) }}" alt="">
                     </div>
                 </td>
             </tr>

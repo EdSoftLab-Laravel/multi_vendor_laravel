@@ -75,7 +75,7 @@
                                 <label class="upload-img-3 m-2 d-block">
                                     <div class="position-relative">
                                     <div class="img">
-                                        <img src="{{asset('storage/app/public/promotional_banner')}}/{{ $fixed_promotional_banner['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
+                                        <img src="{{asset('storage/promotional_banner')}}/{{ $fixed_promotional_banner['value']??'' }}" onerror='this.src="{{asset('/assets/admin/img/upload-4.png')}}"' class="vertical-img mw-100 vertical" alt="">
                                     </div>
                                         <input type="file" name="fixed_promotional_banner"  hidden>
                                            @if (isset($fixed_promotional_banner['value']))

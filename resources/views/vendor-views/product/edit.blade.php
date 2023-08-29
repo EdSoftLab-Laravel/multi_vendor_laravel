@@ -140,7 +140,7 @@
                                 <label class="text-dark">{{translate('messages.item')}} {{translate('messages.thumbnail')}} <small class="text-danger">* ( {{translate('messages.ratio')}} 1:1 )</small></label>
                                 <center class="d-block" id="image-viewer-section" class="pt-2">
                                     <img class="img--100" id="viewer"
-                                            src="{{asset('storage/app/public/product')}}/{{$product['image']}}"
+                                            src="{{asset('storage/product')}}/{{$product['image']}}"
                                             onerror='this.
                                             src="{{asset('/assets/admin/img/400x400/img2.jpg')}}"'
                                             alt="product image"/>

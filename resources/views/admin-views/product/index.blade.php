@@ -65,7 +65,7 @@
                             @endif
                             @if ($language)
                             <div class="lang_form"
-                            id="default-form">
+                            id="default-form">  
                                 <div class="form-group">
                                     <label class="input-label"
                                         for="default_name">{{ translate('messages.name') }}
@@ -73,7 +73,7 @@
                                     </label>
                                     <input type="text" name="name[]" id="default_name"
                                         class="form-control" placeholder="{{ translate('messages.new_item') }}"
-                                        required
+                                        
                                         oninvalid="document.getElementById('en-link').click()">
                                 </div>
                                 <input type="hidden" name="lang[]" value="default">
@@ -111,7 +111,7 @@
                                         <label class="input-label"
                                             for="exampleFormControlInput1">{{ translate('messages.name') }} ({{ translate('messages.default') }})</label>
                                         <input type="text" name="name[]" class="form-control"
-                                            placeholder="{{ translate('messages.new_item') }}" required>
+                                            placeholder="{{ translate('messages.new_item') }}" >
                                     </div>
                                     <input type="hidden" name="lang[]" value="default">
                                     <div class="form-group mb-0">
@@ -144,7 +144,7 @@
                                     <label class="d-inline-block m-0">
                                         <img class="img--100" id="viewer" src="{{ asset('assets/admin/img/upload.png') }}" alt="thumbnail" />
                                         <input type="file" name="image" id="customFileEg1" class="custom-file-input d-none"
-                                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" required>
+                                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" >
                                     </label>
                                 </div>
                             </div>

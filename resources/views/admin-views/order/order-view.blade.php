@@ -420,7 +420,7 @@
                                     <div class="avatar avatar-xl mr-3"
                                         title="{{ $order->parcel_category ? $order->parcel_category->name : translate('messages.parcel_category_not_found') }}">
                                         <img class="img-fluid"
-                                            src="{{ asset('storage/app/public/parcel_category') }}/{{ $order->parcel_category ? $order->parcel_category->image : '' }}"
+                                            src="{{ asset('storage/parcel_category') }}/{{ $order->parcel_category ? $order->parcel_category->image : '' }}"
                                             onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'">
                                     </div>
                                     <div class="media-body">
@@ -522,7 +522,7 @@
                                                                         class="avatar-status avatar-lg-status avatar-status-dark"><i
                                                                             class="tio-edit"></i></span>
                                                                     <img class="img-fluid rounded aspect-ratio-1"
-                                                                        src="{{ asset('storage/app/public/product') }}/{{ $detail->item['image'] }}"
+                                                                        src="{{ asset('storage/product') }}/{{ $detail->item['image'] }}"
                                                                         onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </div>
@@ -530,7 +530,7 @@
                                                                 <a class="avatar avatar-xl mr-3"
                                                                     href="{{ route('admin.item.view', [$detail->item['id'],'module_id' => $order->module_id]) }}">
                                                                     <img class="img-fluid rounded aspect-ratio-1"
-                                                                        src="{{ asset('storage/app/public/product') }}/{{ $detail->item['image'] }}"
+                                                                        src="{{ asset('storage/product') }}/{{ $detail->item['image'] }}"
                                                                         onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </a>
@@ -658,7 +658,7 @@
                                                                         class="avatar-status avatar-lg-status avatar-status-dark"><i
                                                                             class="tio-edit"></i></span>
                                                                     <img class="img-fluid rounded"
-                                                                        src="{{ asset('storage/app/public/campaign') }}/{{ $detail->campaign['image'] }}"
+                                                                        src="{{ asset('storage/campaign') }}/{{ $detail->campaign['image'] }}"
                                                                         onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </div>
@@ -666,7 +666,7 @@
                                                                 <a class="avatar avatar-xl mr-3"
                                                                     href="{{ route('admin.campaign.view', ['item', $detail->campaign['id']]) }}">
                                                                     <img class="img-fluid rounded"
-                                                                        src="{{ asset('storage/app/public/campaign') }}/{{ $detail->campaign['image'] }}"
+                                                                        src="{{ asset('storage/campaign') }}/{{ $detail->campaign['image'] }}"
                                                                         onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
                                                                         alt="Image Description">
                                                                 </a>
@@ -955,7 +955,7 @@
                                                 <img class="img__aspect-1 rounded border w-100" data-toggle="modal"
                                                     data-target="#imagemodal{{ $key }}"
                                                     onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}"
-                                                    src="{{ asset('storage/app/public/refund') . '/' . $img }}">
+                                                    src="{{ asset('storage/refund') . '/' . $img }}">
                                             </div>
                                             <div class="modal fade" id="imagemodal{{ $key }}" tabindex="-1"
                                                 role="dialog" aria-labelledby="myModalLabel{{ $key }}"
@@ -1138,7 +1138,7 @@
                                     <div class="avatar avatar-circle">
                                         <img class="avatar-img"
                                             onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
-                                            src="{{ asset('storage/app/public/delivery-man/' . $order->delivery_man->image) }}"
+                                            src="{{ asset('storage/delivery-man/' . $order->delivery_man->image) }}"
                                             alt="Image Description">
                                     </div>
                                     <div class="media-body">
@@ -1201,7 +1201,7 @@
                                 <div class="avatar avatar-circle">
                                     <img class="avatar-img"
                                         onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
-                                        src="{{ asset('storage/app/public/profile/' . $order->customer->image) }}"
+                                        src="{{ asset('storage/profile/' . $order->customer->image) }}"
                                         alt="Image Description">
                                 </div>
                                 <div class="media-body">
@@ -1319,7 +1319,7 @@
                                 <div class="avatar avatar-circle">
                                     <img class="avatar-img w-75px"
                                         onerror="this.src='{{ asset('assets/admin/img/100x100/1.png') }}'"
-                                        src="{{ asset('storage/app/public/store/' . $order->store->logo) }}"
+                                        src="{{ asset('storage/store/' . $order->store->logo) }}"
                                         alt="Image Description">
                                 </div>
                                 <div class="media-body">
@@ -1576,7 +1576,7 @@
                                         <span class="dm_list" role='button' data-id="{{ $dm['id'] }}">
                                             <img class="avatar avatar-sm avatar-circle mr-1"
                                                 onerror="this.src='{{ asset('assets/admin/img/160x160/img1.jpg') }}'"
-                                                src="{{ asset('storage/app/public/delivery-man') }}/{{ $dm['image'] }}"
+                                                src="{{ asset('storage/delivery-man') }}/{{ $dm['image'] }}"
                                                 alt="{{ $dm['name'] }}">
                                             {{ $dm['name'] }}
                                         </span>
@@ -2130,11 +2130,11 @@
                     return function() {
                         @if ($parcel_order)
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/profile/' . $order->customer->image) }}'></div><div style='float:right; padding: 10px;'><b>{{ $order->customer->f_name }}{{ $order->customer->l_name }}</b><br />{{ $address['address'] }}</div>"
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/profile/' . $order->customer->image) }}'></div><div style='float:right; padding: 10px;'><b>{{ $order->customer->f_name }}{{ $order->customer->l_name }}</b><br />{{ $address['address'] }}</div>"
                             );
                         @else
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/restaurant/' . $order->store->logo) }}'></div><div class='text-break' style='float:right; padding: 10px;'><b>{{ Str::limit($order->store->name, 15, '...') }}</b><br /> {{ $order->store->address }}</div>"
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/restaurant/' . $order->store->logo) }}'></div><div class='text-break' style='float:right; padding: 10px;'><b>{{ Str::limit($order->store->name, 15, '...') }}</b><br /> {{ $order->store->address }}</div>"
                             );
                         @endif
                         infowindow.open(map, Restaurantmarker);
@@ -2145,7 +2145,7 @@
             map.fitBounds(dmbounds);
             for (var i = 0; i < deliveryMan.length; i++) {
                 if (deliveryMan[i].lat) {
-                    // var contentString = "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man') }}/"+deliveryMan[i].image+"'></div><div style='float:right; padding: 10px;'><b>"+deliveryMan[i].name+"</b><br/> "+deliveryMan[i].location+"</div>";
+                    // var contentString = "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man') }}/"+deliveryMan[i].image+"'></div><div style='float:right; padding: 10px;'><b>"+deliveryMan[i].name+"</b><br/> "+deliveryMan[i].location+"</div>";
                     var point = new google.maps.LatLng(deliveryMan[i].lat, deliveryMan[i].lng);
                     dmbounds.extend(point);
                     map.fitBounds(dmbounds);
@@ -2159,7 +2159,7 @@
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man') }}/" +
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man') }}/" +
                                 deliveryMan[i].image +
                                 "'></div><div style='float:right; padding: 10px;'><b>" + deliveryMan[i]
                                 .name + "</b><br/> " + deliveryMan[i].location + "</div>");
@@ -2353,7 +2353,7 @@
                     google.maps.event.addListener(marker, 'click', (function(marker) {
                         return function() {
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/profile/' . $order->customer->image) }}'></div><div style='float:right; padding: 10px;'><b>{{ $order->customer->f_name }} {{ $order->customer->l_name }}</b><br />{{ $address['address'] }}</div>"
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/profile/' . $order->customer->image) }}'></div><div style='float:right; padding: 10px;'><b>{{ $order->customer->f_name }} {{ $order->customer->l_name }}</b><br />{{ $address['address'] }}</div>"
                             );
                             infowindow.open(map, marker);
                         }
@@ -2372,7 +2372,7 @@
                     google.maps.event.addListener(dmmarker, 'click', (function(dmmarker) {
                         return function() {
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/delivery-man/' . $order->delivery_man->image) }}'></div> <div style='float:right; padding: 10px;'><b>{{ $order->delivery_man->f_name }} {{ $order->delivery_man->l_name }}</b><br /> {{ $order->dm_last_location['location'] }}</div>"
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/delivery-man/' . $order->delivery_man->image) }}'></div> <div style='float:right; padding: 10px;'><b>{{ $order->delivery_man->f_name }} {{ $order->delivery_man->l_name }}</b><br /> {{ $order->dm_last_location['location'] }}</div>"
                             );
                             infowindow.open(map, dmmarker);
                         }
@@ -2392,7 +2392,7 @@
                     google.maps.event.addListener(Retaurantmarker, 'click', (function(Retaurantmarker) {
                         return function() {
                             infowindow.setContent(
-                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/app/public/restaurant/' . $order->store->logo) }}'></div> <div style='float:right; padding: 10px;'><b>{{ Str::limit($order->store->name, 15, '...') }}</b><br /> {{ $order->store->address }}</div>"
+                                "<div style='float:left'><img style='max-height:40px;wide:auto;' src='{{ asset('storage/restaurant/' . $order->store->logo) }}'></div> <div style='float:right; padding: 10px;'><b>{{ Str::limit($order->store->name, 15, '...') }}</b><br /> {{ $order->store->address }}</div>"
                             );
                             infowindow.open(map, Retaurantmarker);
                         }

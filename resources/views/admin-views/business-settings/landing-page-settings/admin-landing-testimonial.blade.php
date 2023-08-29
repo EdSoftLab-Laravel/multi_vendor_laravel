@@ -226,11 +226,11 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <img src="{{asset('storage/app/public/reviewer_image')}}/{{$review->reviewer_image}}"
+                                            <img src="{{asset('storage/reviewer_image')}}/{{$review->reviewer_image}}"
                                             onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                         </td>
                                         <td>
-                                            <img src="{{asset('storage/app/public/reviewer_company_image')}}/{{$review->company_image}}"
+                                            <img src="{{asset('storage/reviewer_company_image')}}/{{$review->company_image}}"
                                             onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                         </td>
                                         <td>

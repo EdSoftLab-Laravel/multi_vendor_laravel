@@ -99,7 +99,7 @@
                                 </label>
                                 <center class="py-3 my-auto">
                                     <img class="img--100" id="viewer"
-                                        src="{{asset('storage/app/public/category')}}/{{$category['image']}}"
+                                        src="{{asset('storage/category')}}/{{$category['image']}}"
                                         onerror='this.src="{{asset('assets/admin/img/900x400/img1.jpg')}}"'
                                         alt=""/>
                                 </center>
@@ -166,7 +166,7 @@
     <script>
         $('#reset_btn').click(function(){
             $('#module_id').val("{{ $category->module_id }}").trigger('change');
-            $('#viewer').attr('src', "{{asset('storage/app/public/category')}}/{{$category['image']}}");
+            $('#viewer').attr('src', "{{asset('storage/category')}}/{{$category['image']}}");
         })
     </script>
 @endpush

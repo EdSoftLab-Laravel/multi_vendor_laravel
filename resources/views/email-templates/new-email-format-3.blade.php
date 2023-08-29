@@ -196,7 +196,7 @@ font-weight: 700
             object-fit: cover
         }
 .social img {
-width: 24px;    
+width: 24px;
 }
     </style>
 
@@ -221,8 +221,8 @@ width: 24px;
                                 <td class="p-10">
                                     <span class="d-block text-center">
                                         @php($restaurant_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                                        <img class="mb-2 mail-img-2" onerror="this.src='{{ asset('storage/app/public/business/' . $restaurant_logo) }}'"
-                                        src="{{ asset('storage/app/public/email_template/') }}/{{ $data['logo']??'' }}" alt="">
+                                        <img class="mb-2 mail-img-2" onerror="this.src='{{ asset('storage/business/' . $restaurant_logo) }}'"
+                                        src="{{ asset('storage/email_template/') }}/{{ $data['logo']??'' }}" alt="">
                                         <h3 class="mb-3 mt-0">{{ translate('Order_Info') }}</h3>
                                     </span>
                                 </td>
@@ -348,7 +348,7 @@ width: 24px;
                                                         $total_discount_on_product += $details['discount'];
                                                         $total += $subtotal;
                                                         ?>
-                                                    @endforeach  
+                                                    @endforeach
                                                         @endif
                                                         <tr>
                                                             <td colspan="2">
@@ -471,6 +471,6 @@ width: 24px;
         </tbody>
     </table>
 
-    
+
 </body>
 </html>

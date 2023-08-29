@@ -95,7 +95,7 @@
                     <div class="resturant--info-address">
                         <div class="logo">
                             <img onerror="this.src='{{asset('assets/admin/img/100x100/1.png')}}'"
-                        src="{{asset('storage/app/public/store')}}/{{$store->logo}}" alt="{{$store->name}} Logo">
+                        src="{{asset('storage/store')}}/{{$store->logo}}" alt="{{$store->name}} Logo">
                         </div>
                         <ul class="address-info list-unstyled list-unstyled-py-3 text-dark">
                             <li>
@@ -138,7 +138,7 @@
                     <div class="resturant--info-address">
                         <div class="avatar avatar-xxl avatar-circle avatar-border-lg">
                             <img class="avatar-img" onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
-                        src="{{asset('storage/app/public/vendor')}}/{{$store->vendor->image}}" alt="Image Description">
+                        src="{{asset('storage/vendor')}}/{{$store->vendor->image}}" alt="Image Description">
                         </div>
                         <ul class="address-info address-info-2 list-unstyled list-unstyled-py-3 text-dark">
                             <li>

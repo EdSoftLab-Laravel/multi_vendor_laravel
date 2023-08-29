@@ -3,14 +3,14 @@
         <td>{{$key+1}}</td>
         <td>
             <span class="media align-items-center">
-                <img class="img--ratio-3 w-auto h--50px rounded mr-2" src="{{asset('storage/app/public/banner')}}/{{$banner['image']}}" 
+                <img class="img--ratio-3 w-auto h--50px rounded mr-2" src="{{asset('storage/banner')}}/{{$banner['image']}}"
                         onerror="this.src='{{asset('/assets/admin/img/900x400/img1.jpg')}}'" alt="{{$banner->name}} image">
                 <div class="media-body">
                     <h5 class="text-hover-primary mb-0">{{Str::limit($banner['title'], 25, '...')}}</h5>
                 </div>
             </span>
         <span class="d-block font-size-sm text-body">
-            
+
         </span>
         </td>
         <td>{{Str::limit($banner->module->module_name, 15, '...')}}</td>

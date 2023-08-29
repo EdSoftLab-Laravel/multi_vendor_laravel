@@ -222,7 +222,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <img src="{{asset('storage/app/public/special_criteria')}}/{{$criteria->image}}"
+                                            <img src="{{asset('storage/special_criteria')}}/{{$criteria->image}}"
                                             onerror="this.src='{{asset('/assets/admin/img/upload-3.png')}}'" class="__size-105" alt="">
                                         </td>
                                         <td>
