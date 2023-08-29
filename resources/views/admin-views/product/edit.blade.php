@@ -150,7 +150,7 @@
                                         @foreach ($product->images as $key => $photo)
                                             <div class="spartan_item_wrapper min-w-100px max-w-100px">
                                                 <img class="img--square"
-                                                    src="{{ asset("storage/app/public/product/$photo") }}"
+                                                    src="{{ asset("storage/product/$photo") }}"
                                                     alt="Product image">
                                                 <a href="{{ route('admin.item.remove-image', ['id' => $product['id'], 'name' => $photo]) }}"
                                                     class="spartan_remove_row"><i class="tio-add-to-trash"></i></a>

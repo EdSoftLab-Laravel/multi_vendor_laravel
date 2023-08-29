@@ -129,7 +129,7 @@
                                 <div class="row" id="coba">
                                     @foreach ($product->images as $key => $photo)
                                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 spartan_item_wrapper">
-                                            <img class="img--square" src="{{asset("storage/app/public/product/$photo")}}" alt="Product image">
+                                            <img class="img--square" src="{{asset("storage/product/$photo")}}" alt="Product image">
                                             <a href="{{route('vendor.item.remove-image',['id'=>$product['id'],'name'=>$photo])}}"
                                                 class="spartan_remove_row"><i class="tio-add-to-trash"></i></a>
                                         </div>
