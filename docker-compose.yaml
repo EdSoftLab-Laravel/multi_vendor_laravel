@@ -8,7 +8,7 @@ services:
       - .:/var/www/html
       - .env.dev:/var/www/html/.env
     ports:
-      - "80:80"
+      - "2020:80"
     environment:
       - APP_ENV=dev
       - APP_DEBUG=true
@@ -47,7 +47,7 @@ services:
     container_name: phpmyadmin
     restart: always
     ports:
-      - 9002:80
+      - 9001:80
     environment:
       PMA_HOST : "db"
       MYSQL_USERNAME: "dg"
