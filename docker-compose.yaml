@@ -56,8 +56,8 @@ services:
       MYSQL_USERNAME: "dg"
       MYSQL_ROOT_PASSWORD: "root"
       UPLOAD_LIMIT: 300M
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
     networks:
       - laravel
     # volumes:
