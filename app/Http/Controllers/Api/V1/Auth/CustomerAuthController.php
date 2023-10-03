@@ -249,7 +249,8 @@ class CustomerAuthController extends Controller
             'l_name' => 'required',
             'email' => 'required|unique:users',
             'phone' => 'required|unique:users',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
         ], [
             'f_name.required' => 'The first name field is required.',
             'l_name.required' => 'The last name field is required.',

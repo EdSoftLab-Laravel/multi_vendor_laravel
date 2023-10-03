@@ -30,7 +30,8 @@ class EmployeeController extends Controller
             'image' => 'required',
             'email' => 'required|unique:admins',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:20|unique:admins',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
 
         ]);
 
@@ -61,7 +62,7 @@ class EmployeeController extends Controller
         $em = Admin::zone()->with(['role'])->where('role_id', '!=','1')->latest()->paginate(config('default_pagination'));
         return view('admin-views.employee.list', compact('em'));
     }
-    
+
     public function edit($id)
     {
         $e = Admin::zone()->where('role_id', '!=','1')->where(['id' => $id])->first();
@@ -81,7 +82,8 @@ class EmployeeController extends Controller
             'role_id' => 'required',
             'email' => 'required|unique:admins,email,'.$id,
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:20|unique:admins,phone,'.$id,
-            'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['nullable', Password::min(1)],
+            // 'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
         ], [
             'f_name.required' => translate('messages.first_name_is_required'),
         ]);

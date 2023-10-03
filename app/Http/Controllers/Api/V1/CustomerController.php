@@ -178,7 +178,7 @@ class CustomerController extends Controller
     $user = User::findOrFail($request->user()->id);
     $user->current_language_key = $current_language;
     $user->save();
-    
+
         $data = $request->user();
         $data['userinfo'] = $data->userinfo;
         $data['order_count'] =(integer)$request->user()->orders->count();
@@ -193,7 +193,8 @@ class CustomerController extends Controller
             'f_name' => 'required',
             'l_name' => 'required',
             'email' => 'required|unique:users,email,'.$request->user()->id,
-            'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['nullable', Password::min(1)],
+            // 'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
         ], [
             'f_name.required' => 'First name is required!',
             'l_name.required' => 'Last name is required!',

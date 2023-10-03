@@ -179,7 +179,7 @@ class PasswordResetController extends Controller
         $validator = Validator::make($request->all(), [
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|exists:users,phone',
             'reset_token'=> 'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
             'confirm_password'=> 'required|same:password',
         ]);
 

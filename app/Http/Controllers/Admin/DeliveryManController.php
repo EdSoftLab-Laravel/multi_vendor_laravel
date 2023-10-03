@@ -168,7 +168,8 @@ class DeliveryManController extends Controller
             'zone_id' => 'required',
             'earning' => 'required',
             'vehicle_id' => 'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
         ], [
             'f_name.required' => translate('messages.first_name_is_required'),
             'zone_id.required' => translate('messages.select_a_zone'),
@@ -322,7 +323,8 @@ class DeliveryManController extends Controller
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|unique:delivery_men,phone,'.$id,
             'vehicle_id' => 'required',
             'earning' => 'required',
-            'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            // 'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['nullable', Password::min(1)],
         ], [
             'f_name.required' => translate('messages.first_name_is_required'),
             'vehicle_id.required' => translate('messages.select_a_vehicle'),

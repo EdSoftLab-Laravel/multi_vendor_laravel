@@ -56,7 +56,8 @@ class VendorController extends Controller
             'minimum_delivery_time' => 'required',
             'maximum_delivery_time' => 'required',
             'delivery_time_type'=>'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'zone_id' => 'required',
             // 'module_id' => 'required',
             'logo' => 'required',
@@ -113,7 +114,7 @@ class VendorController extends Controller
         $store->zone_id = $request->zone_id;
         $store->tax = $request->tax;
         $store->delivery_time = $request->minimum_delivery_time .'-'. $request->maximum_delivery_time.' '.$request->delivery_time_type;
-        $store->module_id = Config::get('module.current_module_id');     
+        $store->module_id = Config::get('module.current_module_id');
         try {
             $store->save();
             $store->module->increment('stores_count');
@@ -200,7 +201,8 @@ class VendorController extends Controller
             'latitude' => 'required',
             'longitude' => 'required',
             'tax' => 'required',
-            'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['nullable', Password::min(1)],
+            // 'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'minimum_delivery_time' => 'required',
             'maximum_delivery_time' => 'required',
             'delivery_time_type'=>'required'
@@ -422,7 +424,7 @@ class VendorController extends Controller
     }
 
     public function pending_requests(Request $request)
-    {   
+    {
         $zone_id = $request->query('zone_id', 'all');
         $search_by = $request->query('search_by');
         $key = explode(' ', $search_by);
@@ -941,13 +943,13 @@ class VendorController extends Controller
         }
         $duplicate_phones = $collections->duplicates('phone');
         $duplicate_emails = $collections->duplicates('email');
-    
-        
+
+
         if ($duplicate_emails->isNotEmpty()) {
             Toastr::error(translate('messages.duplicate_data_on_column', ['field' => translate('messages.email')]));
             return back();
         }
-        
+
         if ($duplicate_phones->isNotEmpty()) {
             Toastr::error(translate('messages.duplicate_data_on_column', ['field' => translate('messages.phone')]));
             return back();
@@ -958,14 +960,14 @@ class VendorController extends Controller
 
         if($request->button == 'import'){
 
-            
-        
+
+
             if(Store::whereIn('email', $email)->orWhereIn('phone', $phone)->exists()
             ){
                 Toastr::error(translate('messages.duplicate_email_or_phone_exists_at_the_database'));
                 return back();
             }
-            
+
             $vendors = [];
             $stores = [];
             $vendor = Vendor::orderBy('id', 'desc')->first('id');
@@ -1016,9 +1018,9 @@ class VendorController extends Controller
                     Toastr::error('messages.Enter_valid_Maximum_Delivery_Fee');
                     return back();
                 }
-        
-        
-        
+
+
+
                 array_push($vendors, [
                     'id'=>$vendor_id+$key+1,
                     'f_name' => $collection['ownerFirstName'],
@@ -1029,7 +1031,7 @@ class VendorController extends Controller
                     'created_at'=>now(),
                     'updated_at'=>now()
                 ]);
-                
+
                 array_push($stores, [
                     'name' => $collection['storeName'],
                     'phone' => $collection['phone'],
@@ -1071,15 +1073,15 @@ class VendorController extends Controller
                         $store_ids[] = $store_id+$key+1;
                     }
                 }
-        
+
             }
-            
+
             $data = array_map(function($id){
                 return array_map(function($item)use($id){
                     return     ['store_id'=>$id,'day'=>$item,'opening_time'=>'00:00:00','closing_time'=>'23:59:59'];
                 },[0,1,2,3,4,5,6]);
             },$store_ids);
-        
+
             try{
                 DB::beginTransaction();
 
@@ -1100,7 +1102,7 @@ class VendorController extends Controller
                 Toastr::error(translate('messages.failed_to_import_data'));
                 return back();
             }
-        
+
             Toastr::success(translate('messages.store_imported_successfully',['count'=>count($stores)]));
             return back();
         }
@@ -1162,9 +1164,9 @@ class VendorController extends Controller
                     Toastr::error('messages.Enter_valid_Maximum_Delivery_Fee');
                     return back();
                 }
-        
-        
-        
+
+
+
                 array_push($vendors, [
                     'id'=>$collection['ownerId'],
                     'f_name' => $collection['ownerFirstName'],
@@ -1175,7 +1177,7 @@ class VendorController extends Controller
                     'created_at'=>now(),
                     'updated_at'=>now()
                 ]);
-                
+
                 array_push($stores, [
                     'id' => $collection['id'],
                     'name' => $collection['storeName'],
@@ -1209,9 +1211,9 @@ class VendorController extends Controller
                     'featured' => $collection['FeaturedStore'] == 'yes' ? 1 : 0,
                     'vendor_id' => $collection['id'],
                     'updated_at' => now(),
-                ]);  
+                ]);
             }
-        
+
             try{
                 $chunkSize = 100;
                 $chunk_stores= array_chunk($stores,$chunkSize);
@@ -1232,7 +1234,7 @@ class VendorController extends Controller
                 Toastr::error(translate('messages.failed_to_import_data'));
                 return back();
             }
-        
+
             Toastr::success(translate('messages.store_imported_successfully',['count'=>count($stores)]));
             return back();
     }

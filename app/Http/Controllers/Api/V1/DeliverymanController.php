@@ -57,7 +57,8 @@ class DeliverymanController extends Controller
             'f_name' => 'required',
             'l_name' => 'required',
             'email' => 'required|unique:delivery_men,email,'.$dm->id,
-            'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['nullable', Password::min(1)],
+            // 'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
         ], [
             'f_name.required' => 'First name is required!',
             'l_name.required' => 'Last name is required!',
@@ -325,7 +326,7 @@ class DeliverymanController extends Controller
                 ]
             ], 406);
         }
-        
+
         if(Config::get('order_delivery_verification')==1 && $order->payment_method=='cash_on_delivery' &&  $request['status']=='delivered' && $order->otp != $request['otp'])
         {
             return response()->json([

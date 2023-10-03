@@ -126,7 +126,7 @@ class VendorPasswordResetController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => 'required|exists:vendors,email',
             'reset_token'=> 'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
             'confirm_password'=> 'required|same:password',
         ]);
 

@@ -15,7 +15,7 @@ class ProfileController extends Controller
     {
         return view('vendor-views.profile.index');
     }
-    
+
     public function bank_view()
     {
         $data = Helpers::get_vendor_data();
@@ -57,7 +57,7 @@ class ProfileController extends Controller
     public function settings_password_update(Request $request)
     {
         $request->validate([
-            'password' => ['required', 'same:confirm_password', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', 'same:confirm_password', Password::min(1)],
             'confirm_password' => 'required',
         ]);
 

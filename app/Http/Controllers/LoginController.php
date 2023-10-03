@@ -64,7 +64,7 @@ class LoginController extends Controller
         $user_type = array_search($login_url,$data);
         abort_if(!$user_type, 404 );
         $role = array_search($user_type,$loginTypes,true);
-        
+
         abort_if($role == null ,404);
         $site_direction = $siteDirections[$role];
         $locale = $locals[$role];
@@ -174,7 +174,7 @@ class LoginController extends Controller
             $admin->save();
             $modules = Module::Active()->get();
             if(isset($modules)&&($modules->count()>0)){
-    
+
                 return redirect()->route('admin.dashboard');
             }
             return redirect()->route('admin.business-settings.business-setup');
@@ -330,7 +330,8 @@ class LoginController extends Controller
     {
         $request->validate([
             'reset_token'=> 'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'confirm_password'=> 'required|same:password',
         ]);
         $data = DB::table('password_resets')->where(['token' => $request['reset_token']])->first();

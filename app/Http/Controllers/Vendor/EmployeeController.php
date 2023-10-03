@@ -30,7 +30,7 @@ class EmployeeController extends Controller
             'image' => 'required',
             'email' => 'required|unique:vendor_employees',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:20|unique:vendor_employees',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
         ]);
 
         DB::table('vendor_employees')->insert([
@@ -76,7 +76,7 @@ class EmployeeController extends Controller
             'role_id' => 'required',
             'email' => 'required|unique:vendor_employees,email,'.$id,
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:20|unique:vendor_employees,phone,'.$id,
-            'password' => ['nullable', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['nullable', Password::min(1)],
         ], [
             'f_name.required' => translate('messages.first_name_is_required'),
         ]);

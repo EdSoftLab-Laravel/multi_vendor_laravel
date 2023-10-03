@@ -25,7 +25,7 @@ class DeliveryManController extends Controller
             Toastr::error(translate('messages.not_found'));
             return back();
         }
-        
+
         $custome_recaptcha = new CaptchaBuilder;
         $custome_recaptcha->build();
         Session::put('six_captcha', $custome_recaptcha->getPhrase());
@@ -73,7 +73,8 @@ class DeliveryManController extends Controller
             'zone_id' => 'required',
             'vehicle_id' => 'required',
             'earning' => 'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
         ], [
             'f_name.required' => translate('messages.first_name_is_required'),
             'zone_id.required' => translate('messages.select_a_zone'),

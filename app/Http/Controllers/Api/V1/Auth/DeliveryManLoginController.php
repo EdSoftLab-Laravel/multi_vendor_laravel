@@ -80,7 +80,8 @@ class DeliveryManLoginController extends Controller
             'identity_number' => 'required',
             'email' => 'required|unique:delivery_men',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|unique:delivery_men',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'zone_id' => 'required',
             'vehicle_id' => 'required',
             'earning' => 'required'
@@ -128,7 +129,7 @@ class DeliveryManLoginController extends Controller
         $dm->zone_id = $request->zone_id;
         $dm->earning = $request->earning;
         $dm->password = bcrypt($request->password);
-        
+
         $dm->save();
         try{
             $admin= Admin::where('role_id', 1)->first();

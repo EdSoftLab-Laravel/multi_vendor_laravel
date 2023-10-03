@@ -35,7 +35,7 @@ class VendorController extends Controller
         $custome_recaptcha = new CaptchaBuilder;
         $custome_recaptcha->build();
         Session::put('six_captcha', $custome_recaptcha->getPhrase());
-        
+
         return view('vendor-views.auth.register', compact('custome_recaptcha'));
     }
 
@@ -80,7 +80,8 @@ class VendorController extends Controller
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|unique:vendors',
             'minimum_delivery_time' => 'required',
             'maximum_delivery_time' => 'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
+            // 'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'zone_id' => 'required',
             'module_id' => 'required',
             'logo' => 'required',

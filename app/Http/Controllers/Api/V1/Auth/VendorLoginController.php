@@ -125,7 +125,7 @@ class VendorLoginController extends Controller
             'minimum_delivery_time' => 'required',
             'maximum_delivery_time' => 'required',
             'delivery_time_type'=>'required',
-            'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'password' => ['required', Password::min(1)],
             'zone_id' => 'required',
             'module_id' => 'required',
             'logo' => 'required',
@@ -183,7 +183,7 @@ class VendorLoginController extends Controller
         {
             StoreLogic::insert_schedule($store->id);
         }
-     
+
         foreach ($data as $key=>$i) {
             $data[$key]['translationable_type'] = 'App\Models\Store';
             $data[$key]['translationable_id'] = $store->id;
