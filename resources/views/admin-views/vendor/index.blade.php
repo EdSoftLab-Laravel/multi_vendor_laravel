@@ -24,8 +24,8 @@
         @php($default_lang = 'en')
         <!-- End Page Header -->
         <form action="{{route('admin.store.store')}}" method="post" enctype="multipart/form-data" class="js-validate" id="vendor_form">
-            @csrf
-
+            {{--  @csrf  --}}
+            {{ csrf_field() }}
             <div class="row g-2">
                 <div class="col-lg-6">
                     <div class="card shadow--card-2">

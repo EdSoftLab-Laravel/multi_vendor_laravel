@@ -146,7 +146,7 @@ class InstallController extends Controller
                     BROADCAST_DRIVER=log
                     CACHE_DRIVER=file
                     SESSION_DRIVER=file
-                    SESSION_LIFETIME=120
+                    SESSION_LIFETIME=240
                     QUEUE_DRIVER=sync
 
                     REDIS_HOST=127.0.0.1
