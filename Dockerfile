@@ -27,8 +27,7 @@ RUN apt-get update && \
 
 COPY . /var/www/html/
 COPY --from=build /usr/bin/composer /usr/bin/composer
-# RUN composer install
-RUN composer update
+RUN composer install
 # RUN composer install --ignore-platform-reqs
 # RUN composer install --prefer-dist --no-interaction
 
