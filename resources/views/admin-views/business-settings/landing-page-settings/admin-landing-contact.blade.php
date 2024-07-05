@@ -8,7 +8,7 @@
         <div class="d-flex flex-wrap justify-content-between">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('assets/admin/img/landing.png')}}" class="w--20" alt="">
+                    <img src="{{asset('public/assets/admin/img/landing.png')}}" class="w--20" alt="">
                 </span>
                 <span>
                     {{ translate('messages.admin_landing_pages') }}
@@ -65,7 +65,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{asset('public/assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="20" name="contact_us_title[]" value="{{ $contact_us_title?->getRawOriginal('value') }}" class="form-control" placeholder="{{translate('Ex_:_Contact_Us')}}">
@@ -75,7 +75,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{asset('public/assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="80" name="contact_us_sub_title[]" value="{{ $contact_us_sub_title?->getRawOriginal('value') }}" class="form-control" placeholder="{{translate('Ex_:_Any_questions_or_remarks_?_Just_write_us_a_message!')}}">
@@ -113,7 +113,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{asset('public/assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="20" name="contact_us_title[]" value="{{ $contact_us_title_translate[$lang]['value']??'' }}" class="form-control" placeholder="{{translate('Ex_:_Contact_Us')}}">
@@ -123,7 +123,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{asset('public/assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="80" name="contact_us_sub_title[]" value="{{ $contact_us_sub_title_translate[$lang]['value']??'' }}" class="form-control" placeholder="{{translate('Ex_:_Any_questions_or_remarks_?_Just_write_us_a_message!')}}">
@@ -140,7 +140,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_20_characters') }}">
-                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{asset('public/assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="20" name="contact_us_title[]" class="form-control" placeholder="{{translate('Ex_:_Contact_Us')}}">
@@ -150,7 +150,7 @@
                                         class="form-label-secondary" data-toggle="tooltip"
                                         data-placement="right"
                                         data-original-title="{{ translate('Write_the_title_within_80_characters') }}">
-                                        <img src="{{ asset('assets/admin/img/info-circle.svg') }}"
+                                        <img src="{{asset('public/assets/admin/img/info-circle.svg') }}"
                                             alt="">
                                     </span></label>
                                 <input type="text" maxlength="80" name="contact_us_sub_title[]" class="form-control" placeholder="{{translate('Ex_:_Any_questions_or_remarks_?_Just_write_us_a_message!')}}">
@@ -277,7 +277,7 @@
                             <div class="mb-3">
                                 <h3 class="modal-title mb-3">{{translate('Referral & Earning')}}</h3>
                             </div>
-                            <img src="{{asset('/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
+                            <img src="{{asset('public/assets/admin/img/zone-instruction.png')}}" alt="admin/img" class="w-100">
                         </div>
                     </div>
                 </div>

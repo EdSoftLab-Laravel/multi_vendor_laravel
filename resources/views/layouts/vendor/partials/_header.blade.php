@@ -33,7 +33,7 @@
                                     <i class="tio-globe"></i>
                                                 {{-- <img
                                                      width="20"
-                                                     src="{{asset('assets/admin')}}/img/flags/{{$data['code']}}.png"
+                                                     src="{{asset('public/assets/admin')}}/img/flags/{{$data['code']}}.png"
                                                      alt="Eng"> --}}
                                                 {{$data['code']}}
                                             @endif
@@ -48,7 +48,7 @@
                                                         {{-- <img
 
                                                             width="20"
-                                                            src="{{asset('assets/admin')}}/img/flags/{{$data['code']}}.png"
+                                                            src="{{asset('public/assets/admin')}}/img/flags/{{$data['code']}}.png"
                                                             alt="{{$data['code']}}"/> --}}
                                                         <span class="text-capitalize">{{$data['code']}}</span>
                                                     </a>
@@ -96,7 +96,7 @@
                                     </div>
                                     <div class="avatar avatar-sm avatar-circle">
                                         <img class="avatar-img"
-                                            onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
+                                            onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
                                             src="{{asset('storage/vendor')}}/{{\App\CentralLogics\Helpers::get_loggedin_user()->image}}"
                                             alt="Image Description">
                                         <span class="avatar-status avatar-sm-status avatar-status-success"></span>
@@ -110,7 +110,7 @@
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-sm avatar-circle mr-2">
                                             <img class="avatar-img"
-                                                 onerror="this.src='{{asset('assets/admin/img/160x160/img1.jpg')}}'"
+                                                 onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg')}}'"
                                                  src="{{asset('storage/vendor')}}/{{\App\CentralLogics\Helpers::get_loggedin_user()->image}}"
                                                  alt="Owner image">
                                         </div>

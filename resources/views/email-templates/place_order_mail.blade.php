@@ -351,7 +351,7 @@
                             @foreach ($social_media as $social)
                                 <div style="display:inline-block;">
                                     <a href="{{ $social->link }}" target=”_blank”>
-                                        <img src="{{ asset('assets/admin/img/' . $social->name . '.png') }}"
+                                        <img src="{{asset('public/assets/admin/img/' . $social->name . '.png') }}"
                                             alt="" style="height: 14px; width:14px; padding: 0px 3px 0px 5px;">
                                     </a>
                                 </div>

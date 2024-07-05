@@ -18,7 +18,7 @@
         <div class="container">
             <div class="banner-content wow fadeInUp">
                 <h1 class="title">{{ $landing_data['fixed_header_title'] }}</h1>
-                <img class="w-100" onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
+                <img class="w-100" onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg') }}'"
                     src="{{ asset('storage/business/' . $logo) }}" alt="">
                 <div class="text">
                     {{ $landing_data['fixed_header_sub_title'] }}
@@ -1897,7 +1897,7 @@
                     <div class="owl-theme owl-carousel" id="sync2">
                         @foreach ($modules as $key => $item)
                         <div class="item">
-                            <img class="__img-50" src="{{ asset('storage/module/') }}/{{ isset($item['icon']) ? $item['icon'] : null }}" onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="">
+                            <img class="__img-50" src="{{ asset('storage/module/') }}/{{ isset($item['icon']) ? $item['icon'] : null }}" onerror="this.src='{{asset('public/assets/admin/img/100x100/2.png')}}'" alt="">
                             <div class="txt d-block">{{translate("messages.{$item->module_name}")}}</div>
                         </div>
                         @endforeach
@@ -1916,7 +1916,7 @@
                         </div>
                         <div class="col-lg-6 col-md-8">
                             <div class="venture-img mx-1">
-                                <img src="{{ asset('storage/module/') }}/{{ isset($item['thumbnail']) ? $item['thumbnail'] : null }}" onerror="this.src='{{asset('assets/admin/img/100x100/2.png')}}'" alt="">
+                                <img src="{{ asset('storage/module/') }}/{{ isset($item['thumbnail']) ? $item['thumbnail'] : null }}" onerror="this.src='{{asset('public/assets/admin/img/100x100/2.png')}}'" alt="">
                             </div>
                         </div>
                     </div>
@@ -1949,7 +1949,7 @@
 
     <!-- ==== Learn Feature Section Starts Here ==== -->
     <section class="learn-feature-section"
-        style="background: url({{ asset('assets/landing/img/learn-feature-bg.svg') }}) no-repeat center center / cover">
+        style="background: url({{asset('public/assets/landing/img/learn-feature-bg.svg') }}) no-repeat center center / cover">
         <div class="container position-relative">
             <div class="row gy-5 gx-0 gx-xl-4">
                 <div class=" col-lg-6 pe-lg-5">
@@ -3362,7 +3362,7 @@
                 <div class="feature-card">
                     <div class="feature-card-icon">
                         <img src="{{ asset('storage/special_criteria')}}/{{ isset($item['image']) ? $item['image'] : null }}" alt="{{$item['title']}}"
-                        onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'">
+                        onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg') }}'">
                     </div>
                     <div class="feature-card-cont">
                         <h4 class="subtitle">
@@ -3577,7 +3577,7 @@
                     </div>
                     @php($fav = \App\Models\BusinessSetting::where(['key' => 'icon'])->first()->value ?? '')
                     <div class="right-side d-flex word-nowrap align-items-center">
-                        <img onerror="this.src='{{ asset('assets/admin/img/160x160/img2.jpg') }}'"
+                        <img onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg') }}'"
                         src="{{ asset('storage/business/' . $fav) }}" alt="">
                         {{translate("messages.Still increasing")}}
                     </div>

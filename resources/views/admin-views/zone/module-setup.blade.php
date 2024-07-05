@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{ asset('assets/admin/img/edit.png') }}" class="w--26" alt="">
+                    <img src="{{asset('public/assets/admin/img/edit.png') }}" class="w--26" alt="">
                 </span>
                 <span>
                    {{ $zone->name }} {{ translate('Zone_Settings') }}
@@ -161,7 +161,7 @@
 @endsection
 
 @push('script_2')
-    <script src="{{ asset('assets/admin') }}/js/tags-input.min.js"></script>
+    <script src="{{asset('public/assets/admin') }}/js/tags-input.min.js"></script>
     <script>
         let modules = <?php echo json_encode($modules_array); ?>;
         let mod = {{ count($zone->modules) }};

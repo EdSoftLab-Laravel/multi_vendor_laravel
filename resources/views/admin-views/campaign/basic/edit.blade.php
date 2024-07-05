@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('assets/admin/img/campaign.png')}}" class="w--26" alt="">
+                    <img src="{{asset('public/assets/admin/img/campaign.png')}}" class="w--26" alt="">
                 </span>
                 <span>
                     {{translate('messages.update')}} {{translate('messages.campaign')}}
@@ -141,7 +141,7 @@
                                 <center class="py-3 my-auto">
                                     <img class="initial--4" id="viewer"
                                          src="{{asset('storage/campaign')}}/{{$campaign->image}}"
-                                         onerror='this.src="{{ asset('assets/admin/img/900x400/img1.jpg') }}"' alt="campaign image"/>
+                                         onerror='this.src="{{asset('public/assets/admin/img/900x400/img1.jpg') }}"' alt="campaign image"/>
                                 </center>
                                 <div class="custom-file">
                                     <input type="file" name="image" id="customFileEg1" class="custom-file-input"
