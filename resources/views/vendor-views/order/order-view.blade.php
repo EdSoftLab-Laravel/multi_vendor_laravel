@@ -219,7 +219,7 @@
                                                         data-target="#imagemodal{{ $key }}"
                                                         title="{{ translate('messages.order') }} {{ translate('messages.attachment') }}">
                                                         <div class="gallary-card ml-auto">
-                                                            <img src="{{ asset('storage/app/' . 'order/' . $item) }}"
+                                                            <img src="{{ asset('storage/app/public/app/' . 'order/' . $item) }}"
                                                                 alt="{{ translate('messages.prescription') }}"
                                                                 class="initial--22 object-cover">
                                                         </div>
@@ -238,7 +238,7 @@
                                                                         class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <img src="{{ asset('storage/app/' . 'order/' . $item) }}"
+                                                                <img src="{{ asset('storage/app/public/app/' . 'order/' . $item) }}"
                                                                     class="initial--22 w-100">
                                                             </div>
                                                             <div class="modal-footer">
@@ -260,7 +260,7 @@
                                     <button class="btn w-100 px-0" data-toggle="modal" data-target="#imagemodal"
                                         title="{{ translate('messages.order') }} {{ translate('messages.attachment') }}">
                                         <div class="gallary-card ml-auto">
-                                            <img src="{{ asset('storage/app/' . 'order/' . $order->order_attachment) }}"
+                                            <img src="{{ asset('storage/app/public/app/' . 'order/' . $order->order_attachment) }}"
                                                 alt="{{ translate('messages.prescription') }}"
                                                 class="initial--22 object-cover">
                                         </div>
@@ -277,7 +277,7 @@
                                                             class="sr-only">{{ translate('messages.cancel') }}</span></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img src="{{ asset('storage/app/' . 'order/' . $order->order_attachment) }}"
+                                                    <img src="{{ asset('storage/app/public/app/' . 'order/' . $order->order_attachment) }}"
                                                         class="initial--22 w-100">
                                                 </div>
                                                 <div class="modal-footer">
@@ -342,7 +342,7 @@
                                                         <a class="avatar avatar-xl mr-3"
                                                             href="{{ route('vendor.item.view', $detail->item['id']) }}">
                                                             <img class="img-fluid rounded"
-                                                                src="{{ asset('storage/product') }}/{{ $detail->item['image'] }}"
+                                                                src="{{ asset('storage/app/public/product') }}/{{ $detail->item['image'] }}"
                                                                 onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg') }}'"
                                                                 alt="Image Description">
                                                         </a>
@@ -452,7 +452,7 @@
                                                     <div class="media media--sm">
                                                         <div class="avatar avatar-xl mr-3">
                                                             <img class="img-fluid"
-                                                                src="{{ asset('storage/campaign') }}/{{ $detail->campaign['image'] }}"
+                                                                src="{{ asset('storage/app/public/campaign') }}/{{ $detail->campaign['image'] }}"
                                                                 onerror="this.src='{{asset('public/assets/admin/img/160x160/img2.jpg') }}'"
                                                                 alt="Image Description">
                                                         </div>
@@ -686,7 +686,7 @@
                                     <div class="avatar avatar-circle">
                                         <img class="avatar-img"
                                             onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg') }}'"
-                                            src="{{ asset('storage/delivery-man/' . $order->delivery_man->image) }}"
+                                            src="{{ asset('storage/app/public/delivery-man/' . $order->delivery_man->image) }}"
                                             alt="Image Description">
                                     </div>
                                     <div class="media-body">
@@ -759,7 +759,7 @@
                                 <div class="avatar avatar-circle">
                                     <img class="avatar-img"
                                         onerror="this.src='{{asset('public/assets/admin/img/160x160/img1.jpg') }}'"
-                                        src="{{ asset('storage/profile/' . $order->customer->image) }}"
+                                        src="{{ asset('storage/app/public/profile/' . $order->customer->image) }}"
                                         alt="Image Description">
                                 </div>
                                 <div class="media-body">

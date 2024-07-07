@@ -127,7 +127,7 @@ font-weight: 700
         <tr>
             <td class="main-table-td">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
                 <h2>New Campaign is Happening !</h2>
                 <div class="mb-1 text-base">Hi Morning Mart,</div>
                 <div class="mb-3">Don’t miss the chance. A new campaign is running on 6amMart. Join the campaign to help reach more customer to your store</div>

@@ -127,7 +127,7 @@ font-weight: 700
         <tr>
             <td class="main-table-td">
                 @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/business/' . $store_logo) }}" alt="public/img">
+                <img style="width:120px;display:block;margin:10px 0" onerror="this.src='{{asset('public/assets/admin/img/favicon.png')}}'" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="public/img">
                 <h2>New Delivery Man Registration Request</h2>
                 <div class="mb-1">Hi Admin,</div>
                 <div class="mb-4"><strong>John Doe</strong> has requested to join as delivery man in 6amMart platform. </div>

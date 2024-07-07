@@ -84,7 +84,7 @@
                                 <center class="py-3 my-auto">
                                     <img class="img--100" id="viewer"
                                         @if(isset($category))
-                                        src="{{asset('storage/category')}}/{{$category['image']}}"
+                                        src="{{asset('storage/app/public/category')}}/{{$category['image']}}"
                                         @else
                                         src="{{asset('public/assets/admin/img/900x400/img1.jpg')}}"
                                         @endif

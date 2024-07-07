@@ -207,7 +207,7 @@ font-weight: 700
                             <td class="p-10">
                                 <span class="d-block text-center">
                                     @php($store_logo = \App\Models\BusinessSetting::where(['key' => 'logo'])->first()->value)
-                                    <img style="width: 125px" class="mb-" src="{{ asset('storage/business/' . $store_logo) }}" alt="">
+                                    <img style="width: 125px" class="mb-" src="{{ asset('storage/app/public/business/' . $store_logo) }}" alt="">
                                     <h3 class="mb-3 mt-0">Order Info</h3>
                                 </span>
                             </td>

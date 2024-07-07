@@ -170,7 +170,7 @@ width: 24px;
                     <div class="text-center">
                     <img class="mail-img-2"
                     @if ($data && $data['icon'])
-                    src="{{ asset('storage/email_template/') }}/{{ $data['icon']??'' }}"
+                    src="{{ asset('storage/app/public/email_template/') }}/{{ $data['icon']??'' }}"
                     @else
                     src='{{asset('public/assets/admin/img/email-template-img.png') }}'
                     @endif id="iconViewer" alt="">

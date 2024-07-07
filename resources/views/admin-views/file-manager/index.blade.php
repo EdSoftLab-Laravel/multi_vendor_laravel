@@ -50,11 +50,11 @@
                                 <p>{{Str::limit($file['name'],10)}}</p>
                             </a>
                             @elseif($file['type']=='file')
-                            <!-- <a class="btn" href="{{asset('storage/app/'.$file['path'])}}" download> -->
+                            <!-- <a class="btn" href="{{asset('storage/app/public/app/'.$file['path'])}}" download> -->
                                 <div class="folder-btn-item mx-auto">
                                 <button class="btn p-0 w-100" title="{{$file['name']}}">
                                     <div class="gallary-card">
-                                        <img src="{{asset('storage/app/'.$file['path'])}}" alt="{{$file['name']}}" class="w-100 rounded">
+                                        <img src="{{asset('storage/app/public/app/'.$file['path'])}}" alt="{{$file['name']}}" class="w-100 rounded">
                                     </div>
                                     <small class="overflow-hidden text-title">{{Str::limit($file['name'],10)}}</small>
                                 </button>
@@ -91,7 +91,7 @@
                                             </div>
                                         </div>
                                         <div class="modal-body p-1 pt-0">
-                                            <img src="{{asset('storage/app/'.$file['path'])}}" class="w-100">
+                                            <img src="{{asset('storage/app/public/app/'.$file['path'])}}" class="w-100">
                                         </div>
                                     </div>
                                 </div>
