@@ -453,9 +453,9 @@
                     <button type="button" class="close" data-dismiss="modal" onclick="foodModalClose()" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
-                    <div class="embed-responsive embed-responsive-16by9">
+                    {{-- <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IkoF9gPH6zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div>
+                      </div> --}}
                 </div>
             </div>
         </div>
@@ -468,9 +468,9 @@
                     <button type="button" class="close" data-dismiss="modal" onclick="attributeModalClose()" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
-                    <div class="embed-responsive embed-responsive-16by9">
+                    {{-- <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xG8fO7TXPbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div>
+                      </div> --}}
                 </div>
             </div>
         </div>

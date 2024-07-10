@@ -227,7 +227,7 @@
 <div id="headerFluid" class="d-none"></div>
 <div id="headerDouble" class="d-none"></div>
 
-<div class="toggle-tour">
+{{-- <div class="toggle-tour">
     <a href="https://youtube.com/playlist?list=PLLFMbDpKMZBxgtX3n3rKJvO5tlU8-ae2Y" target="_blank" class="d-flex align-items-center gap-10px">
         <img src="{{asset('public/assets/admin/img/tutorial.svg') }}" alt="">
         <span>
@@ -240,4 +240,4 @@
             <span class="text-capitalize">{{ translate('Tour') }}</span>
         </span>
     </div>
-</div>
+</div> --}}
