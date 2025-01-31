@@ -1143,13 +1143,13 @@ class OrderController extends Controller
 
     public function cancel_order(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'reason' => 'required|max:255'
-        ]);
+        // $validator = Validator::make($request->all(), [
+        //     'reason' => 'required|max:255'
+        // ]);
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => Helpers::error_processor($validator)], 403);
-        }
+        // if ($validator->fails()) {
+        //     return response()->json(['errors' => Helpers::error_processor($validator)], 403);
+        // }
 
         $order = Order::where(['user_id' => $request->user()->id, 'id' => $request['order_id']])->Notpos()->first();
         if (!$order) {
