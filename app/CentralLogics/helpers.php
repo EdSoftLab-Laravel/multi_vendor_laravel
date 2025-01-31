@@ -830,37 +830,6 @@ class Helpers
             "click_action": "'.$web_push_link.'"';
         }
 
-        // $postdata = '{
-        //     "to" : "' . $fcm_token . '",
-        //     "mutable_content": true,
-        //     "data" : {
-        //         "title":"' . $data['title'] . '",
-        //         "body" : "' . $data['description'] . '",
-        //         "image" : "' . $data['image'] . '",
-        //         "order_id":"' . $data['order_id'] . '",
-        //         "type":"' . $data['type'] . '",
-        //         "conversation_id":"' . $conversation_id . '",
-        //         "sender_type":"' . $sender_type . '",
-        //         "module_id":"' . $module_id . '",
-        //         "order_type":"' . $order_type . '",
-        //         "is_read": 0
-        //     },
-        //     "notification" : {
-        //         "title" :"' . $data['title'] . '",
-        //         "body" : "' . $data['description'] . '",
-        //         "image" : "' . $data['image'] . '",
-        //         "order_id":"' . $data['order_id'] . '",
-        //         "title_loc_key":"' . $data['order_id'] . '",
-        //         "body_loc_key":"' . $data['type'] . '",
-        //         "type":"' . $data['type'] . '",
-        //         "is_read": 0,
-        //         "icon" : "new",
-        //         "sound": "notification.wav",
-        //         "android_channel_id": "6ammart"
-        //         '.$click_action.'
-        //     }
-        // }';
-
         $notification = [
             "title" => $data['title'],
             "body" => $data['description'],
@@ -893,34 +862,11 @@ class Helpers
         $message = CloudMessage::new()->withNotification($notification)->withData($fcm_data);
         $obj = $messaging->sendMulticast($message, $fcm_token);
         return response()->json($obj);
-
-        // $ch = curl_init();
-        // $timeout = 120;
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        // curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        // curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-
-        // // Get URL content
-        // $result = curl_exec($ch);
-        // // close handle to release resources
-        // curl_close($ch);
-
-        // return $result;
     }
 
     public static function send_push_notif_to_topic($data, $topic, $type,$web_push_link = null)
     {
         info([$data, $topic, $type, $web_push_link]);
-        // $key = BusinessSetting::where(['key' => 'push_notification_key'])->first()->value;
-
-        // $url = "https://fcm.googleapis.com/fcm/send";
-        // $header = array(
-        //     "authorization: key=" . $key . "",
-        //     "content-type: application/json"
-        // );
         if(isset($data['module_id'])){
             $module_id = $data['module_id'];
         }else{
@@ -944,38 +890,6 @@ class Helpers
         }
 
         if (isset($data['order_id'])) {
-        //     $postdata = '{
-        //         "to" : "/topics/' . $topic . '",
-        //         "mutable_content": true,
-        //         "data" : {
-        //             "title":"' . $data['title'] . '",
-        //             "body" : "' . $data['description'] . '",
-        //             "image" : "' . $data['image'] . '",
-        //             "order_id":"' . $data['order_id'] . '",
-        //             "module_id":"' . $module_id . '",
-        //             "order_type":"' . $order_type . '",
-        //             "zone_id":"' . $zone_id . '",
-        //             "is_read": 0,
-        //             "type":"' . $type . '"
-        //         },
-        //         "notification" : {
-        //             "title":"' . $data['title'] . '",
-        //             "body" : "' . $data['description'] . '",
-        //             "image" : "' . $data['image'] . '",
-        //             "order_id":"' . $data['order_id'] . '",
-        //             "title_loc_key":"' . $data['order_id'] . '",
-        //             "body_loc_key":"' . $type . '",
-        //             "type":"' . $type . '",
-        //             "is_read": 0,
-        //             "icon" : "new",
-        //             "sound": "notification.wav",
-        //             "android_channel_id": "6ammart"
-        //             '.$click_action.'
-        //           }
-        //     }';
-        
-
-
         $notification = [
             "title" => $data['title'],
             "body" => $data['description'],
@@ -1002,31 +916,6 @@ class Helpers
             "type" => $type
         ];
         } else {
-        //     $postdata = '{
-        //         "to" : "/topics/' . $topic . '",
-        //         "mutable_content": true,
-        //         "data" : {
-        //             "title":"' . $data['title'] . '",
-        //             "body" : "' . $data['description'] . '",
-        //             "image" : "' . $data['image'] . '",
-        //             "is_read": 0,
-        //             "type":"' . $type . '"
-        //         },
-        //         "notification" : {
-        //             "title":"' . $data['title'] . '",
-        //             "body" : "' . $data['description'] . '",
-        //             "image" : "' . $data['image'] . '",
-        //             "body_loc_key":"' . $type . '",
-        //             "type":"' . $type . '",
-        //             "is_read": 0,
-        //             "icon" : "new",
-        //             "sound": "notification.wav",
-        //             "android_channel_id": "6ammart"
-        //             '.$click_action.'
-        //           }
-        //     }';
-
-
         $notification = [
             "title" => $data['title'],
             "body" => $data['description'],
@@ -1053,22 +942,6 @@ class Helpers
         $message = CloudMessage::new()->withNotification($notification)->withData($fcm_data);
         $obj = $messaging->sendMulticast($message, $topic);
         return response()->json($obj);
-
-        // $ch = curl_init();
-        // $timeout = 120;
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        // curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        // curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-
-        // // Get URL content
-        // $result = curl_exec($ch);
-        // // close handle to release resources
-        // curl_close($ch);
-
-        // return $result;
     }
 
 
