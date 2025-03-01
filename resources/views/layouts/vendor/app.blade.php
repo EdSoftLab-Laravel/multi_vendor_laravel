@@ -11,6 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Title -->
     <title>@yield('title')</title>
     <!-- Favicon -->
@@ -279,14 +280,19 @@
 </audio>
 
 <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     var audio = document.getElementById("myAudio");
 
     function playAudio() {
+    audioContext.resume().then(() => {
         audio.play();
+    }).catch(error => console.log("Audio context error:", error));
     }
 
     function pauseAudio() {
+    audioContext.resume().then(() => {
         audio.pause();
+    }).catch(error => console.log("Audio context error:", error));
     }
 </script>
 <script>
@@ -333,7 +339,7 @@
     }
 </script>
 
-<script>
+{{-- <script>
     @php($fcm_credentials = \App\CentralLogics\Helpers::get_business_settings('fcm_credentials'))
     var firebaseConfig = {
         apiKey: "{{isset($fcm_credentials['apiKey']) ? $fcm_credentials['apiKey'] : ''}}",
@@ -468,6 +474,164 @@ fetch('https://iid.googleapis.com/iid/v1/' + token + '/rel/topics/' + topic, {
         if(getUrlParameter('conversation')){
             conversationView();
         }
+</script> --}}
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-messaging.js";
+
+    // Fetch Firebase credentials from Laravel
+    const fcmCredentials = @json(\App\CentralLogics\Helpers::get_business_settings('fcm_credentials'));
+
+    const firebaseConfig = {
+        apiKey: fcmCredentials.apiKey || "",
+        authDomain: fcmCredentials.authDomain || "",
+        projectId: fcmCredentials.projectId || "",
+        storageBucket: fcmCredentials.storageBucket || "",
+        messagingSenderId: fcmCredentials.messagingSenderId || "",
+        appId: fcmCredentials.appId || "",
+        measurementId: fcmCredentials.measurementId || ""
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+    
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register("/firebase-messaging-sw.js")
+            .then((registration) => {
+                console.log("Service Worker registered:", registration);
+            })
+            .catch((error) => {
+                console.error("Service Worker registration failed:", error);
+            });
+    }
+
+    // Function to request notification permission
+    async function startFCM() {
+        try {
+            const permission = await Notification.requestPermission();
+            if (permission !== "granted") {
+                console.warn("Notification permission denied!");
+                return;
+            }
+            await getToken(messaging, { vapidKey: '{{ env("VAPIDKEY") }}' }).then((token) => {
+            if (token) {
+            console.log("FCM Token:", token);
+            @php($store_id=\App\CentralLogics\Helpers::get_store_id())
+            subscribeTokenToTopic(token, "store_panel_{{$store_id}}_message");
+            } else {
+                console.log('No registration token available. Request permission to generate one.');
+            }
+            }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+            });
+        } catch (error) {
+            console.error("FCM Error:", error);
+        }
+    }
+
+    async function subscribeTokenToTopic(clientToken, topic) {
+        try {
+            const response = await fetch("{{ env('APP_URL') }}/admin/subscribe-token-to-topic", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                },
+                body: JSON.stringify({
+                    token: clientToken,
+                    topic: topic
+                })
+            });
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(`Error subscribing to topic: ${data.error}`);
+            }
+            console.log(`Subscribed to topic: ${data}`);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+
+        function converationList() {
+            $.ajax({
+                url: "{{ route('vendor.message.list') }}",
+                success: function(data) {
+                    $('#conversation-list').empty();
+                    $("#conversation-list").append(data.html);
+                    var user_id = getUrlParameter('user');
+                    $('.customer-list').removeClass('conv-active');
+                    $('#customer-' + user_id).addClass('conv-active');
+                }
+            })
+        }
+
+        function conversationView() {
+            var conversation_id = getUrlParameter('conversation');
+            var user_id = getUrlParameter('user');
+            var url= '{{url('/')}}/store-panel/message/view/'+conversation_id+'/' + user_id;
+            $.ajax({
+                url: url,
+                success: function(data) {
+                    $('#view-conversation').html(data.view);
+                }
+            })
+        }
+        var order_type = 'all';
+        onMessage(function (payload) {
+            console.log(payload.data);
+            if(payload.data.order_id && payload.data.type == 'new_order'){
+                @if(\App\CentralLogics\Helpers::employee_module_permission_check('order'))
+                    order_type = payload.data.order_type
+                    playAudio();
+                    $('#popup-modal').appendTo("body").modal('show');
+                @endif
+            }else if(payload.data.type == 'message'){
+            var conversation_id = getUrlParameter('conversation');
+            var user_id = getUrlParameter('user');
+            var url= '{{url('/')}}/store-panel/message/view/'+conversation_id+'/' + user_id;
+            $.ajax({
+                url: url,
+                success: function(data) {
+                    $('#view-conversation').html(data.view);
+                }
+            })
+            toastr.success('{{ translate('messages.New message arrived') }}', {
+                        CloseButton: true,
+                        ProgressBar: true
+                    });
+
+            if($('#conversation-list').scrollTop() == 0){
+                converationList();
+            }
+        }
+        });
+
+        function check_order() {
+            if(order_type){
+                location.href = '{{url('/')}}/store-panel/order/list/'+order_type;
+            }
+            location.href = '{{url('/')}}/store-panel/order/list/all';
+        }
+
+    startFCM();
+    converationList();
+    if(getUrlParameter('conversation')){
+        conversationView();
+    }
 </script>
 
 <script>

@@ -28,6 +28,8 @@ use Illuminate\Support\Str;
 use PayPal\Api\Transaction;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Kreait\Firebase\Factory;
+use Kreait\Firebase\Messaging\Notification;
+use Kreait\Firebase\Messaging\AndroidConfig;
 
 class Helpers
 {
@@ -864,86 +866,144 @@ class Helpers
         return response()->json($obj);
     }
 
-    public static function send_push_notif_to_topic($data, $topic, $type,$web_push_link = null)
+    // public static function send_push_notif_to_topic($data, $topic, $type,$web_push_link = null)
+    // {
+    //     info([$data, $topic, $type, $web_push_link]);
+    //     if(isset($data['module_id'])){
+    //         $module_id = $data['module_id'];
+    //     }else{
+    //         $module_id = '';
+    //     }
+    //     if(isset($data['order_type'])){
+    //         $order_type = $data['order_type'];
+    //     }else{
+    //         $order_type = '';
+    //     }
+    //     if(isset($data['zone_id'])){
+    //         $zone_id = $data['zone_id'];
+    //     }else{
+    //         $zone_id = '';
+    //     }
+
+    //     $click_action = "";
+    //     if($web_push_link){
+    //         $click_action = ',
+    //         "click_action": "'.$web_push_link.'"';
+    //     }
+
+    //     if (isset($data['order_id'])) {
+    //     $notification = [
+    //         "title" => $data['title'],
+    //         "body" => $data['description'],
+    //         "image" => $data['image'],
+    //         "order_id" => $data['order_id'],
+    //         "title_loc_key" => $data['order_id'],
+    //         "body_loc_key" => $type,
+    //         "type" => $type,                 
+    //         "is_read" => 0,
+    //         "icon" => "new",
+    //         "sound" => "notification.wav",
+    //         "android_channel_id" => "6ammart '.$click_action.'"
+    //     ];
+
+    //     $fcm_data = [
+    //         "title" => $data['title'],
+    //         "body" => $data['description'],
+    //         "image" => $data['image'],
+    //         "order_id" => $data['order_id'],
+    //         "module_id" => $module_id,
+    //         "order_type" => $order_type,
+    //         "zone_id" => $zone_id,
+    //         "is_read" => 0,
+    //         "type" => $type
+    //     ];
+    //     } else {
+    //     $notification = [
+    //         "title" => $data['title'],
+    //         "body" => $data['description'],
+    //         "image" => $data['image'],
+    //         "body_loc_key" => $type,
+    //         "type" => $type,                 
+    //         "is_read" => 0,
+    //         "icon" => "new",
+    //         "sound" => "notification.wav",
+    //         "android_channel_id" => "6ammart '.$click_action.'"
+    //     ];
+
+    //     $fcm_data = [
+    //         "title" => $data['title'],
+    //         "body" => $data['description'],
+    //         "image" => $data['image'],
+    //         "is_read" => 0,
+    //         "type" => $type
+    //     ];
+    //     }
+        
+    //     $firebase = (new Factory)->withServiceAccount(storage_path("app/json/firebase_config.json"));
+    //     $messaging = $firebase->createMessaging();
+    //     $message = CloudMessage::new()->withNotification($notification)->withData($fcm_data);
+    //     $obj = $messaging->sendMulticast($message, $topic);
+    //     return response()->json($obj);
+    // }
+
+    public static function send_push_notif_to_topic($data, $topic, $type, $web_push_link = null) 
     {
         info([$data, $topic, $type, $web_push_link]);
-        if(isset($data['module_id'])){
-            $module_id = $data['module_id'];
-        }else{
-            $module_id = '';
-        }
-        if(isset($data['order_type'])){
-            $order_type = $data['order_type'];
-        }else{
-            $order_type = '';
-        }
-        if(isset($data['zone_id'])){
-            $zone_id = $data['zone_id'];
-        }else{
-            $zone_id = '';
-        }
-
-        $click_action = "";
-        if($web_push_link){
-            $click_action = ',
-            "click_action": "'.$web_push_link.'"';
-        }
-
-        if (isset($data['order_id'])) {
-        $notification = [
-            "title" => $data['title'],
-            "body" => $data['description'],
-            "image" => $data['image'],
-            "order_id" => $data['order_id'],
-            "title_loc_key" => $data['order_id'],
-            "body_loc_key" => $type,
-            "type" => $type,                 
-            "is_read" => 0,
-            "icon" => "new",
-            "sound" => "notification.wav",
-            "android_channel_id" => "6ammart '.$click_action.'"
-        ];
-
+    
+        // Use default values if variables are not set
+        $module_id = $data['module_id'] ?? '';
+        $order_type = $data['order_type'] ?? '';
+        $zone_id = $data['zone_id'] ?? '';
+        $click_action = $web_push_link ?? '';
+    
+        // Create Notification Payload
+        $notification = Notification::fromArray([
+            "title" => $data['title'] ?? 'New Notification',
+            "body" => $data['description'] ?? '',
+            "image" => $data['image'] ?? ''
+        ]);
+    
+        // Create Data Payload
         $fcm_data = [
-            "title" => $data['title'],
-            "body" => $data['description'],
-            "image" => $data['image'],
-            "order_id" => $data['order_id'],
+            "title" => $data['title'] ?? '',
+            "body" => $data['description'] ?? '',
+            "image" => $data['image'] ?? '',
+            "order_id" => $data['order_id'] ?? null,
             "module_id" => $module_id,
             "order_type" => $order_type,
             "zone_id" => $zone_id,
             "is_read" => 0,
             "type" => $type
         ];
-        } else {
-        $notification = [
-            "title" => $data['title'],
-            "body" => $data['description'],
-            "image" => $data['image'],
-            "body_loc_key" => $type,
-            "type" => $type,                 
-            "is_read" => 0,
-            "icon" => "new",
-            "sound" => "notification.wav",
-            "android_channel_id" => "6ammart '.$click_action.'"
-        ];
-
-        $fcm_data = [
-            "title" => $data['title'],
-            "body" => $data['description'],
-            "image" => $data['image'],
-            "is_read" => 0,
-            "type" => $type
-        ];
-        }
-        
+    
+        // Initialize Firebase
         $firebase = (new Factory)->withServiceAccount(storage_path("app/json/firebase_config.json"));
         $messaging = $firebase->createMessaging();
-        $message = CloudMessage::new()->withNotification($notification)->withData($fcm_data);
-        $obj = $messaging->sendMulticast($message, $topic);
-        return response()->json($obj);
+    
+        // Configure Android Notifications
+        $androidConfig = AndroidConfig::fromArray([
+            'priority' => 'high',
+            'notification' => [
+                'sound' => 'notification.wav',
+                'click_action' => $click_action,
+                'channel_id' => "6ammart_" . $click_action
+            ]
+        ]);
+    
+        // Create Cloud Message
+        $message = CloudMessage::new()->withTarget('topic', $topic)
+            ->withNotification($notification)
+            ->withData($fcm_data)
+            ->withAndroidConfig($androidConfig);
+    
+        try {
+            // 🔹 Send Notification to Topic
+            $messaging->send( $message);
+            return response()->json(['success' => true, 'message' => 'Notification sent successfully']);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
-
 
     public static function rating_count($item_id, $rating)
     {

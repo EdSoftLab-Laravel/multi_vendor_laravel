@@ -12,7 +12,8 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
 use Rap2hpoutre\FastExcel\Facades\FastExcel;
 use Rap2hpoutre\FastExcel\FastExcel as FastExcelFastExcel;
-
+use Google\Client;
+use Kreait\Firebase\Factory;
 
 class NotificationController extends Controller
 {
@@ -164,5 +165,25 @@ class NotificationController extends Controller
         }elseif($request->type == 'csv'){
             return (new FastExcelFastExcel($data))->download('Notifications.csv');
         }
+    }
+    
+    public function subscribeTokenToTopic(Request $request)
+    {
+        try {
+            $clientToken = $request->input('token');
+            $topic = $request->input('topic');
+
+            $firebase = (new Factory)->withServiceAccount(storage_path('app/json/firebase_config.json'));
+            $response = $firebase->createMessaging()->subscribeToTopic(topic: $topic, registrationTokenOrTokens: [$clientToken]);
+            return response()->json([
+                'message' => "Successfully subscribed to topic",
+                'response' => $response
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => "Error subscribing to topic: " . $e->getMessage()
+            ], 400);
+        }
+ 
     }
 }

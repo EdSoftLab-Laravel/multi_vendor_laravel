@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/dg', 'DashboardController@dashboard')->name('dg');
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
+    Route::post('/subscribe-token-to-topic', 'NotificationController@subscribeTokenToTopic')->name('subscribe-token-to-topic');
+
     Route::get('zone/get-coordinates/{id}', 'ZoneController@get_coordinates')->name('zone.get-coordinates');
 
     Route::group(['middleware' => ['admin', 'current-module']], function () {

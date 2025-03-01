@@ -496,14 +496,19 @@
 </audio>
 
 <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     var audio = document.getElementById("myAudio");
 
     function playAudio() {
+    audioContext.resume().then(() => {
         audio.play();
+    }).catch(error => console.log("Audio context error:", error));
     }
 
     function pauseAudio() {
+    audioContext.resume().then(() => {
         audio.pause();
+    }).catch(error => console.log("Audio context error:", error));
     }
 </script>
 <script>
@@ -707,7 +712,8 @@
         });
 
 </script>
-<script>
+
+{{-- <script>
     @php($fcm_credentials = \App\CentralLogics\Helpers::get_business_settings('fcm_credentials'))
     var firebaseConfig = {
         apiKey: "{{isset($fcm_credentials['apiKey']) ? $fcm_credentials['apiKey'] : ''}}",
@@ -751,6 +757,84 @@
         }).catch(error => {
             console.error(error);
         })
+    } --}}
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-messaging.js";
+
+    // Fetch Firebase credentials from Laravel
+    const fcmCredentials = @json(\App\CentralLogics\Helpers::get_business_settings('fcm_credentials'));
+
+    const firebaseConfig = {
+        apiKey: fcmCredentials.apiKey || "",
+        authDomain: fcmCredentials.authDomain || "",
+        projectId: fcmCredentials.projectId || "",
+        storageBucket: fcmCredentials.storageBucket || "",
+        messagingSenderId: fcmCredentials.messagingSenderId || "",
+        appId: fcmCredentials.appId || "",
+        measurementId: fcmCredentials.measurementId || ""
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+    
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register("/firebase-messaging-sw.js")
+            .then((registration) => {
+                console.log("Service Worker registered:", registration);
+            })
+            .catch((error) => {
+                console.error("Service Worker registration failed:", error);
+            });
+    }
+
+    // Function to request notification permission
+    async function startFCM() {
+        try {
+            const permission = await Notification.requestPermission();
+            if (permission !== "granted") {
+                console.warn("Notification permission denied!");
+                return;
+            }
+
+            await getToken(messaging, { vapidKey: '{{ env("VAPIDKEY") }}' }).then((token) => {
+            if (token) {
+            console.log("FCM Token:", token);
+            subscribeTokenToTopic(token, "admin_message");
+            } else {
+                console.log('No registration token available. Request permission to generate one.');
+            }
+            }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+            });
+        } catch (error) {
+            console.error("FCM Error:", error);
+        }
+    }
+
+    async function subscribeTokenToTopic(token, topic) {
+        try {
+            const response = await fetch("{{ env('APP_URL') }}/admin/subscribe-token-to-topic", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                },
+                body: JSON.stringify({
+                    token: token,
+                    topic: topic
+                })
+            });
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(`Error subscribing to topic: ${data.error}`);
+            }
+            console.log(`Subscribed to topic: ${data}`);
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     function getUrlParameter(sParam) {
@@ -820,7 +904,7 @@
     var admin_zone_id=null;
     var admin_role_id=null;
 
-    messaging.onMessage(function(payload) {
+    onMessage(messaging, (payload) => {
         console.log(payload.data);
         if(payload.data.order_id && payload.data.type == "order_request"){
                 @php($admin_order_notification = \App\Models\BusinessSetting::where('key', 'admin_order_notification')->first())
@@ -862,18 +946,18 @@
     });
 
     function check_order() {
-            if(new_order_type == 'parcel')
-            {
-                var url= '{{url('/')}}/admin/parcel/orders/all?module_id=' + new_module_id;
-                location.href = url;
-            }
-            else
-            {
-                var url= '{{url('/')}}/admin/order/list/all?module_id=' + new_module_id;
-                location.href = url;
-            }
-
+        if(new_order_type == 'parcel')
+        {
+            var url= '{{url('/')}}/admin/parcel/orders/all?module_id=' + new_module_id;
+            location.href = url;
         }
+        else
+        {
+            var url= '{{url('/')}}/admin/order/list/all?module_id=' + new_module_id;
+            location.href = url;
+        }
+
+    }
 
     startFCM();
     conversationList();

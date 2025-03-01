@@ -4127,4 +4127,5 @@
                                  system will not work as it planned' => 'Without configuring this section map functionality will not work properly. Thus the whole
                                  system will not work as it planned',
   'Invalid date range!' => 'Invalid date range!',
+  'Pusti Bagan' => 'Pusti Bagan',
 );
