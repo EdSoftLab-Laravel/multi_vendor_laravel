@@ -4128,4 +4128,6 @@
                                  system will not work as it planned',
   'Invalid date range!' => 'Invalid date range!',
   'Pusti Bagan' => 'Pusti Bagan',
+  'Failed to update!' => 'Failed to update!',
+  'Waste Wheel' => 'Waste Wheel',
 );
